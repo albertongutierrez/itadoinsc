@@ -1,3 +1,11 @@
+	<?php 
+	session_start();
+	// include("php/tiempo.php") ;
+    if(!isset($_SESSION['crmUsername']) && !isset($_SESSION['crmRanking']) && !isset($_SESSION['crmEmpresa'])){
+        header('Location: index.php?status=errs' );
+    }
+	 ?>
+	 
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 	<head>
@@ -100,10 +108,4 @@
 	</head>
 	<body>
 
-	<?php 
-	session_start();
-	// include("php/tiempo.php") ;
-    if(!isset($_SESSION['crmUsername']) && !isset($_SESSION['crmRanking']) && !isset($_SESSION['crmEmpresa'])){
-        header('Location: index.php?status=errs' );
-    }
-	 ?>
+
