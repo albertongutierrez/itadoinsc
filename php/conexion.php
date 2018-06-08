@@ -1,11 +1,17 @@
 <?php
 /*local*/
-$host="localhost";
-$user="root";
-$pw="";
-$bd="crm_inscripciones_itado";
-$llavec="QY%qffw4";
+// $host="localhost";
+// $user="root";
+// $pw="";
+// $bd="crm_inscripciones_itado";
+// $llavec="QY%qffw4";
 
+//PC DE HAROLD
+$host="localhost";
+$user="mangusoft";
+$pw="123";
+$bd="crm_inscripciones_itado";
+$llavec="%7jdq##a";
 
 /*SERVIDOR WEB*/
 

@@ -1,0 +1,228 @@
+[06-Oct-2017 15:36:02 Europe/Madrid] PHP Notice:  Undefined variable: label in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 53
+[06-Oct-2017 15:36:02 Europe/Madrid] PHP Notice:  Undefined variable: data in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 58
+[06-Oct-2017 16:32:05 Europe/Madrid] PHP Notice:  Undefined index: crmEmpresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 6
+[06-Oct-2017 16:32:05 Europe/Madrid] PHP Notice:  Undefined index: crmUsername in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/cabeza.php on line 128
+[06-Oct-2017 16:32:05 Europe/Madrid] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/cabeza.php on line 155
+[06-Oct-2017 16:32:05 Europe/Madrid] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/cabeza.php on line 203
+[06-Oct-2017 16:32:05 Europe/Madrid] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/cabeza.php on line 212
+[06-Oct-2017 16:32:05 Europe/Madrid] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/parametros-mant.php on line 2
+[06-Oct-2017 16:32:05 Europe/Madrid] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/parametros-mant.php on line 47
+[06-Oct-2017 16:32:05 Europe/Madrid] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/parametros-mant.php on line 47
+[06-Oct-2017 16:32:05 Europe/Madrid] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/parametros-mant.php on line 74
+[06-Oct-2017 16:32:05 Europe/Madrid] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/parametros-mant.php on line 74
+[06-Oct-2017 16:32:05 Europe/Madrid] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/parametros-mant.php on line 75
+[06-Oct-2017 16:32:05 Europe/Madrid] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/parametros-mant.php on line 75
+[06-Oct-2017 16:32:05 Europe/Madrid] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/parametros-mant.php on line 80
+[06-Oct-2017 16:32:05 Europe/Madrid] PHP Notice:  Undefined index: crmEmpresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/parametros-mant.php on line 80
+[06-Oct-2017 16:32:05 Europe/Madrid] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 303
+[06-Oct-2017 16:32:05 Europe/Madrid] PHP Notice:  Undefined index: crmEmpresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 307
+[06-Oct-2017 16:32:32 Europe/Madrid] PHP Notice:  Undefined variable: label in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 53
+[06-Oct-2017 16:32:32 Europe/Madrid] PHP Notice:  Undefined variable: data in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 58
+[06-Oct-2017 19:30:22 Europe/Madrid] PHP Notice:  Undefined variable: label in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 53
+[06-Oct-2017 19:30:22 Europe/Madrid] PHP Notice:  Undefined variable: data in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 58
+[06-Oct-2017 19:30:57 Europe/Madrid] PHP Notice:  Undefined variable: label in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 53
+[06-Oct-2017 19:30:57 Europe/Madrid] PHP Notice:  Undefined variable: data in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 58
+[06-Oct-2017 19:40:44 Europe/Madrid] PHP Notice:  Undefined index: crmEmpresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 6
+[06-Oct-2017 19:40:44 Europe/Madrid] PHP Notice:  Undefined index: crmUsername in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/cabeza.php on line 128
+[06-Oct-2017 19:40:44 Europe/Madrid] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/cabeza.php on line 155
+[06-Oct-2017 19:40:44 Europe/Madrid] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/cabeza.php on line 203
+[06-Oct-2017 19:40:44 Europe/Madrid] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/cabeza.php on line 212
+[06-Oct-2017 19:40:44 Europe/Madrid] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/inscripcion-mant.php on line 2
+[06-Oct-2017 19:40:44 Europe/Madrid] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/inscripcion-mant.php on line 47
+[06-Oct-2017 19:40:44 Europe/Madrid] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/inscripcion-mant.php on line 47
+[06-Oct-2017 19:40:44 Europe/Madrid] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 475
+[06-Oct-2017 19:40:44 Europe/Madrid] PHP Notice:  Undefined index: crmEmpresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 479
+[06-Oct-2017 19:40:57 Europe/Madrid] PHP Notice:  Undefined variable: label in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 53
+[06-Oct-2017 19:40:57 Europe/Madrid] PHP Notice:  Undefined variable: data in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 58
+[06-Oct-2017 19:43:42 Europe/Madrid] PHP Fatal error:  Call to undefined function extaerInscritosUDT2() in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/inscripcion-actualizar.php on line 6
+[06-Oct-2017 19:43:54 Europe/Madrid] PHP Fatal error:  Call to undefined function extaerInscritosUDT2() in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/inscripcion-actualizar.php on line 6
+[06-Oct-2017 19:44:03 Europe/Madrid] PHP Fatal error:  Call to undefined function extaerInscritosUDT2() in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/inscripcion-actualizar.php on line 6
+[06-Oct-2017 19:44:14 Europe/Madrid] PHP Fatal error:  Call to undefined function extaerInscritosUDT2() in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/inscripcion-actualizar.php on line 6
+[06-Oct-2017 19:44:19 Europe/Madrid] PHP Fatal error:  Call to undefined function extaerInscritosUDT2() in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/inscripcion-actualizar.php on line 6
+[06-Oct-2017 19:44:24 Europe/Madrid] PHP Fatal error:  Call to undefined function extaerInscritosUDT2() in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/inscripcion-actualizar.php on line 6
+[06-Oct-2017 19:44:35 Europe/Madrid] PHP Fatal error:  Call to undefined function extaerInscritosUDT2() in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/inscripcion-actualizar.php on line 6
+[06-Oct-2017 19:44:37 Europe/Madrid] PHP Fatal error:  Call to undefined function extaerInscritosUDT2() in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/inscripcion-actualizar.php on line 6
+[06-Oct-2017 19:44:40 Europe/Madrid] PHP Fatal error:  Call to undefined function extaerInscritosUDT2() in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/inscripcion-actualizar.php on line 6
+[06-Oct-2017 19:44:52 Europe/Madrid] PHP Fatal error:  Call to undefined function extaerInscritosUDT2() in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/inscripcion-actualizar.php on line 6
+[06-Oct-2017 19:44:52 Europe/Madrid] PHP Fatal error:  Call to undefined function extaerInscritosUDT2() in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/inscripcion-actualizar.php on line 6
+[06-Oct-2017 19:44:54 Europe/Madrid] PHP Notice:  Undefined variable: label in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 53
+[06-Oct-2017 19:44:54 Europe/Madrid] PHP Notice:  Undefined variable: data in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 58
+[06-Oct-2017 19:45:08 Europe/Madrid] PHP Fatal error:  Call to undefined function extaerInscritosUDT2() in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/inscripcion-actualizar.php on line 6
+[06-Oct-2017 19:45:17 Europe/Madrid] PHP Fatal error:  Call to undefined function extaerInscritosUDT2() in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/inscripcion-actualizar.php on line 6
+[06-Oct-2017 19:47:12 Europe/Madrid] PHP Fatal error:  Call to undefined function extaerInscritosUDT2() in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/inscripcion-actualizar.php on line 6
+[06-Oct-2017 19:49:33 Europe/Madrid] PHP Notice:  Undefined variable: label in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 53
+[06-Oct-2017 19:49:33 Europe/Madrid] PHP Notice:  Undefined variable: data in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 58
+[06-Oct-2017 19:49:47 Europe/Madrid] PHP Fatal error:  Call to undefined function extaerInscritosUDT2() in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/inscripcion-actualizar.php on line 6
+[06-Oct-2017 19:52:12 Europe/Madrid] PHP Fatal error:  Call to a member function fetch_assoc() on boolean in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 8
+[06-Oct-2017 19:52:18 Europe/Madrid] PHP Fatal error:  Call to a member function fetch_assoc() on boolean in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 8
+[06-Oct-2017 19:52:20 Europe/Madrid] PHP Fatal error:  Call to a member function fetch_assoc() on boolean in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 8
+[06-Oct-2017 19:52:21 Europe/Madrid] PHP Fatal error:  Call to a member function fetch_assoc() on boolean in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 8
+[06-Oct-2017 19:52:27 Europe/Madrid] PHP Fatal error:  Call to a member function fetch_assoc() on boolean in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 8
+[06-Oct-2017 19:52:29 Europe/Madrid] PHP Fatal error:  Call to a member function fetch_assoc() on boolean in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 8
+[06-Oct-2017 19:53:00 Europe/Madrid] PHP Fatal error:  Call to undefined function extaerInscritosUDT2() in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/inscripcion-actualizar.php on line 6
+[06-Oct-2017 19:53:42 Europe/Madrid] PHP Fatal error:  Call to undefined function extaerInscritosUDT2() in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/inscripcion-actualizar.php on line 6
+[06-Oct-2017 19:54:53 Europe/Madrid] PHP Fatal error:  Call to undefined function extaerInscritosUDT2() in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/inscripcion-actualizar.php on line 6
+[06-Oct-2017 19:56:10 Europe/Madrid] PHP Fatal error:  Call to undefined function extaerInscritosUDT2() in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/inscripcion-actualizar.php on line 6
+[06-Oct-2017 19:56:24 Europe/Madrid] PHP Fatal error:  Call to undefined function extaerInscritosUDT2() in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/inscripcion-actualizar.php on line 6
+[06-Oct-2017 20:31:53 Europe/Madrid] PHP Notice:  Undefined variable: label in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 53
+[06-Oct-2017 20:31:53 Europe/Madrid] PHP Notice:  Undefined variable: data in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 58
+[25-Oct-2017 14:10:45 America/La_Paz] PHP Notice:  Undefined variable: label in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 53
+[25-Oct-2017 14:10:45 America/La_Paz] PHP Notice:  Undefined variable: data in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 58
+[26-Oct-2017 08:32:58 America/La_Paz] PHP Notice:  Undefined variable: label in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 53
+[26-Oct-2017 08:32:58 America/La_Paz] PHP Notice:  Undefined variable: data in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 58
+[22-Nov-2017 19:28:03 America/La_Paz] PHP Notice:  Undefined variable: label in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 53
+[22-Nov-2017 19:28:03 America/La_Paz] PHP Notice:  Undefined variable: data in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 58
+[22-Nov-2017 19:29:13 America/La_Paz] PHP Notice:  Undefined variable: label in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 53
+[22-Nov-2017 19:29:13 America/La_Paz] PHP Notice:  Undefined variable: data in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 58
+[22-Nov-2017 19:36:33 America/La_Paz] PHP Notice:  Undefined variable: seccion in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/permisos-actualizar.php on line 102
+[22-Nov-2017 19:36:46 America/La_Paz] PHP Notice:  Undefined variable: label in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 53
+[22-Nov-2017 19:36:46 America/La_Paz] PHP Notice:  Undefined variable: data in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 58
+[08-May-2018 16:16:16 America/La_Paz] PHP Notice:  Undefined variable: label in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 53
+[08-May-2018 16:16:16 America/La_Paz] PHP Notice:  Undefined variable: data in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 58
+[08-May-2018 16:16:19 America/La_Paz] PHP Notice:  Undefined variable: label in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 53
+[08-May-2018 16:16:19 America/La_Paz] PHP Notice:  Undefined variable: data in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 58
+[08-May-2018 16:16:38 America/La_Paz] PHP Warning:  Missing argument 2 for extraerEmpresa(), called in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/usuario-crear.php on line 64 and defined in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 11
+[08-May-2018 16:18:07 America/La_Paz] PHP Warning:  Missing argument 2 for extraerEmpresa(), called in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/usuario-crear.php on line 64 and defined in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 11
+[08-May-2018 16:20:54 America/La_Paz] PHP Notice:  Undefined variable: label in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 53
+[08-May-2018 16:20:54 America/La_Paz] PHP Notice:  Undefined variable: data in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 58
+[08-May-2018 16:21:51 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 522
+[08-May-2018 16:22:04 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 501
+[08-May-2018 16:22:34 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 501
+[08-May-2018 16:22:40 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 522
+[08-May-2018 16:23:17 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 522
+[08-May-2018 16:23:21 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 545
+[08-May-2018 16:23:24 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 522
+[08-May-2018 16:23:24 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 501
+[08-May-2018 16:23:51 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 522
+[08-May-2018 16:24:20 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 522
+[08-May-2018 16:24:32 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 545
+[08-May-2018 16:24:35 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 522
+[08-May-2018 16:24:35 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 501
+[08-May-2018 16:24:44 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 522
+[08-May-2018 16:24:57 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 522
+[08-May-2018 16:25:14 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 545
+[08-May-2018 16:25:16 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 522
+[08-May-2018 16:25:16 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 501
+[08-May-2018 16:27:29 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 545
+[08-May-2018 16:27:32 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 545
+[08-May-2018 16:28:03 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 600
+[08-May-2018 16:28:11 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 545
+[08-May-2018 16:28:11 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 578
+[08-May-2018 22:29:29 Europe/Madrid] PHP Notice:  Undefined index: cedula in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/inscripcion-ticket-generar.php on line 44
+[08-May-2018 16:35:56 America/La_Paz] PHP Notice:  Undefined variable: label in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 53
+[08-May-2018 16:35:56 America/La_Paz] PHP Notice:  Undefined variable: data in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 58
+[08-May-2018 16:36:50 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 761
+[08-May-2018 16:36:50 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 762
+[08-May-2018 16:36:50 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 763
+[08-May-2018 16:36:50 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 764
+[08-May-2018 16:36:50 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 765
+[08-May-2018 16:36:50 America/La_Paz] PHP Notice:  Trying to get property of non-object in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/permisos-mant.php on line 91
+[08-May-2018 16:36:54 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 545
+[08-May-2018 16:36:54 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 699
+[08-May-2018 16:36:54 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 700
+[08-May-2018 16:36:54 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 701
+[08-May-2018 16:36:54 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 702
+[08-May-2018 16:36:54 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 703
+[09-May-2018 09:10:17 America/La_Paz] PHP Notice:  Undefined index: crmEmpresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 6
+[09-May-2018 09:10:17 America/La_Paz] PHP Notice:  Undefined index: crmUsername in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/cabeza.php on line 130
+[09-May-2018 09:10:17 America/La_Paz] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/cabeza.php on line 157
+[09-May-2018 09:10:17 America/La_Paz] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/cabeza.php on line 213
+[09-May-2018 09:10:17 America/La_Paz] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/cabeza.php on line 222
+[09-May-2018 09:10:17 America/La_Paz] PHP Notice:  Undefined variable: label in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 53
+[09-May-2018 09:10:17 America/La_Paz] PHP Notice:  Undefined variable: data in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 58
+[09-May-2018 09:12:00 America/La_Paz] PHP Notice:  Undefined variable: label in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 53
+[09-May-2018 09:12:00 America/La_Paz] PHP Notice:  Undefined variable: data in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 58
+[09-May-2018 09:13:01 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 501
+[09-May-2018 09:13:03 America/La_Paz] PHP Notice:  Undefined variable: label in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 53
+[09-May-2018 09:13:03 America/La_Paz] PHP Notice:  Undefined variable: data in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 58
+[09-May-2018 10:10:56 America/La_Paz] PHP Notice:  Undefined index: crmEmpresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 6
+[09-May-2018 10:10:56 America/La_Paz] PHP Notice:  Undefined index: crmUsername in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/cabeza.php on line 130
+[09-May-2018 10:10:56 America/La_Paz] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/cabeza.php on line 157
+[09-May-2018 10:10:56 America/La_Paz] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/cabeza.php on line 213
+[09-May-2018 10:10:56 America/La_Paz] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/cabeza.php on line 222
+[09-May-2018 10:10:56 America/La_Paz] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/profesor-mant.php on line 2
+[09-May-2018 10:10:56 America/La_Paz] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/profesor-mant.php on line 47
+[09-May-2018 10:10:56 America/La_Paz] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/profesor-mant.php on line 47
+[09-May-2018 10:10:56 America/La_Paz] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 497
+[09-May-2018 10:10:56 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 501
+[09-May-2018 10:11:06 America/La_Paz] PHP Notice:  Undefined variable: label in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 53
+[09-May-2018 10:11:06 America/La_Paz] PHP Notice:  Undefined variable: data in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 58
+[09-May-2018 10:11:13 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 501
+[09-May-2018 10:11:52 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 501
+[09-May-2018 10:12:04 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 522
+[09-May-2018 10:14:04 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 522
+[09-May-2018 12:53:18 America/La_Paz] PHP Notice:  Undefined index: crmEmpresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 6
+[09-May-2018 12:53:18 America/La_Paz] PHP Notice:  Undefined index: crmUsername in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/cabeza.php on line 130
+[09-May-2018 12:53:18 America/La_Paz] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/cabeza.php on line 157
+[09-May-2018 12:53:18 America/La_Paz] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/cabeza.php on line 213
+[09-May-2018 12:53:18 America/La_Paz] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/cabeza.php on line 222
+[09-May-2018 12:53:18 America/La_Paz] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/curso-mant.php on line 2
+[09-May-2018 12:53:18 America/La_Paz] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/curso-mant.php on line 47
+[09-May-2018 12:53:18 America/La_Paz] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/curso-mant.php on line 47
+[09-May-2018 12:53:18 America/La_Paz] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 518
+[09-May-2018 12:53:18 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 522
+[09-May-2018 12:53:28 America/La_Paz] PHP Notice:  Undefined variable: label in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 53
+[09-May-2018 12:53:28 America/La_Paz] PHP Notice:  Undefined variable: data in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 58
+[09-May-2018 18:53:36 Europe/Madrid] PHP Notice:  Undefined index: cedula in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/inscripcion-ticket-generar.php on line 44
+[09-May-2018 15:44:37 America/La_Paz] PHP Notice:  Undefined variable: label in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 53
+[09-May-2018 15:44:37 America/La_Paz] PHP Notice:  Undefined variable: data in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 58
+[09-May-2018 21:44:48 Europe/Madrid] PHP Notice:  Undefined index: cedula in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/inscripcion-ticket-generar.php on line 44
+[09-May-2018 15:47:00 America/La_Paz] PHP Notice:  Undefined variable: label in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 53
+[09-May-2018 15:47:00 America/La_Paz] PHP Notice:  Undefined variable: data in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 58
+[09-May-2018 21:47:08 Europe/Madrid] PHP Notice:  Undefined index: cedula in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/inscripcion-ticket-generar.php on line 44
+[09-May-2018 21:50:13 Europe/Madrid] PHP Notice:  Undefined index: cedula in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/inscripcion-ticket-generar.php on line 44
+[09-May-2018 16:17:57 America/La_Paz] PHP Notice:  Undefined variable: label in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 53
+[09-May-2018 16:17:57 America/La_Paz] PHP Notice:  Undefined variable: data in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 58
+[09-May-2018 16:18:00 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 501
+[09-May-2018 17:39:31 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 501
+[09-May-2018 17:39:39 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 501
+[09-May-2018 17:39:54 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 522
+[09-May-2018 17:40:01 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 545
+[09-May-2018 17:40:03 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 522
+[09-May-2018 17:40:03 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 501
+[09-May-2018 17:40:24 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 545
+[09-May-2018 17:40:26 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 545
+[09-May-2018 23:40:48 Europe/Madrid] PHP Notice:  Undefined index: cedula in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/inscripcion-ticket-generar.php on line 44
+[10-May-2018 16:05:05 America/La_Paz] PHP Notice:  Undefined variable: label in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 53
+[10-May-2018 16:05:05 America/La_Paz] PHP Notice:  Undefined variable: data in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 58
+[10-May-2018 16:05:08 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 501
+[10-May-2018 16:05:16 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 501
+[11-May-2018 12:41:42 America/La_Paz] PHP Notice:  Undefined variable: label in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 53
+[11-May-2018 12:41:42 America/La_Paz] PHP Notice:  Undefined variable: data in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 58
+[11-May-2018 12:41:47 America/La_Paz] PHP Notice:  Undefined variable: label in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 53
+[11-May-2018 12:41:47 America/La_Paz] PHP Notice:  Undefined variable: data in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 58
+[11-May-2018 12:42:46 America/La_Paz] PHP Notice:  Undefined variable: label in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 53
+[11-May-2018 12:42:46 America/La_Paz] PHP Notice:  Undefined variable: data in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 58
+[11-May-2018 12:42:49 America/La_Paz] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/consultas.php on line 501
+[11-May-2018 15:24:24 America/La_Paz] PHP Notice:  Undefined variable: label in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 53
+[11-May-2018 15:24:24 America/La_Paz] PHP Notice:  Undefined variable: data in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 58
+[11-May-2018 15:24:38 America/La_Paz] PHP Notice:  Undefined variable: ITA in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/profesor-actualizar.php on line 23
+[11-May-2018 15:32:27 America/La_Paz] PHP Notice:  Undefined variable: label in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 53
+[11-May-2018 15:32:27 America/La_Paz] PHP Notice:  Undefined variable: data in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 58
+[11-May-2018 15:51:27 America/La_Paz] PHP Notice:  Undefined variable: ITA in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/profesor-actualizar.php on line 23
+[17-May-2018 11:50:37 America/La_Paz] PHP Notice:  Undefined variable: label in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 53
+[17-May-2018 11:50:37 America/La_Paz] PHP Notice:  Undefined variable: data in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 58
+[17-May-2018 11:51:21 America/La_Paz] PHP Notice:  Undefined variable: label in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 53
+[17-May-2018 11:51:21 America/La_Paz] PHP Notice:  Undefined variable: data in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 58
+[17-May-2018 11:51:49 America/La_Paz] PHP Notice:  Use of undefined constant php - assumed 'php' in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/empresa-actualizar.php on line 108
+[17-May-2018 11:53:34 America/La_Paz] PHP Notice:  Use of undefined constant php - assumed 'php' in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/empresa-actualizar.php on line 108
+[17-May-2018 11:57:04 America/La_Paz] PHP Notice:  Use of undefined constant php - assumed 'php' in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/empresa-actualizar.php on line 108
+[17-May-2018 11:57:06 America/La_Paz] PHP Notice:  Undefined variable: label in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 53
+[17-May-2018 11:57:06 America/La_Paz] PHP Notice:  Undefined variable: data in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 58
+[17-May-2018 14:00:43 America/La_Paz] PHP Notice:  Undefined variable: label in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 53
+[17-May-2018 14:00:43 America/La_Paz] PHP Notice:  Undefined variable: data in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 58
+[25-May-2018 10:05:22 America/La_Paz] PHP Notice:  Undefined variable: label in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 53
+[25-May-2018 10:05:22 America/La_Paz] PHP Notice:  Undefined variable: data in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 58
+[25-May-2018 10:06:19 America/La_Paz] PHP Notice:  Undefined variable: label in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 53
+[25-May-2018 10:06:19 America/La_Paz] PHP Notice:  Undefined variable: data in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 58
+[25-May-2018 10:08:18 America/La_Paz] PHP Notice:  Undefined variable: label in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 53
+[25-May-2018 10:08:18 America/La_Paz] PHP Notice:  Undefined variable: data in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 58
+[25-May-2018 10:57:08 America/La_Paz] PHP Notice:  Undefined variable: seccion in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/permisos-actualizar.php on line 102
+[25-May-2018 12:11:31 America/La_Paz] PHP Notice:  Undefined variable: label in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 53
+[25-May-2018 12:11:31 America/La_Paz] PHP Notice:  Undefined variable: data in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 58
+[04-Jun-2018 10:19:03 America/La_Paz] PHP Notice:  Undefined variable: label in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 53
+[04-Jun-2018 10:19:03 America/La_Paz] PHP Notice:  Undefined variable: data in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 58
+[04-Jun-2018 10:19:19 America/La_Paz] PHP Notice:  Undefined variable: label in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 53
+[04-Jun-2018 10:19:19 America/La_Paz] PHP Notice:  Undefined variable: data in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 58
+[07-Jun-2018 22:19:23 America/La_Paz] PHP Notice:  Undefined variable: label in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 53
+[07-Jun-2018 22:19:23 America/La_Paz] PHP Notice:  Undefined variable: data in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/main.php on line 58

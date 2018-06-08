@@ -1,0 +1,42 @@
+[26-Oct-2017 14:32:47 Europe/Madrid] PHP Fatal error:  Call to a member function fetch_assoc() on boolean in /home/dghytdjj/mangusoft.com/crm_mangusoft3/consulta-participante.php on line 600
+[23-Nov-2017 00:27:25 Europe/Madrid] PHP Fatal error:  Call to a member function fetch_assoc() on boolean in /home/dghytdjj/mangusoft.com/crm_mangusoft3/graficos.php on line 4
+[23-Nov-2017 00:27:35 Europe/Madrid] PHP Fatal error:  Call to a member function fetch_assoc() on boolean in /home/dghytdjj/mangusoft.com/crm_mangusoft3/consulta-participante.php on line 600
+[17-Feb-2018 13:29:02 Europe/Madrid] PHP Fatal error:  Call to a member function fetch_assoc() on boolean in /home/dghytdjj/mangusoft.com/crm_mangusoft3/consulta-participante.php on line 600
+[17-Feb-2018 13:29:09 Europe/Madrid] PHP Fatal error:  Call to a member function fetch_assoc() on boolean in /home/dghytdjj/mangusoft.com/crm_mangusoft3/consulta-participante.php on line 600
+[08-May-2018 22:16:06 Europe/Madrid] PHP Fatal error:  Call to a member function fetch_assoc() on boolean in /home/dghytdjj/mangusoft.com/crm_mangusoft3/consulta-participante.php on line 600
+[08-May-2018 22:16:11 Europe/Madrid] PHP Fatal error:  Call to a member function fetch_assoc() on boolean in /home/dghytdjj/mangusoft.com/crm_mangusoft3/graficos.php on line 4
+[09-May-2018 15:11:31 Europe/Madrid] PHP Fatal error:  Call to a member function fetch_assoc() on boolean in /home/dghytdjj/mangusoft.com/crm_mangusoft3/consulta-participante.php on line 600
+[09-May-2018 15:11:52 Europe/Madrid] PHP Fatal error:  Call to a member function fetch_assoc() on boolean in /home/dghytdjj/mangusoft.com/crm_mangusoft3/consulta-participante.php on line 600
+[09-May-2018 19:32:47 Europe/Madrid] PHP Notice:  Undefined index: crmEmpresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/php/consultas.php on line 5
+[09-May-2018 19:32:47 Europe/Madrid] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/main-2.php on line 52
+[09-May-2018 19:32:47 Europe/Madrid] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/main-2.php on line 61
+[09-May-2018 22:17:26 Europe/Madrid] PHP Fatal error:  Call to a member function fetch_assoc() on boolean in /home/dghytdjj/mangusoft.com/crm_mangusoft3/graficos.php on line 4
+[09-May-2018 22:17:34 Europe/Madrid] PHP Fatal error:  Call to a member function fetch_assoc() on boolean in /home/dghytdjj/mangusoft.com/crm_mangusoft3/consulta-participante.php on line 600
+[09-May-2018 22:17:46 Europe/Madrid] PHP Fatal error:  Call to a member function fetch_assoc() on boolean in /home/dghytdjj/mangusoft.com/crm_mangusoft3/consulta-participante.php on line 600
+[10-May-2018 22:04:53 Europe/Madrid] PHP Notice:  Undefined index: crmEmpresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/php/consultas.php on line 5
+[10-May-2018 22:04:53 Europe/Madrid] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/main-2.php on line 52
+[10-May-2018 22:04:53 Europe/Madrid] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/main-2.php on line 61
+[11-May-2018 21:24:15 Europe/Madrid] PHP Notice:  Undefined index: crmEmpresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/php/consultas.php on line 5
+[11-May-2018 21:24:15 Europe/Madrid] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/main-2.php on line 52
+[11-May-2018 21:24:15 Europe/Madrid] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/main-2.php on line 61
+[11-May-2018 21:32:04 Europe/Madrid] PHP Notice:  Undefined index: crmEmpresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/php/consultas.php on line 5
+[11-May-2018 21:32:04 Europe/Madrid] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/main-2.php on line 52
+[11-May-2018 21:32:04 Europe/Madrid] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/main-2.php on line 61
+[17-May-2018 17:47:31 Europe/Madrid] PHP Notice:  Undefined index: crmEmpresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/php/consultas.php on line 5
+[17-May-2018 17:47:31 Europe/Madrid] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/main-2.php on line 52
+[17-May-2018 17:47:31 Europe/Madrid] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/main-2.php on line 61
+[17-May-2018 17:47:32 Europe/Madrid] PHP Notice:  Undefined index: crmEmpresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/php/consultas.php on line 5
+[17-May-2018 17:47:32 Europe/Madrid] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/main-2.php on line 52
+[17-May-2018 17:47:32 Europe/Madrid] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/main-2.php on line 61
+[17-May-2018 17:48:36 Europe/Madrid] PHP Notice:  Undefined index: crmEmpresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/php/consultas.php on line 5
+[17-May-2018 17:48:36 Europe/Madrid] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/main-2.php on line 52
+[17-May-2018 17:48:36 Europe/Madrid] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/main-2.php on line 61
+[25-May-2018 18:09:34 Europe/Madrid] PHP Notice:  Undefined index: crmEmpresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/php/consultas.php on line 5
+[25-May-2018 18:09:34 Europe/Madrid] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/main-2.php on line 52
+[25-May-2018 18:09:34 Europe/Madrid] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/main-2.php on line 61
+[25-May-2018 18:09:34 Europe/Madrid] PHP Notice:  Undefined index: crmEmpresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/php/consultas.php on line 5
+[25-May-2018 18:09:34 Europe/Madrid] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/main-2.php on line 52
+[25-May-2018 18:09:34 Europe/Madrid] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/main-2.php on line 61
+[05-Jun-2018 16:58:53 Europe/Madrid] PHP Notice:  Undefined index: crmEmpresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/php/consultas.php on line 5
+[05-Jun-2018 16:58:53 Europe/Madrid] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/main-2.php on line 52
+[05-Jun-2018 16:58:53 Europe/Madrid] PHP Notice:  Undefined index: crmRanking in /home/dghytdjj/mangusoft.com/crm_mangusoft3/main-2.php on line 61

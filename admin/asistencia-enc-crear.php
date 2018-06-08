@@ -91,8 +91,8 @@ if ($_SESSION['crmRanking']>2){
 											</td>
 											<td> 
 											<select  name='presente[]' class='form-control' required=''> 
-						            			<option value='P,".$ro['codinscripcion']."'>Presente</option>         
 									            <option value='A,".$ro['codinscripcion']."'>Ausente</option>
+						            			<option value='P,".$ro['codinscripcion']."'>Presente</option>         
 									                      
 									        </select>
 									        </td>

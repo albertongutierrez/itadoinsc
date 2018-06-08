@@ -1,14 +1,3 @@
-<?php 
-	session_start();
-	// include("php/tiempo.php");
- 	require('php/consultas.php');
- 	if(!isset($_SESSION['crmUsername']) && !isset($_SESSION['crmEmpresa']) && !isset($_SESSION['crmRanking'])){
- 		header("Location: index.php?status=errns");
- 	}
-	date_default_timezone_set('America/La_Paz');
- 	
- ?>
- 
 <!doctype html>
 <html lang="en" class="no-js">
 <head>
@@ -72,6 +61,16 @@
     </script>
 </head>
 <body  >
+<?php 
+	session_start();
+	// include("php/tiempo.php");
+ 	require('php/consultas.php');
+ 	if(!isset($_SESSION['crmUsername']) && !isset($_SESSION['crmEmpresa']) && !isset($_SESSION['crmRanking'])){
+ 		header("Location: index.php?status=errns");
+ 	}
+	date_default_timezone_set('America/La_Paz');
+ 	
+ ?>
 	<header class="cd-main-header" >
 		<div class="txt_logo">
 		<a href="main.php">

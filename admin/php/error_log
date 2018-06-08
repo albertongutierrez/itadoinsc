@@ -1,0 +1,9 @@
+[06-Oct-2017 19:37:08 Europe/Madrid] PHP Notice:  Undefined index: codempresa in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/provincias-registros.php on line 14
+[06-Oct-2017 21:06:09 Europe/Madrid] PHP Notice:  Undefined index: curso in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/secciones-enc-registros.php on line 8
+[06-Oct-2017 21:06:09 Europe/Madrid] PHP Notice:  Undefined index: profesor in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/secciones-enc-registros.php on line 28
+[06-Oct-2017 21:06:09 Europe/Madrid] PHP Notice:  Undefined index: descripcion in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/secciones-enc-registros.php on line 29
+[06-Oct-2017 21:06:09 Europe/Madrid] PHP Notice:  Undefined index: cupo in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/secciones-enc-registros.php on line 30
+[11-May-2018 15:37:43 America/La_Paz] PHP Notice:  Undefined index: entero in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/inscripcion-registros.php on line 279
+[11-May-2018 15:41:01 America/La_Paz] PHP Notice:  Undefined index: entero in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/inscripcion-registros.php on line 279
+[11-May-2018 15:41:18 America/La_Paz] PHP Notice:  Undefined index: entero in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/inscripcion-registros.php on line 279
+[25-May-2018 10:26:16 America/La_Paz] PHP Notice:  Undefined index: entero in /home/dghytdjj/mangusoft.com/crm_mangusoft3/admin/php/inscripcion-registros.php on line 279
