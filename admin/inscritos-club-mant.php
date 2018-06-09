@@ -58,7 +58,8 @@ if ($_SESSION['crmRanking']>2){
 		<h2 style="text-align: center;" class="site-title">Mantenimiento Inscripción Directa</h2>
 
 		<?php if(!empty($statusMsg)){
-	        echo '<div class="alert '.$statusMsgClass.'">'.$statusMsg.'</div>';
+	        //echo '<div class="alert '.$statusMsgClass.'">'.$statusMsg.'</div>';
+	        echo '<div class="alert alert-dismissable '.$statusMsgClass.'"> <button type="button" class="close" data-dismiss="alert" aria-label="close" aria-hidden="true" >&times;</button>'.$statusMsg.'</div>';
 	    } 
 	    if(($_SESSION['crmRanking']==1) || ($_SESSION['crmRanking']==2)){
 	    	echo "<a href='inscritos-club-crear.php'>

@@ -82,7 +82,7 @@ if ($_SESSION['crmRanking']>2){
 									<td>".$row['apellido']."</td>
 									<td> ".$row['estado_inscripcion']."</td>
 									";//<td> ".$row['por_defecto']."</td>
-									 if($_SESSION['crmRanking']==1 or $_SESSION['crmRanking']==2){echo "<td><a href='inscripcion-ticket-generar.php?accion=UDT&empresa=".$row['codempresa']."&id=".$row['codinscripcion']."'><img src='img/printer.png' width=15/></a> </td>";}
+									 if($_SESSION['crmRanking']==1 or $_SESSION['crmRanking']==2){echo "<td><a data-toggle='tooltip' title='Imprimir' href='inscripcion-ticket-generar.php?accion=UDT&empresa=".$row['codempresa']."&id=".$row['codinscripcion']."'><img src='img/printer.png' width=15/></a> </td>";}
 									echo"</tr>";
 								}
 								/*<td> <a href='empresa-registros.php?accion=UDT&id=".$row['codempresa']."&nombre=".$row['nombre']."&rsmnombre=".$row['rsm_nombre']."&telefono1=".$row['telefono1']."&telefono2=".$row['telefono2']."&correo=".$row['email']."&web=".$row['pweb']."&estado=".$row['estado']."&rnc=".$row['RNC']."'><img src='img/lapiz.png' width=15/></a> </td>*/
@@ -95,5 +95,10 @@ if ($_SESSION['crmRanking']>2){
 			</div>
 		</div>
 	</div>
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
 
 <?php include'php/pie.php';?>

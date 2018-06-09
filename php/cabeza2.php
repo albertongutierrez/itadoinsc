@@ -1,35 +1,42 @@
+	<?php 
+	session_start();
+	// include("php/tiempo.php") ;
+    if(!isset($_SESSION['crmUsername']) && !isset($_SESSION['crmRanking']) && !isset($_SESSION['crmEmpresa'])){
+        header('Location: index.php?status=errs' );
+    }
+	 ?>
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-		<title>MS | Consultas</title>
-		<meta name="description" content="Sistema de consulta MS" />
-		<meta name="author" content="Codrops" />
-		<!-- <link rel="shortcut icon" href="../favicon.ico">  -->
-		<link rel="stylesheet" type="text/css" href="css/default.css" />
-		<link rel="stylesheet" type="text/css" href="css/style-2.css" />
-		<link rel="stylesheet" type="text/css" href="css/component.css" />
-		<script src="js/modernizr.custom.js"></script> 
-		<link rel="stylesheet" href="css/bootstrap.css">
-		<link rel="stylesheet" href="css/bootstrap-theme.css">
-		<link rel="stylesheet" href="css/jquery.dataTables.min.css">
-		<script src="js/jquery-3.1.1.min.js"></script>
-		<script src="js/jquery.dataTables.min.js"></script>
-  		<script src="js/Chart.js"></script>
-		<script src="js/bootstrap.js"></script>
-		
-		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
-		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.3.1/css/buttons.dataTables.min.css">
-		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>MS | Consultas</title>
+    <meta name="description" content="Sistema de consulta MS" />
+    <meta name="author" content="Codrops" />
+    <!-- <link rel="shortcut icon" href="../favicon.ico">  -->
+    <link rel="stylesheet" type="text/css" href="css/default.css" />
+    <link rel="stylesheet" type="text/css" href="css/style-2.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <script src="js/modernizr.custom.js"></script> 
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <link rel="stylesheet" href="css/jquery.dataTables.min.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
+      <script src="js/Chart.js"></script>
+    <script src="js/bootstrap.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.3.1/css/buttons.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
 
-    	<link rel="icon" type="image/png" href="img/logo.png" />
+      <link rel="icon" type="image/png" href="img/logo.png" />
 
     <script>
- 	$(document).ready(function(){
+  $(document).ready(function(){
     var table = $('#example').DataTable({   
-     	"scrollX": true,
+      "scrollX": true,
        "iDisplayLength": 10,
        "order": [[ 2, "desc" ]],
        dom: 'Bfrtip',
@@ -93,15 +100,8 @@
     
     });
 
-		
+    
 </script>
-	</head>
-	<body>
+  </head>
+  <body>
 
-	<?php 
-	session_start();
-	// include("php/tiempo.php") ;
-    if(!isset($_SESSION['crmUsername']) && !isset($_SESSION['crmRanking']) && !isset($_SESSION['crmEmpresa'])){
-        header('Location: index.php?status=errs' );
-    }
-	 ?>

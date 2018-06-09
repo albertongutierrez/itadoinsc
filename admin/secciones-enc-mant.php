@@ -42,7 +42,8 @@ if ($_SESSION['crmRanking']>2){
 		<h2 style="text-align: center;" class="site-title">Mantenimiento Secciones </h2>
 
 		<?php if(!empty($statusMsg)){
-	        echo '<div class="alert '.$statusMsgClass.'">'.$statusMsg.'</div>';
+	        //echo '<div class="alert '.$statusMsgClass.'">'.$statusMsg.'</div>';
+	        echo '<div class="alert alert-dismissable '.$statusMsgClass.'"> <button type="button" class="close" data-dismiss="alert" aria-label="close" aria-hidden="true" >&times;</button>'.$statusMsg.'</div>';
 	    } 
 	    if(($_SESSION['crmRanking']==1) || ($_SESSION['crmRanking']==2)){
 	    	echo "<a href='secciones-enc-crear.php'>
@@ -85,8 +86,8 @@ if ($_SESSION['crmRanking']>2){
 									
 									<td> ".$row['estado']."</td>
 									";//<td> ".$row['por_defecto']."</td>
-									  echo"<td><a href='secciones-enc-actualizar.php?accion=UDT&empresa=".$row['codempresa']."&id=".$row['codseccion_enc']."'><img src='img/lapiz.png' width=15/></a> </td>"; 
-									  echo "<td> <a href='php/secciones-enc-registros.php/?accion=DLT&id=".$row['codseccion_enc']."&empresa=".$row['codempresa']."'><img src='img/basura.png' width=15/></a> </td>
+									  echo"<td><a data-toggle='tooltip' title='Editar' href='secciones-enc-actualizar.php?accion=UDT&empresa=".$row['codempresa']."&id=".$row['codseccion_enc']."'><img src='img/lapiz.png' width=15/></a> </td>"; 
+									  echo "<td> <a data-toggle='tooltip' title='Anular' href='php/secciones-enc-registros.php/?accion=DLT&id=".$row['codseccion_enc']."&empresa=".$row['codempresa']."'><img src='img/basura.png' width=15/></a> </td>
 									</tr>";
 								}
 								/*<td> <a href='empresa-registros.php?accion=UDT&id=".$row['codempresa']."&nombre=".$row['nombre']."&rsmnombre=".$row['rsm_nombre']."&telefono1=".$row['telefono1']."&telefono2=".$row['telefono2']."&correo=".$row['email']."&web=".$row['pweb']."&estado=".$row['estado']."&rnc=".$row['RNC']."'><img src='img/lapiz.png' width=15/></a> </td>*/
@@ -99,5 +100,9 @@ if ($_SESSION['crmRanking']>2){
 			</div>
 		</div>
 	</div>
-
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
 <?php include'php/pie.php';?>

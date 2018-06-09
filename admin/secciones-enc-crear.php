@@ -65,7 +65,7 @@ if ($_SESSION['crmRanking']>2){
 				<form class="form-horizontal" method="POST" action="php/secciones-enc-registros.php?accion=INS" autocomplete="off" enctype="multipart/form-data">	
 
 					<div class="form-group">
-			          <div class="col-sm-4 col-sm-offset-4">
+			          <div class="col-sm-4 col-sm-offset-2">
 			          	<label for="curso" class=" control-label">Curso</label><span style="font-weight: bold; color: red; font-size: 25px">*</span>
 			            <select id="curso" name="curso" class="form-control" onchange="validar()" required> 
 				            <option>Seleccione</option>           
@@ -89,7 +89,7 @@ if ($_SESSION['crmRanking']>2){
 			        </div>
 
 			        <div class="form-group">
-			          <div class="col-sm-4 col-sm-offset-4">
+			          <div class="col-sm-4 col-sm-offset-2">
 			          	<label for="profesor" class=" control-label">Profesor</label><span style="font-weight: bold; color: red; font-size: 25px">*</span>
 			            <select id="profesor" name="profesor" class="form-control" required> 
 				            <option>Seleccione</option>           
@@ -107,14 +107,14 @@ if ($_SESSION['crmRanking']>2){
 			        </div>
 
 					<div class="form-group">
-						<div class="col-sm-4 col-sm-offset-4">
+						<div class="col-sm-4 col-sm-offset-2">
 							<label for="descripcion" class="control-label">Descripción</label><span style="font-weight: bold; color: red; font-size: 25px">*</span>
 							<input type="text" class="form-control" id="descripcion" name="descripcion" placeholder="Descripción" required>
 						</div>
 					</div>
 
 					<div class="form-group">
-						<div class="col-sm-4 col-sm-offset-4">
+						<div class="col-sm-4 col-sm-offset-2">
 							<label for="cupo" class="control-label">Cupo</label><span style="font-weight: bold; color: red; font-size: 25px">*</span>
 							<input type="number" class="form-control" id="cupo" name="cupo" placeholder="Cantidad de Cupo" required>
 
@@ -123,14 +123,14 @@ if ($_SESSION['crmRanking']>2){
 					</div>
 
 					<div class="form-group" id="importFrm">
-						<div class="col-sm-4 col-sm-offset-4">
+						<div class="col-sm-4 col-sm-offset-2">
 							<label for="horas" class="control-label">Horas</label><span style="font-weight: bold; color: red; font-size: 25px">*</span>
 							<input type="number" class="form-control" id="horas" name="horas" placeholder="Cantidad de Horas" onchange="validar()">
 						</div>
 					</div>
 															
 					<div class="form-group">
-						<div class="col-sm-offset-4 col-sm-10">
+						<div class="col-sm-offset-2 col-sm-10">
 							<a href="secciones-enc-mant.php" class="btn btn-default">Regresar</a>
 							<button type="submit" class="btn btn-primary">Guardar</button>
 						</div>

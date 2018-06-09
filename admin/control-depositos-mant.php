@@ -42,7 +42,8 @@ if ($_SESSION['crmRanking']>2){
 		<h2 style="text-align: center;" class="site-title">Mantenimiento Depósitos Banco | Libreta</h2>
 
 		<?php if(!empty($statusMsg)){
-	        echo '<div class="alert '.$statusMsgClass.'">'.$statusMsg.'</div>';
+	        //echo '<div class="alert '.$statusMsgClass.'">'.$statusMsg.'</div>';
+	        echo '<div class="alert alert-dismissable '.$statusMsgClass.'"> <button type="button" class="close" data-dismiss="alert" aria-label="close" aria-hidden="true" >&times;</button>'.$statusMsg.'</div>';
 	    } 
 	    if(($_SESSION['crmRanking']==1) || ($_SESSION['crmRanking']==2)){
 	    	echo "<a href='#'> 	    	
@@ -91,7 +92,7 @@ if ($_SESSION['crmRanking']>2){
 									<td> ".$row['confirmado']."</td>
 									<td> ".$row['comentario']."</td>
 									";//<td> ".$row['por_defecto']."</td>
-									 if($_SESSION['crmRanking']==1 or $_SESSION['crmRanking']==2){echo "<td><a href='control-depositos-actualizar.php?accion=UDT&empresa=".$row['codempresa']."&id=".$row['coddeposito']."'><img src='img/lapiz.png' width=15/></a> </td>";}
+									 if($_SESSION['crmRanking']==1 or $_SESSION['crmRanking']==2){echo "<td><a data-toggle='tooltip' title='Editar' href='control-depositos-actualizar.php?accion=UDT&empresa=".$row['codempresa']."&id=".$row['coddeposito']."'><img src='img/lapiz.png' width=15/></a> </td>";}
 									 // if($_SESSION['crmRanking']==1 or $_SESSION['crmRanking']==2){echo "<td> <a href='php/control-depositos-registros.php/?accion=DLT&empresa=".$row['codempresa']."&id=".$row['coddeposito']."'><img src='img/basura.png' width=15/></a> </td>";}									
 									
 									echo"</tr>";
@@ -106,5 +107,9 @@ if ($_SESSION['crmRanking']>2){
 			</div>
 		</div>
 	</div>
-
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
 <?php include'php/pie.php';?>

@@ -11,7 +11,7 @@ $host="localhost";
 $user="mangusoft";
 $pw="123";
 $bd="crm_inscripciones_itado";
-$llavec="%7jdq##a";
+$llavec="QY%qffw4";
 
 /*SERVIDOR WEB*/
 

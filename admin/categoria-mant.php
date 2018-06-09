@@ -42,7 +42,8 @@ if ($_SESSION['crmRanking']>2){
 		<h2 style="text-align: center;" class="site-title">Mantenimiento Categorías</h2>
 
 		<?php if(!empty($statusMsg)){
-	        echo '<div class="alert '.$statusMsgClass.'">'.$statusMsg.'</div>';
+	        //echo '<div class="alert '.$statusMsgClass.'">'.$statusMsg.'</div>';
+	        echo '<div class="alert alert-dismissable '.$statusMsgClass.'"> <button type="button" class="close" data-dismiss="alert" aria-label="close" aria-hidden="true" >&times;</button>'.$statusMsg.'</div>';
 	    } 
 	    if(($_SESSION['crmRanking']==1) || ($_SESSION['crmRanking']==2)){
 	    	echo "<a href='categoria-crear.php'>
@@ -86,8 +87,8 @@ if ($_SESSION['crmRanking']>2){
 									<td> ".$row['rango2']."</td>
 									<td> ".$row['estado']."</td>
 									";//<td> ".$row['por_defecto']."</td>
-									 if($_SESSION['crmRanking']==1 or $_SESSION['crmRanking']==2){echo "<td><a href='categoria-actualizar.php?accion=UDT&empresa=".$row['codempresa']."&id=".$row['codcategoria']."'><img src='img/lapiz.png' width=15/></a> </td>";}
-									 if($_SESSION['crmRanking']==1 or $_SESSION['crmRanking']==2){echo "<td> <a href='php/categoria-registros.php/?accion=DLT&id=".$row['codcategoria']."&empresa=".$row['codempresa']."'><img src='img/basura.png' width=15/></a> </td>";}
+									 if($_SESSION['crmRanking']==1 or $_SESSION['crmRanking']==2){echo "<td><a data-toggle='tooltip' title='Editar' href='categoria-actualizar.php?accion=UDT&empresa=".$row['codempresa']."&id=".$row['codcategoria']."'><img src='img/lapiz.png' width=15/></a> </td>";}
+									 if($_SESSION['crmRanking']==1 or $_SESSION['crmRanking']==2){echo "<td> <a data-toggle='tooltip' title='Anular' href='php/categoria-registros.php/?accion=DLT&id=".$row['codcategoria']."&empresa=".$row['codempresa']."'><img src='img/basura.png' width=15/></a> </td>";}
 																		
 									echo"</tr>";
 								}
@@ -101,5 +102,9 @@ if ($_SESSION['crmRanking']>2){
 			</div>
 		</div>
 	</div>
-
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
 <?php include'php/pie.php';?>

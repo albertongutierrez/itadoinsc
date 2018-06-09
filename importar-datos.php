@@ -37,7 +37,8 @@
 		</div>
 		<p  class="titulo-sitio"> Importar Datos</p>
 	    <?php if(!empty($statusMsg)){
-	        echo '<div class="alert '.$statusMsgClass.'">'.$statusMsg.'</div>';
+	        //echo '<div class="alert '.$statusMsgClass.'">'.$statusMsg.'</div>';
+	        echo '<div class="alert alert-dismissable '.$statusMsgClass.'"> <button type="button" class="close" data-dismiss="alert" aria-label="close" aria-hidden="true" >&times;</button>'.$statusMsg.'</div>';
 	    } 
 
 	    ?>

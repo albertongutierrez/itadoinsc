@@ -1,3 +1,13 @@
+<?php 
+	session_start();
+	// include("php/tiempo.php");
+ 	require('php/consultas.php');
+ 	if(!isset($_SESSION['crmUsername']) && !isset($_SESSION['crmEmpresa']) && !isset($_SESSION['crmRanking'])){
+ 		header("Location: index.php?status=errns");
+ 	}
+	date_default_timezone_set('America/La_Paz');
+ 	
+ ?>
 <!doctype html>
 <html lang="en" class="no-js">
 <head>
@@ -18,6 +28,13 @@
 	
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.3.1/css/buttons.dataTables.min.css">
+
+	<!-- datatimepiker -->
+  	<link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+  	<!-- <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet"> -->
+  	<link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+  	<script type="text/javascript" src="js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+  	<!-- <script type="text/javascript" src="js/bootstrap-datetimepicker.es.js" charset="UTF-8"></script> -->
 		
   	
     <title>MS | CONFIGURACION </title>
@@ -61,16 +78,6 @@
     </script>
 </head>
 <body  >
-<?php 
-	session_start();
-	// include("php/tiempo.php");
- 	require('php/consultas.php');
- 	if(!isset($_SESSION['crmUsername']) && !isset($_SESSION['crmEmpresa']) && !isset($_SESSION['crmRanking'])){
- 		header("Location: index.php?status=errns");
- 	}
-	date_default_timezone_set('America/La_Paz');
- 	
- ?>
 	<header class="cd-main-header" >
 		<div class="txt_logo">
 		<a href="main.php">

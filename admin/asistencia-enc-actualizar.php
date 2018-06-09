@@ -34,7 +34,12 @@ $fecha=date("Y-m-d",strtotime($ru['fecha'])).'T'.date("h:i",strtotime($ru['fecha
 						<div class="form-group">
 							<div class="col-sm-4">
 								<label>Fecha / Hora</label><span style="font-weight: bold; color: red; font-size: 25px">*</span>
-			        			<input type="datetime-local" name="horas" class="form-control" required="" value="<?php echo $fecha ?>">
+			        			<!-- <input type="datetime-local" name="horas" class="form-control" required="" value="<?php echo $fecha ?>"> -->
+			        			<div class="input-append date form_datetime">
+			                      <input size="24" type="text" value="<?php echo $fecha ?>" id= "horas" name="horas" placeholder="Fecha" required="" readonly>
+			                      <span class="add-on"><i class="icon-remove"></i></span>
+			                      <span class="add-on"><i class="icon-th"></i></span>
+			                    </div>   
 			        		</div>
 			        	</div>
 
@@ -110,4 +115,15 @@ $fecha=date("Y-m-d",strtotime($ru['fecha'])).'T'.date("h:i",strtotime($ru['fecha
 	    	<?php ////endif ?>			
 		</div>
 	</div>		
+
+	<script type="text/javascript">
+	    $(".form_datetime").datetimepicker({
+	        // format: "dd MM yyyy - HH:ii P",
+	        showMeridian: true,
+	        autoclose: true,
+	        todayBtn: true,
+	        pickerPosition: "bottom-left"
+	    });
+	</script>  
+
 <?php include'php/pie.php';?>

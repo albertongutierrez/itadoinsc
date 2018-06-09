@@ -43,7 +43,7 @@ $ro=$query->fetch_assoc();
 				<form class="form-horizontal" method="POST" action="php/secciones-enc-registros.php?accion=UDT" autocomplete="off" enctype="multipart/form-data">	
 
 					<div class="form-group">
-			          <div class="col-sm-4 col-sm-offset-4">
+			          <div class="col-sm-4 col-sm-offset-2">
 			          	<label for="curso" class=" control-label">Curso</label><span style="font-weight: bold; color: red; font-size: 25px">*</span>
 			            <select id="curso" name="curso" class="form-control" onload="validar()" required> 
 				            <option>Seleccione</option>           
@@ -60,7 +60,7 @@ $ro=$query->fetch_assoc();
 			        </div>
 
 			        <div class="form-group">
-			          <div class="col-sm-4 col-sm-offset-4">
+			          <div class="col-sm-4 col-sm-offset-2">
 			          	<label for="profesor" class=" control-label">Profesor</label><span style="font-weight: bold; color: red; font-size: 25px">*</span>
 			            <select id="profesor" name="profesor" class="form-control" required> 
 				            <option>Seleccione</option>           
@@ -78,14 +78,14 @@ $ro=$query->fetch_assoc();
 			        </div>
 
 					<div class="form-group">
-						<div class="col-sm-4 col-sm-offset-4">
+						<div class="col-sm-4 col-sm-offset-2">
 							<label for="descripcion" class="control-label">Descripción</label><span style="font-weight: bold; color: red; font-size: 25px">*</span>
 							<input type="text" class="form-control" id="descripcion" name="descripcion" placeholder="Descripción" required="" value="<?php echo $ro['descripcion'] ?>">
 						</div>
 					</div>
 
 					<div class="form-group">
-						<div class="col-sm-4 col-sm-offset-4">
+						<div class="col-sm-4 col-sm-offset-2">
 							<label for="cupo" class="control-label">Cupo</label><span style="font-weight: bold; color: red; font-size: 25px">*</span>
 							<input type="number" class="form-control" id="cupo" name="cupo" placeholder="Cantidad de Cupo" required=""  value="<?php echo $ro['cupo'] ?>">
 							<input type="hidden" class="form-control" id="codigo" name="codigo" value="<?php echo $ro['codseccion_enc'] ?>">
@@ -94,7 +94,7 @@ $ro=$query->fetch_assoc();
 					</div>
 					<?php //if ($ro['horas']!=0): ?>
 						<div class="form-group" id="importFrm" >
-							<div class="col-sm-4 col-sm-offset-4">
+							<div class="col-sm-4 col-sm-offset-2">
 								<label for="horas" class="control-label">Horas</label><span style="font-weight: bold; color: red; font-size: 25px">*</span>
 								<input type="number" class="form-control" id="horas" name="horas" placeholder="Cantidad de Horas"  value="<?php echo $ro['horas'] ?>" >
 							</div>
@@ -102,7 +102,7 @@ $ro=$query->fetch_assoc();
 					<?php //endif ?>
 
 					<div class="form-group">
-						<div class='col-sm-4 col-md-offset-4'>
+						<div class='col-sm-4 col-md-offset-2'>
 							<label for='estado' class='control-label'>Estado</label>
 							<select class='form-control' id='estado' name='estado'>
 								<option value='A' <?php if($ro['estado']=='A'){echo'selected';}?>>ACTIVO</option>
@@ -113,7 +113,7 @@ $ro=$query->fetch_assoc();
 					</div>	
 															
 					<div class="form-group">
-						<div class="col-sm-offset-4 col-sm-10">
+						<div class="col-sm-offset-2 col-sm-10">
 							<a href="secciones-enc-mant.php" class="btn btn-default">Regresar</a>
 							<button type="submit" class="btn btn-primary">Guardar</button>
 						</div>

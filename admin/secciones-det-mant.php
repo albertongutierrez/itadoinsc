@@ -50,7 +50,8 @@ if ($_SESSION['crmRanking']>2){
 		<h2 style="text-align: center;" class="site-title">Mantenimiento Clases</h2>
 
 		<?php if(!empty($statusMsg)){
-	        echo '<div class="alert '.$statusMsgClass.'">'.$statusMsg.'</div>';
+	        //echo '<div class="alert '.$statusMsgClass.'">'.$statusMsg.'</div>';
+	        echo '<div class="alert alert-dismissable '.$statusMsgClass.'"> <button type="button" class="close" data-dismiss="alert" aria-label="close" aria-hidden="true" >&times;</button>'.$statusMsg.'</div>';
 	    } 
 	    if(($_SESSION['crmRanking']==1) || ($_SESSION['crmRanking']==2)){
 	    	echo "<a href='secciones-det-crear.php'>
@@ -127,9 +128,9 @@ if ($_SESSION['crmRanking']>2){
 									
 									<td> ".$row['estado']."</td>
 									";//<td> ".$row['por_defecto']."</td>
-									  echo"<td><a href='secciones-det-actualizar.php?accion=UDT&empresa=".$row['codempresa']."&id=".$row['codseccion_det']."&user=".$row['codinscripcion']."'><img src='img/lapiz.png' width=15/></a> </td>"; 
+									  echo"<td><a data-toggle='tooltip' title='Editar' href='secciones-det-actualizar.php?accion=UDT&empresa=".$row['codempresa']."&id=".$row['codseccion_det']."&user=".$row['codinscripcion']."'><img src='img/lapiz.png' width=15/></a> </td>"; 
 									  if (($ro['codinscripcion']==$row['codinscripcion']) and ($row['estado']=='A')){
-									  echo "<td> <a href='php/secciones-det-registros.php/?accion=DLT&id=".$row['codseccion_det']."&empresa=".$row['codempresa']."&user=".$row['codinscripcion']."'><img src='img/basura.png' width=15/></a> </td>";
+									  echo "<td> <a data-toggle='tooltip' title='Anular' href='php/secciones-det-registros.php/?accion=DLT&id=".$row['codseccion_det']."&empresa=".$row['codempresa']."&user=".$row['codinscripcion']."'><img src='img/basura.png' width=15/></a> </td>";
 										}
 										else{
 											echo "<td></td>";
@@ -147,5 +148,9 @@ if ($_SESSION['crmRanking']>2){
 			<?php endif ?>
 		</div>
 	</div>
-
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
 <?php include'php/pie.php';?>

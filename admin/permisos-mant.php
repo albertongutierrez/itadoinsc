@@ -42,7 +42,8 @@ if ($_SESSION['crmRanking']>2){
 		<h2 style="text-align: center;" class="site-title">Mantenimiento Permisos</h2>
 
 		<?php if(!empty($statusMsg)){
-	        echo '<div class="alert '.$statusMsgClass.'">'.$statusMsg.'</div>';
+	        //echo '<div class="alert '.$statusMsgClass.'">'.$statusMsg.'</div>';
+	        echo '<div class="alert alert-dismissable '.$statusMsgClass.'"> <button type="button" class="close" data-dismiss="alert" aria-label="close" aria-hidden="true" >&times;</button>'.$statusMsg.'</div>';
 	    } 
 	    if(($_SESSION['crmRanking']==1) || ($_SESSION['crmRanking']==2)){
 	    	echo "<a href='permisos-crear.php'>
@@ -109,12 +110,12 @@ if ($_SESSION['crmRanking']>2){
 									<td> ".$row['estado']."</td>
 									<td>".$row['fecha']."</td>
 									";
-									echo "<td><a href='permisos-actualizar.php?accion=UDT&empresa=".$row['codempresa']."&id=".$row['codigo']."&seccion=".$row['seccion']."'><img src='img/lapiz.png' width=15/></a> </td>";
+									echo "<td><a data-toggle='tooltip' title='Editar' href='permisos-actualizar.php?accion=UDT&empresa=".$row['codempresa']."&id=".$row['codigo']."&seccion=".$row['seccion']."'><img src='img/lapiz.png' width=15/></a> </td>";
 									if ($row['estado_permiso']=='A'){
-										echo "<td><a href='php/permisos-registros.php?accion=CUT&empresa=".$row['codempresa']."&id=".$row['codigo']."'><img src='img/tj.png' width=15/></a> </td>";
+										echo "<td><a data-toggle='tooltip' title='Finalizar' href='php/permisos-registros.php?accion=CUT&empresa=".$row['codempresa']."&id=".$row['codigo']."'><img src='img/tj.png' width=15/></a> </td>";
 									}
 									else{
-										echo "<td> <a href='php/permisos-registros.php/?accion=DLT&id=".$row['codigo']."&empresa=".$row['codempresa']."'><img src='img/basura.png' width=15/></a> </td>";
+										echo "<td> <a data-toggle='tooltip' title='Anular' href='php/permisos-registros.php/?accion=DLT&id=".$row['codigo']."&empresa=".$row['codempresa']."'><img src='img/basura.png' width=15/></a> </td>";
 									}
 																		
 									echo"</tr>";
@@ -129,5 +130,11 @@ if ($_SESSION['crmRanking']>2){
 			</div>
 		</div>
 	</div>
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
 
 <?php include'php/pie.php';?>
