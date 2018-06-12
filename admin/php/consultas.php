@@ -8,6 +8,31 @@
 		$consulta=$result->fetch_assoc();
 		return $consulta;  
 	}
+
+	function extraerAsistenciaCreada($id){
+		include('conectar.php');
+		date_default_timezone_set('America/La_Paz');
+		
+		$empresa=$_SESSION['crmEmpresa'];
+		$fecha=date('Y-m-d');
+
+		$sql="
+		SELECT 
+			* 
+		FROM 
+			asistencia_enc 
+		where 
+				codempresa = '$empresa'
+			and DATE(fecha)='$fecha'
+			and codseccion_enc='$id'
+			and estado='A'
+			
+		";
+		// return ($sql);
+		return $mysqli->query($sql);
+
+	}
+
 	function extraerEmpresa($ranking,$empresa){
 		include('conectar.php');
 		if ($ranking ==1){

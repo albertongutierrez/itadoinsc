@@ -21,7 +21,12 @@
 	<link rel="stylesheet" href="css/jquery.dataTables.min.css">
 	<link rel="stylesheet" href="css/bootstrap-theme.css">
     <link rel="stylesheet"  href="css/bootstrap.min.css">
+    <link rel="stylesheet"  href="css/jquery-confirm.min.css">
 	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery-confirm.min.js"></script>
+
+	<script src="js/bootstrap.js"></script>	
+
 	<script src="js/bootstrap.js"></script>	
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
 	<script src="js/jquery.dataTables.min.js"></script>
@@ -107,7 +112,145 @@
 
 	    
 
+
+	    //////////////////////////////////////////////////////////
+	    var table = $('#example2').DataTable({   
+     	// "scrollX": true,
+       "iDisplayLength": 12,
+       "order": [[ 1, "desc" ]],
+       dom: 'Bfrtip',
+        buttons: ['copy', 'csv', 'excel', 'pdf', 'print'],
+        "language":{
+			    "sProcessing":     "Procesando...",
+			    "sLengthMenu":     "Mostrar _MENU_ registros",
+			    "sZeroRecords":    "No se encontraron resultados",
+			    "sEmptyTable":     "Ningún dato disponible en esta tabla",
+			    "sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+			    "sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
+			    "sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
+			    "sInfoPostFix":    "",
+			    "sSearch":         "Buscar:",
+			    "sUrl":            "",
+			    "sInfoThousands":  ",",
+			    "sLoadingRecords": "Cargando...",
+			    "oPaginate": {
+			        "sFirst":    "Primero",
+			        "sLast":     "Último",
+			        "sNext":     "Siguiente",
+			        "sPrevious": "Anterior"
+			    },
+			    "oAria": {
+			        "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
+			        "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+			    }
+			}
+    
+	   });
+
+	   
+	    
+	   $('#frm-example2').on('submit', function(e){
+	      var form = this;
+
+	      // var rows = table.rows({ 'search': 'applied' }).nodes();
+  		 	// $('select', rows).prop("selected", true);
+
+	      // Iterate over all checkboxes in the table
+	      table.$('#selector option:selected').each(function(){
+	         // If checkbox doesn't exist in DOM
+	         if(!$.contains(document, this)){
+	            // If checkbox is checked
+	            // if(this.checked){
+	               // Create a hidden element 
+	             // alert(this.name);
+	               $(form).append(
+	                  $('<input>')
+	                     .attr('type', 'hidden')
+	                     .attr('name','presente[]')
+	                     .val(this.value)
+	               );
+	            // }
+	         } 
+	      }); 
+
+	   });
+	   /////////////////////////////////////////////////
+	   table=$('#example').DataTable({
+	    	 "iDisplayLength": 15,
+	    	 "order": [[ 0, "desc" ]],
+	    	 dom: 'Bfrtip',
+	        buttons: ['copy', 'csv', 'excel', 'pdf', 'print'],
+         "language":{
+			    "sProcessing":     "Procesando...",
+			    "sLengthMenu":     "Mostrar _MENU_ registros",
+			    "sZeroRecords":    "No se encontraron resultados",
+			    "sEmptyTable":     "Ningún dato disponible en esta tabla",
+			    "sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+			    "sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
+			    "sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
+			    "sInfoPostFix":    "",
+			    "sSearch":         "Buscar:",
+			    "sUrl":            "",
+			    "sInfoThousands":  ",",
+			    "sLoadingRecords": "Cargando...",
+			    "oPaginate": {
+			        "sFirst":    "Primero",
+			        "sLast":     "Último",
+			        "sNext":     "Siguiente",
+			        "sPrevious": "Anterior"
+			    },
+			    "oAria": {
+			        "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
+			        "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+			    }
+			}
+      });
+      
+      $('#checkall').on('click', function(){
+        // Check/uncheck all checkboxes in the table
+        var rows = table.rows({ 'search': 'applied' }).nodes();
+        $('input[type="checkbox"]', rows).prop('checked', this.checked);
+     });
+
+      $('#example tbody').on('change', 'input[type="checkbox"]', function(){
+        // If checkbox is not checked
+        if(!this.checked){
+           var el = $('#checkall').get(0);
+           // If "Select all" control is checked and has 'indeterminate' property
+           if(el && el.checked && ('indeterminate' in el)){
+              // Set visual state of "Select all" control 
+              // as 'indeterminate'
+              el.indeterminate = true;
+           }
+        }
+     });
+
+      $('#target').on('submit', function(e){
+        var form = this;
+
+        // Iterate over all checkboxes in the table
+        table.$('input[type="checkbox"]').each(function(){
+           // If checkbox doesn't exist in DOM
+           if(!$.contains(document, this)){
+              // If checkbox is checked
+              if(this.checked){
+                 // Create a hidden element 
+                 $(form).append(
+                    $('<input>')
+                       .attr('type', 'hidden')
+                       .attr('name', this.name)
+                       .val(this.value)
+                 );
+              }
+           } 
+        });
+
+     });
     });
+
+    
+
+    
     </script>
 </head>
 <body  >

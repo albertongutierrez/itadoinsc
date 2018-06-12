@@ -5,6 +5,9 @@ session_start();
 if(isset($_GET['accion'])){
 	$i=$_GET['accion'];
 	if ($i=='INS'){		
+		// foreach ($_POST['presente'] as $a ) {
+		// 	echo $a.'<br>';
+		// }
 		date_default_timezone_set('America/La_Paz');
 		$fecha=date("Y-m-d h:i:s",strtotime($_POST['horas']));
 		

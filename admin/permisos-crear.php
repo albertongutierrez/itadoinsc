@@ -1,4 +1,4 @@
-<?php include'php/cabeza3.php';
+<?php include'php/cabeza.php';
 
 if ($_SESSION['crmRanking']>2){
 	echo"<script language='javascript'>window.location='categoria-mant.php'</script>;";

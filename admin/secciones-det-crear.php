@@ -1,4 +1,4 @@
-<?php include'php/cabeza2.php';
+<?php include'php/cabeza.php';
 
 if ($_SESSION['crmRanking']>2){
 	echo"<script language='javascript'>window.location='categoria-mant.php'</script>;";
@@ -59,7 +59,7 @@ if ($_SESSION['crmRanking']>2){
 			        <table class="display table table-striped" id="example"  cellspacing="0" width="100%">
 						<thead>
 							<tr>
-								<th><input name="select_all" value="1" id="example-select-all" type="checkbox"/> All</th>
+								<th><input name="select_all" value="1" id="example-select-all" type="checkbox"/> Todo</th>
 								<th>Código</th>
 								<th>Nombre</th>							
 								<th>Apellido</th>							

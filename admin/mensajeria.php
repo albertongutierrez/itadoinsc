@@ -1,4 +1,4 @@
-<?php include'php/cabeza2.php'; 
+<?php include'php/cabeza.php'; 
 if ($_SESSION['crmRanking']>2){
 	echo"<script language='javascript'>window.location='main.php'</script>;"; 
 }

@@ -1,4 +1,4 @@
-<?php include'php/cabeza3.php';
+<?php include'php/cabeza.php';
 
 if ($_SESSION['crmRanking']>2){
 	echo"<script language='javascript'>window.location='categoria-mant.php'</script>;";
@@ -21,7 +21,7 @@ $fecha=date("Y-m-d",strtotime($ru['fecha'])).'T'.date("h:i",strtotime($ru['fecha
 			</div>
 		
 			<div class="p-body">
-			        	<form class="form-horizontal"  id="frm-example" method="post" action="php/asistencia-enc-registros.php?accion=UDT">
+			        	<form class="form-horizontal"  id="frm-example2" method="post" action="php/asistencia-enc-registros.php?accion=UDT">
 
 			        	<div class="form-group ">
 					    	<div class="col-sm-4">					 
@@ -36,9 +36,13 @@ $fecha=date("Y-m-d",strtotime($ru['fecha'])).'T'.date("h:i",strtotime($ru['fecha
 								<label>Fecha / Hora</label><span style="font-weight: bold; color: red; font-size: 25px">*</span>
 			        			<!-- <input type="datetime-local" name="horas" class="form-control" required="" value="<?php echo $fecha ?>"> -->
 			        			<div class="input-append date form_datetime">
-			                      <input size="24" type="text" value="<?php echo $fecha ?>" id= "horas" name="horas" placeholder="Fecha" required="" readonly>
-			                      <span class="add-on"><i class="icon-remove"></i></span>
-			                      <span class="add-on"><i class="icon-th"></i></span>
+				        			<div class="col-sm-9 col-xs-10">
+				                     	 <input size="24" class="form-control" type="text" value="<?php echo $fecha ?>" id= "horas" name="horas" placeholder="Fecha" required="" readonly>
+				                  	</div>
+				                  	<div class="col-sm-3 col-xs-2">
+				                      <span class="add-on"><i class="icon-remove" style="width: 50%"></i></span>
+				                      <span class="add-on" ><i class="icon-th" style="width: 50%"></i></span>
+				                    </div>
 			                    </div>   
 			        		</div>
 			        	</div>
@@ -55,7 +59,7 @@ $fecha=date("Y-m-d",strtotime($ru['fecha'])).'T'.date("h:i",strtotime($ru['fecha
 			   
 			        	<div class="form-group">
 			        	<div class="col-sm-12 ">
-			        	<table id="example" class="display">
+			        	<table id="example2" class="display">
 			        		<thead>
 								<tr>
 									<th>C&oacute;digo</th>

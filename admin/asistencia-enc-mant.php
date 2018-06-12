@@ -102,7 +102,7 @@ if ($_SESSION['crmRanking']>2){
 									<td>".$row['fecha']."</td>
 									<td> ".$row['estado']."</td>
 									";
-									echo "<td><a data-toggle='tooltip' title='Editar' href='asistencia-enc-actualizar.php?accion=UDT&empresa=".$row['codempresa']."&id=".$row['codasistencia_enc']."'><img src='img/lapiz.png' width=15/></a> </td>";
+									echo "<td><a data-toggle='tooltip' title='Editar' href='asistencia-enc-actualizar.php?empresa=".$row['codempresa']."&id=".$row['codasistencia_enc']."'><img src='img/lapiz.png' width=15/></a> </td>";
 									echo "<td> <a data-toggle='tooltip' title='Anular' href='php/asistencia-enc-registros.php/?accion=DLT&id=".$row['codasistencia_enc']."&empresa=".$row['codempresa']."'><img src='img/basura.png' width=15/></a> </td>";
 																		
 									echo"</tr>";
