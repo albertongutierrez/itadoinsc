@@ -84,7 +84,24 @@ if ($_SESSION['crmRanking']>2){
 									<td> ".$row['estado']."</td>
 									";//<td> ".$row['por_defecto']."</td>
 									if($_SESSION['crmRanking']==1 or $_SESSION['crmRanking']==2){echo "<td><a data-toggle='tooltip' title='Editar' href='provincias-pais-actualizar.php?accion=UDT&empresa=".$row['codempresa']."&id=".$row['codprovincia']."'><img src='img/lapiz.png' width=15/></a> </td>";}
-									 if($_SESSION['crmRanking']==1 or $_SESSION['crmRanking']==2){echo "<td> <a data-toggle='tooltip' title='Anular' href='php/provincias-pais-registros.php/?accion=DLT&id=".$row['codprovincia']."&empresa=".$row['codempresa']."'><img src='img/basura.png' width=15/></a> </td>";}
+									 if($_SESSION['crmRanking']==1 or $_SESSION['crmRanking']==2){		echo "<td>"?> 
+													<img 
+													data-toggle='tooltip'
+													src='img/basura.png' width='15' title='Anular' onclick="
+													$.confirm({
+												    title: '¿Estás seguro? ',
+												    content: 'Con esta acción el registro seleccionado sera eliminado',
+												    buttons: {
+												        confirmar: function () {
+												 window.location='php/provincias-pais-registros.php/?accion=DLT&id=<?php echo $row['codprovincia']."&empresa=".$row['codempresa'];?>';
+												        },
+												        cancelar: function () {
+												            // $.alert('Cancelado!');
+												        }
+												    }
+												});"/>
+											<?php echo"
+										 </td>";}	
 
 									
 									

@@ -115,7 +115,24 @@ if ($_SESSION['crmRanking']>2){
 										echo "<td><a data-toggle='tooltip' title='Finalizar' href='php/permisos-registros.php?accion=CUT&empresa=".$row['codempresa']."&id=".$row['codigo']."'><img src='img/tj.png' width=15/></a> </td>";
 									}
 									else{
-										echo "<td> <a data-toggle='tooltip' title='Anular' href='php/permisos-registros.php/?accion=DLT&id=".$row['codigo']."&empresa=".$row['codempresa']."'><img src='img/basura.png' width=15/></a> </td>";
+											echo "<td>"?> 
+													<img 
+													data-toggle='tooltip'
+													src='img/basura.png' width='15' title='Anular' onclick="
+													$.confirm({
+												    title: '¿Estás seguro? ',
+												    content: 'Con esta acción el registro seleccionado sera eliminado',
+												    buttons: {
+												        confirmar: function () {
+												 window.location='php/permisos-registros.php/?accion=DLT&id=<?php echo $row['codigo']."&empresa=".$row['codempresa'];?>';
+												        },
+												        cancelar: function () {
+												            // $.alert('Cancelado!');
+												        }
+												    }
+												});"/>
+											<?php echo"
+										 </td>";
 									}
 																		
 									echo"</tr>";

@@ -86,11 +86,24 @@ if ($_SESSION['crmRanking']>2){
 									<td> ".$row['estado']."</td>
 									";//<td> ".$row['por_defecto']."</td>
 									 if($_SESSION['crmRanking']==1 or $_SESSION['crmRanking']==2){echo "<td> <a data-toggle='tooltip' title='Editar' href='empresa-actualizar.php?accion=UDT&id=".$row['codempresa']."'><img src='img/lapiz.png' width=15/></a> </td>";}
-									 if($_SESSION['crmRanking']==1 ){echo "<td> <a data-toggle='tooltip' title='Anular' href='php/empresa-registros.php?accion=DLT&id=".$row['codempresa']."'><img src='img/basura.png' width=15/></a> </td>";}
-
-									
-									
-									echo"</tr>";
+									 if($_SESSION['crmRanking']==1 ){												echo "<td>"?> 
+													<img 
+													data-toggle='tooltip'
+													src='img/basura.png' width='15' title='Anular' onclick="
+													$.confirm({
+												    title: '¿Estás seguro? ',
+												    content: 'Con esta acción el registro seleccionado sera eliminado',
+												    buttons: {
+												        confirmar: function () {
+												 window.location='php/empresa-registros.php/?accion=DLT&id=<?php echo $row['codempresa'];?>';
+												        },
+												        cancelar: function () {
+												            // $.alert('Cancelado!');
+												        }
+												    }
+												});"/>
+											<?php echo"
+										 </td>";}
 								}
 								/*<td> <a href='empresa-registros.php?accion=UDT&id=".$row['codempresa']."&nombre=".$row['nombre']."&rsmnombre=".$row['rsm_nombre']."&telefono1=".$row['telefono1']."&telefono2=".$row['telefono2']."&correo=".$row['email']."&web=".$row['pweb']."&estado=".$row['estado']."&rnc=".$row['RNC']."'><img src='img/lapiz.png' width=15/></a> </td>*/
 							}

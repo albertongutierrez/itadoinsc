@@ -86,8 +86,25 @@ if ($_SESSION['crmRanking']>2){
 									<td> ".$row['estado']."</td>
 									";//<td> ".$row['por_defecto']."</td>
 								
-									if($_SESSION['crmRanking']==1 or $_SESSION['crmRanking']==2){echo "<td><a href='data-toggle='tooltip' title='Editar' paises-actualizar.php?accion=UDT&id=".$row['codpais']."'><img src='img/lapiz.png' width=15/></a> </td>";}
-									if($_SESSION['crmRanking']==1 or $_SESSION['crmRanking']==2){echo "<td> <a data-toggle='tooltip' title='Anular' href='php/paises-registros.php/?accion=DLT&id=".$row['codpais']."'><img src='img/basura.png' width=15/></a> </td>";}																		
+									if($_SESSION['crmRanking']==1 or $_SESSION['crmRanking']==2){echo "<td><a data-toggle='tooltip' title='Editar' href='paises-actualizar.php?accion=UDT&id=".$row['codpais']."'><img src='img/lapiz.png' width=15/></a> </td>";}
+									if($_SESSION['crmRanking']==1 or $_SESSION['crmRanking']==2){echo "<td>"?> 
+													<img 
+													data-toggle='tooltip'
+													src='img/basura.png' width='15' title='Anular' onclick="
+													$.confirm({
+												    title: '¿Estás seguro? ',
+												    content: 'Con esta acción el registro seleccionado sera eliminado',
+												    buttons: {
+												        confirmar: function () {
+												 window.location='php/paises-registros.php/?accion=DLT&id=<?php echo $row['codpais'];?>';
+												        },
+												        cancelar: function () {
+												            // $.alert('Cancelado!');
+												        }
+												    }
+												});"/>
+											<?php echo"
+										 </td>";}																		
 									echo"</tr>";
 									
 								}								
