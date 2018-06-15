@@ -124,16 +124,16 @@
 ?>
 <?php
 
-require_once 'lib/dompdf/autoload.inc.php';
+// require_once 'lib/dompdf/autoload.inc.php';
 // // reference the Dompdf namespace
-use Dompdf\Dompdf;
-$dompdf = new DOMPDF();
-$dompdf->loadHtml(ob_get_clean());
-$dompdf->render();
-$pdf = $dompdf->output();
-$filename = "tikect".time().'.pdf';
-file_put_contents($filename, $pdf);
-$dompdf->stream($filename);
+// use Dompdf\Dompdf;
+// $dompdf = new DOMPDF();
+// $dompdf->loadHtml(ob_get_clean());
+// $dompdf->render();
+// $pdf = $dompdf->output();
+// $filename = "tikect".time().'.pdf';
+// file_put_contents($filename, $pdf);
+// $dompdf->stream($filename);
 
 ?>
 

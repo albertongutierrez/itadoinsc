@@ -7,6 +7,7 @@ if ($_SESSION['crmRanking']>2){
 		$creada=false;
 		$ids='';
 		$empresa='';
+		$seccion=''
 
 ?>
 	<div class="content-wrapper" style="overflow:hidden;" >

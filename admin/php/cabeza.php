@@ -114,7 +114,7 @@
 
 
 	    //////////////////////////////////////////////////////////
-	    var table = $('#example2').DataTable({   
+	    var table2 = $('#example2').DataTable({   
      	// "scrollX": true,
        "iDisplayLength": 12,
        "order": [[ 1, "desc" ]],
@@ -150,20 +150,20 @@
 	   
 	    
 	   $('#frm-example2').on('submit', function(e){
-	      var form = this;
+	      var form1 = this;
 
 	      // var rows = table.rows({ 'search': 'applied' }).nodes();
   		 	// $('select', rows).prop("selected", true);
 
 	      // Iterate over all checkboxes in the table
-	      table.$('#selector option:selected').each(function(){
+	      table2.$('#selector option:selected').each(function(){
 	         // If checkbox doesn't exist in DOM
 	         if(!$.contains(document, this)){
 	            // If checkbox is checked
 	            // if(this.checked){
 	               // Create a hidden element 
 	             // alert(this.name);
-	               $(form).append(
+	               $(form1).append(
 	                  $('<input>')
 	                     .attr('type', 'hidden')
 	                     .attr('name','presente[]')

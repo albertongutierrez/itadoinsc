@@ -512,7 +512,7 @@
 			$sql="SELECT * FROM `inscripcion` WHERE `codinscripcion`='$id' and `codempresa`='$empresa'";
 		}
 		else{
-			$sql="SELECT * FROM `inscripcion` WHERE  `codempresa`='".$_SESSION['codempresa']."' `codinscripcion`='$id'";
+			$sql="SELECT * FROM `inscripcion` WHERE  `codempresa`='".$_SESSION['crmEmpresa']."' AND `codinscripcion`='$id'";
 		}
 		return $mysqli->query($sql); 
 	}
@@ -523,7 +523,7 @@
 			$sql="SELECT * FROM `profesor`  ";
 		}
 		else{
-			$sql="SELECT * FROM `profesor` WHERE  `codempresa`='".$_SESSION['codempresa']."'";
+			$sql="SELECT * FROM `profesor` WHERE  `codempresa`='".$_SESSION['crmEmpresa']."'";
 		}
 		return $mysqli->query($sql); 
 	}
@@ -533,7 +533,7 @@
 			$sql="SELECT * FROM `profesor` WHERE `codprofesor`='$id' and `codempresa`='$empresa'";
 		}
 		else{
-			$sql="SELECT * FROM `profesor` WHERE  `codempresa`='".$_SESSION['codempresa']."' `codprofesor`='$id'";
+			$sql="SELECT * FROM `profesor` WHERE  `codempresa`='".$_SESSION['crmEmpresa']."' and `codprofesor`='$id'";
 		}
 		return $mysqli->query($sql); 
 	}
@@ -544,7 +544,7 @@
 			$sql="SELECT * FROM `cursos`  ";
 		}
 		else{
-			$sql="SELECT * FROM `cursos` WHERE  `codempresa`='".$_SESSION['codempresa']."'";
+			$sql="SELECT * FROM `cursos` WHERE  `codempresa`='".$_SESSION['crmEmpresa']."'";
 		}
 		return $mysqli->query($sql); 
 	}
@@ -555,7 +555,7 @@
 			$sql="SELECT * FROM `cursos` WHERE `codcurso`='$id' and `codempresa`='$empresa'";
 		}
 		else{
-			$sql="SELECT * FROM `cursos` WHERE  `codempresa`='".$_SESSION['codempresa']."' `codcurso`='$id'";
+			$sql="SELECT * FROM `cursos` WHERE  `codempresa`='".$_SESSION['crmEmpresa']."' and `codcurso`='$id'";
 		}
 		return $mysqli->query($sql); 
 	}
@@ -567,7 +567,7 @@
 			$sql="SELECT * FROM `secciones_enc` where `estado`='A'";
 		}
 		else{
-			$sql="SELECT * FROM `secciones_enc` WHERE  `codempresa`='".$_SESSION['codempresa']."' and `estado`='A'";
+			$sql="SELECT * FROM `secciones_enc` WHERE  `codempresa`='".$_SESSION['crmEmpresa']."' and `estado`='A'";
 		}
 		return $mysqli->query($sql); 
 	}
@@ -578,7 +578,7 @@
 			$sql="SELECT * FROM `secciones_enc` WHERE `codseccion_enc`='$id' and `codempresa`='$empresa'";
 		}
 		else{
-			$sql="SELECT * FROM `secciones_enc` WHERE  `codempresa`='".$_SESSION['codempresa']."' `codseccion_enc`='$id'";
+			$sql="SELECT * FROM `secciones_enc` WHERE  `codempresa`='".$_SESSION['crmEmpresa']."' and `codseccion_enc`='$id'";
 		}
 		return $mysqli->query($sql); 
 	}
@@ -589,7 +589,7 @@
 			$sql="SELECT * FROM `secciones_det`  ";
 		}
 		else{
-			$sql="SELECT * FROM `secciones_det` WHERE  `codempresa`='".$_SESSION['codempresa']."'";
+			$sql="SELECT * FROM `secciones_det` WHERE  `codempresa`='".$_SESSION['crmEmpresa']."'";
 		}
 		return $mysqli->query($sql); 
 	}
@@ -600,7 +600,7 @@
 			$sql="SELECT * FROM `secciones_det` where `codseccion_enc`='$id' ";
 		}
 		else{
-			$sql="SELECT * FROM `secciones_det` WHERE  `codempresa`='".$_SESSION['codempresa']."' and `codseccion_enc`='$id'";
+			$sql="SELECT * FROM `secciones_det` WHERE  `codempresa`='".$_SESSION['crmEmpresa']."' and `codseccion_enc`='$id'";
 		}
 		return $mysqli->query($sql); 
 	}
@@ -611,7 +611,7 @@
 			$sql="SELECT * FROM `secciones_det` where `codseccion_det`='$id' ";
 		}
 		else{
-			$sql="SELECT * FROM `secciones_det` WHERE  `codempresa`='".$_SESSION['codempresa']."' and `codseccion_det`='$id'";
+			$sql="SELECT * FROM `secciones_det` WHERE  `codempresa`='".$_SESSION['crmEmpresa']."' and `codseccion_det`='$id'";
 		}
 		return $mysqli->query($sql); 
 	}
@@ -622,7 +622,7 @@
 			$sql="SELECT * FROM `asistencia_enc`  ";
 		}
 		else{
-			$sql="SELECT * FROM `asistencia_enc` WHERE  `codempresa`='".$_SESSION['codempresa']."'";
+			$sql="SELECT * FROM `asistencia_enc` WHERE  `codempresa`='".$_SESSION['crmEmpresa']."'";
 		}
 		return $mysqli->query($sql); 
 	}
@@ -633,7 +633,7 @@
 			$sql="SELECT * FROM `asistencia_enc` where `codasistencia_enc`='$id'";
 		}
 		else{
-			$sql="SELECT * FROM `asistencia_enc` WHERE  `codempresa`='".$_SESSION['codempresa']."' and `codasistencia_enc`='$id'";
+			$sql="SELECT * FROM `asistencia_enc` WHERE  `codempresa`='".$_SESSION['crmEmpresa']."' and `codasistencia_enc`='$id'";
 		}
 		return $mysqli->query($sql); 
 	}
@@ -645,7 +645,7 @@
 		}
 		
 		else{
-			$sql="SELECT * FROM `asistencia_det` WHERE  `codempresa`='".$_SESSION['codempresa']."' and `codasistencia_enc`='$id'";
+			$sql="SELECT * FROM `asistencia_det` WHERE  `codempresa`='".$_SESSION['crmEmpresa']."' and `codasistencia_enc`='$id'";
 		}
 		return $mysqli->query($sql); 
 	}
@@ -656,7 +656,7 @@
 			$sql="(SELECT DISTINCT condicion ,COUNT(*) as total FROM `asistencia_det` where `codasistencia_enc`='$id' and condicion='A')UNION(SELECT DISTINCT condicion ,COUNT(*) as total FROM `asistencia_det` where `codasistencia_enc`='$id' and condicion='P')";
 		}
 		else{
-			$sql="(SELECT DISTINCT condicion ,COUNT(*) as total FROM `asistencia_det` where `codasistencia_enc`='$id' and condicion='A' and `codempresa`='".$_SESSION['codempresa']."')UNION(SELECT DISTINCT condicion ,COUNT(*) as total FROM `asistencia_det` where `codasistencia_enc`='$id' and condicion='P' and `codempresa`='".$_SESSION['codempresa']."')";
+			$sql="(SELECT DISTINCT condicion ,COUNT(*) as total FROM `asistencia_det` where `codasistencia_enc`='$id' and condicion='A' and `codempresa`='".$_SESSION['crmEmpresa']."')UNION(SELECT DISTINCT condicion ,COUNT(*) as total FROM `asistencia_det` where `codasistencia_enc`='$id' and condicion='P' and `codempresa`='".$_SESSION['crmEmpresa']."')";
 		}
 		return $mysqli->query($sql); 
 	}
@@ -667,7 +667,21 @@
 			$sql="SELECT b.descripcion as asignatura FROM asistencia_enc a, cursos b, secciones_enc c WHERE a.codseccion_enc= c.codseccion_enc and b.codcurso=c.codcurso and a.codasistencia_enc='$id'";
 		}
 		else{
-			$sql="SELECT b.descripcion as asignatura FROM asistencia_enc a, cursos b, secciones_enc c WHERE a.codseccion_enc= c.codseccion_enc and b.codcurso=c.codcurso and a.codasistencia_enc='$id' and  a.codempresa='".$_SESSION['codempresa']."' and b.codempresa'".$_SESSION['codempresa']."' and c.codempresa='".$_SESSION['codempresa']."'";
+			$sql="
+			SELECT 
+				b.descripcion as asignatura 
+			FROM 
+				asistencia_enc a, 
+				cursos b, 
+				secciones_enc c 
+			WHERE 
+					a.codseccion_enc= c.codseccion_enc 
+				and b.codcurso=c.codcurso 
+				and a.codasistencia_enc='$id' 
+				and a.codempresa='".$_SESSION['crmEmpresa']."' 
+				and a.codempresa=b.codempresa
+				and a.codempresa=c.codempresa
+			";
 		}
 		return $mysqli->query($sql); 
 	}
@@ -678,7 +692,7 @@
 		}
 		
 		else{
-			$sql="SELECT b.descripcion as curso, b.horas as horas_curso,SUM(a.horas)as horas_acum, b.horas-SUM(a.horas) horas_res FROM secciones_enc a, cursos b WHERE a.codcurso=b.codcurso and a.codempresa=b.codempresa and b.acomulativo='S' and a.codempresa='".$_SESSION['codempresa']."' and b.codempresa='".$_SESSION['codempresa']."' and b.codcurso='$id'";
+			$sql="SELECT b.descripcion as curso, b.horas as horas_curso,SUM(a.horas)as horas_acum, b.horas-SUM(a.horas) horas_res FROM secciones_enc a, cursos b WHERE a.codcurso=b.codcurso and a.codempresa=b.codempresa and b.acomulativo='S' and a.codempresa='".$_SESSION['crmEmpresa']."' and b.codempresa='".$_SESSION['crmEmpresa']."' and b.codcurso='$id'";
 		}
 		return $mysqli->query($sql); 
 	}
@@ -721,11 +735,11 @@
 				and date(b.fecha)='$fecha'
 				and b.codseccion_enc='$id'
 				and e.estado='A' 
-				and a.codempresa='".$_SESSION['codempresa']."' 
-				and b.codempresa='".$_SESSION['codempresa']."' 
-				and c.codempresa='".$_SESSION['codempresa']."' 
-				and d.codempresa='".$_SESSION['codempresa']."' 
-				and e.codempresa='".$_SESSION['codempresa']."' 
+				and a.codempresa='".$_SESSION['crmEmpresa']."' 
+				and b.codempresa='".$_SESSION['crmEmpresa']."' 
+				and c.codempresa='".$_SESSION['crmEmpresa']."' 
+				and d.codempresa='".$_SESSION['crmEmpresa']."' 
+				and e.codempresa='".$_SESSION['crmEmpresa']."' 
 				";
 		}
 		return $mysqli->query($sql); 
@@ -761,7 +775,7 @@
 		}
 		
 		else{
-			$sql="SELECT DISTINCT
+			$sql="SELECT 
 				d.codinscripcion as id, 
 				a.codpermiso as codigo, 
 				CONCAT(d.nombre,' ',d.apellido) as nombres, 
@@ -770,7 +784,7 @@
 				b.descripcion as seccion,
 				-- COUNT(*)as total_p,
 				a.fecha,
-				e.codempresa,
+				e.codempresa, 
 				a.hora_fin as fin,
 				a.hora_ini as ini,
 				a.codseccion as seccion
@@ -780,14 +794,13 @@
 				`inscripcion` d, 
 				`empresa` e 
 				WHERE 
-				a.codseccion=b.codseccion_enc and 
-				a.codempresa=e.codempresa and
-				a.codinscripcion=d.codinscripcion and 
-				a.codempresa='".$_SESSION['codempresa']."' and 
-				b.codempresa='".$_SESSION['codempresa']."' and 
-				c.codempresa='".$_SESSION['codempresa']."' and 
-				d.codempresa='".$_SESSION['codempresa']."' and 
-				e.codempresa='".$_SESSION['codempresa']."' 
+				a.codseccion=b.codseccion_enc 
+				and a.codinscripcion=d.codinscripcion
+				and a.codempresa ='".$_SESSION['crmEmpresa']."' 
+				and a.codempresa = b.codempresa 
+				-- and a.codempresa = c.codempresa 
+				and a.codempresa = d.codempresa  
+				and a.codempresa = e.codempresa 
 				";
 		}
 		return $mysqli->query($sql); 
@@ -837,6 +850,7 @@
 				a.nombre,
 				a.apellido,
 				a.codinscripcion,
+				a.cedula,
 				b.descripcion as curso
 				FROM 
 				inscripcion a, 
@@ -906,7 +920,7 @@
 			$sql="SELECT a.condicion from asistencia_det a, asistencia_enc b  WHERE a.codinscripcion='$id' and b.estado='A' and a.codasistencia_enc=b.codasistencia_enc and date(b.fecha) between '$f1' and '$f2'";
 		} 		
 		else{
-			$sql="SELECT a.condicion as total from asistencia_det a, asistencia_enc b  WHERE a.codinscripcion='$id' and b.estado='A' and a.codasistencia_enc=b.codasistencia_enc and a.codempresa='".$_SESSION['crmEmpresa']."' and b.codempresa='".$_SESSION['crmEmpresa']."' and date(b.fecha) between '$f1' and '$f2'";
+			$sql="SELECT a.condicion from asistencia_det a, asistencia_enc b  WHERE a.codinscripcion='$id' and b.estado='A' and a.codasistencia_enc=b.codasistencia_enc and a.codempresa='".$_SESSION['crmEmpresa']."' and b.codempresa='".$_SESSION['crmEmpresa']."' and date(b.fecha) between '$f1' and '$f2'";
 		}
 		return $mysqli->query($sql);
 	}

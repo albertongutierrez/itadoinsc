@@ -87,7 +87,7 @@ $fecha=date("Y-m-d",strtotime($ru['fecha'])).'T'.date("h:i",strtotime($ru['fecha
 										</td>
 
 										<td> 
-											<select  name='presente[]' class='form-control' required='' > 
+											<select  name='presente[]' class='form-control' id="selector" required='' > 
 						            			<option value='<?php echo "P,".$ro['codinscripcion'];?>' <?php if ($condi=='P'){echo "selected";} ?>>Presente</option>         
 									            <option value='<?php echo "A,".$ro['codinscripcion'];?>' <?php if ($condi=='A'){echo "selected";} ?>>Ausente</option>
 									                      
