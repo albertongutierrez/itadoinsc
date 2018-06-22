@@ -48,6 +48,7 @@
 
     <script>
  	$(document).ready(function(){
+
 	    $('#table_id').DataTable({ // tabla con botones de impresion
 	    	 "iDisplayLength": 15,
 	    	 "order": [[ 0, "desc" ]],
@@ -78,6 +79,38 @@
 			    }
 			}
 	    });
+
+	    $('#table_id3').DataTable({ // tabla con botones de impresion
+	    	 "iDisplayLength": 15,
+	    	 "order": [[ 8, "desc" ]],
+	    	 dom: 'Bfrtip',
+	        buttons: ['copy', 'csv', 'excel', 'pdf', 'print'],
+	      "language":{
+			    "sProcessing":     "Procesando...",
+			    "sLengthMenu":     "Mostrar _MENU_ registros",
+			    "sZeroRecords":    "No se encontraron resultados",
+			    "sEmptyTable":     "Ningún dato disponible en esta tabla",
+			    "sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+			    "sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
+			    "sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
+			    "sInfoPostFix":    "",
+			    "sSearch":         "Buscar:",
+			    "sUrl":            "",
+			    "sInfoThousands":  ",",
+			    "sLoadingRecords": "Cargando...",
+			    "oPaginate": {
+			        "sFirst":    "Primero",
+			        "sLast":     "Último",
+			        "sNext":     "Siguiente",
+			        "sPrevious": "Anterior"
+			    },
+			    "oAria": {
+			        "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
+			        "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+			    }
+			}
+	    });
+
 	    $('#table_id2').DataTable({ // tablas grandes se pone la barra y con botones
 	    	  "scrollX": true,
 	    	 "iDisplayLength": 15,
@@ -276,14 +309,14 @@
 				
 				<li class="has-children account">
 					<a href="#0" class="cuenta">
-						<img src="img/cd-avatar.png" alt="avatar">
+						<img src="https://ui-avatars.com/api/?name=<?php echo $_SESSION['crmUsername']; ?>&size=128&color=ffffff&background=1784c7" alt="avatar" style='border: 2px solid white;width:24px;height:24px;'>
 						<?php echo $_SESSION['crmUsername']; ?>
 					</a>
 
 					<ul>
 
 						<!-- <li><a href="#0">My Account</a></li> -->
-						<li><a href="usuario-mant.php">Cuenta</a></li>
+						<li><a href="usuario-editar.php">Cuenta</a></li>
 						<li><a href="php/logout.php">Cerrar Sesión</a></li>
 					</ul>
 				</li>
@@ -328,6 +361,7 @@
 						
 					</ul>
 				</li>
+			<?php endif ?>
 
 				<li class="has-children gcurso">
 					<a href="#0">Gestión de Asistencia</a>
@@ -340,7 +374,6 @@
 						
 					</ul>
 				</li>
-			<?php endif ?>
 				<li class="has-children reporte">
 					<a href="#0">Reportes</a>
 					

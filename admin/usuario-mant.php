@@ -85,6 +85,7 @@
 
 							if($query->num_rows > 0){
 								while ( $row= $query->fetch_assoc()) { 
+									if ($row['codtipo']!=3){
 									
 									echo "
 									<tr>
@@ -113,6 +114,7 @@
 										 </td>";}									
 									
 									echo"</tr>";
+									}
 								}
 								/*<td> <a href='empresa-registros.php?accion=UDT&id=".$row['codempresa']."&nombre=".$row['nombre']."&rsmnombre=".$row['rsm_nombre']."&telefono1=".$row['telefono1']."&telefono2=".$row['telefono2']."&correo=".$row['email']."&web=".$row['pweb']."&estado=".$row['estado']."&rnc=".$row['RNC']."'><img src='img/lapiz.png' width=15/></a> </td>*/
 							}

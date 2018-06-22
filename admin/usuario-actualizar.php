@@ -38,12 +38,15 @@
 									if($query->num_rows > 0)
 									{
 										while ($row = $query->fetch_assoc()) {	
-										if ($row['codtipo']==$r['codtipo'])	{												
-											echo "<option value='".$row['codtipo']."' selected>".strtoupper($row['descripcion'])."</option>	";
-										}
-										else{
-											echo "<option value='".$row['codtipo']."' >".strtoupper($row['descripcion'])."</option>	";
-										}
+											if ($row['codtipo']!=3) {
+
+												if ($row['codtipo']==$r['codtipo'])	{												
+													echo "<option value='".$row['codtipo']."' selected>".strtoupper($row['descripcion'])."</option>	";
+												}
+												else{
+													echo "<option value='".$row['codtipo']."' >".strtoupper($row['descripcion'])."</option>	";
+												}
+											}
 										}
 									}
 								?>						

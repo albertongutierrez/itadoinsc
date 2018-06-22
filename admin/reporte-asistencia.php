@@ -56,7 +56,7 @@ if ($_SESSION['crmRanking']>3){
 	    $fecha=date('Y-m-d');
 	    // echo $fecha;
 	    if (isset($_GET['curso'])) {
-	    	$curso=$_GET['curso'];	    }
+	    	$curso=$_GET['curso'];	 }
 	    else{
 	    	$curso='';
 	    }

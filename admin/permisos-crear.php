@@ -1,8 +1,8 @@
 <?php include'php/cabeza.php';
 
-if ($_SESSION['crmRanking']>2){
-	echo"<script language='javascript'>window.location='categoria-mant.php'</script>;";
-}
+// if ($_SESSION['crmRanking']>2){
+// 	echo"<script language='javascript'>window.location='categoria-mant.php'</script>;";
+// }
 		$fecha=date("Y-m-d").'T'.date("h:i");
 
 ?>
@@ -49,15 +49,16 @@ if ($_SESSION['crmRanking']>2){
 			<div class="p-body">
 			        	<form id="frm-example" method="post" action="php/permisos-registros.php?accion=INS" class="form-horizontal">
 
-						<div class="form-group">
-							<div class="col-sm-4">
-								<label>Fecha / Hora</label><span style="font-weight: bold; color: red; font-size: 25px">*</span>
-			        			<!-- <input type="datetime-local" name="horas" class="form-control" required="" value="<?php echo $fecha ?>"> -->
+						<div class="col-sm-4">
+							<div class="form-group">
+								<label class="control-label">Fecha / Hora</label><span style="font-weight: bold; color: red; font-size: 25px">*</span>
 			        			<div class="input-append date form_datetime">
-			                      <input size="24" type="text" value="<?php echo $fecha ?>" id= "horas" name="horas" placeholder="Fecha" required="" readonly>
-			                      <span class="add-on"><i class="icon-remove"></i></span>
-			                      <span class="add-on"><i class="icon-th"></i></span>
-			                    </div>   
+			        				<div class="input-group">
+				                      <input size="24" type="text" class="form-control" value="<?php echo $fecha ?>" id= "horas" name="horas" placeholder="Fecha" required="" readonly>
+				                      <span class="add-on input-group-addon"><i class="icon-remove"></i></span>
+				                      <span class="add-on input-group-addon"><i class="icon-th"></i></span>
+				                    </div>   
+				                </div>
 			        		</div>
 			        	</div>
 			   
@@ -82,25 +83,39 @@ if ($_SESSION['crmRanking']>2){
 								}
 
 								$query=extraerEstudiantesPermiso($seccion);
-								// echo "";
-								while ($row=$query->fetch_assoc()) {
-									// $query2=extaerInscritosUDT2($row['codinscripcion'],$row['codempresa']);
-									// $ro=$query2->fetch_assoc();
-									// if ($row['estado']=='A'){
-										echo "
-										<tr>
-											<td>
-												".$row['id']."
-											</td>
-											<td>
-												".$row['nombre']."
-											</td>
-											<td> 
-											<input type='radio' name='permiso' value='".$row['id']."'>            
-									        </td>
-											
-										</tr>";
-									// }
+								if($query->num_rows==0 and $seccion!=''){
+
+									echo "<script>
+											$.confirm({
+												    title: 'Debe de Pasar Asistencia ',
+												    content: 'Desea Pasar asistencia?',
+												    buttons: {
+												        confirmar: function () {
+														 window.location='asistencia-enc-crear.php?seccion=".$seccion."';
+												        },
+												        cancelar: function () {
+												            // $.alert('Cancelado!');
+												        }
+												    }
+												});
+									</script>"	;
+								}
+								else{
+									while ($row=$query->fetch_assoc()) {
+											echo "
+											<tr>
+												<td>
+													".$row['id']."
+												</td>
+												<td>
+													".$row['nombre']."
+												</td>
+												<td> 
+												<input type='radio' name='permiso' value='".$row['id']."'>            
+										        </td>
+												
+											</tr>";
+									}
 								}
 								?>
 							</tbody>

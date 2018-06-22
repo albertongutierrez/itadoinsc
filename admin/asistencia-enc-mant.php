@@ -1,7 +1,5 @@
 <?php include'php/cabeza.php'; 
-if ($_SESSION['crmRanking']>2){
-	echo"<script language='javascript'>window.location='main.php'</script>;";
-}
+
 ?>
 <?php 
 	if(!empty($_GET['status'])){
@@ -45,13 +43,13 @@ if ($_SESSION['crmRanking']>2){
 	        //echo '<div class="alert '.$statusMsgClass.'">'.$statusMsg.'</div>';
 	        echo '<div class="alert alert-dismissable '.$statusMsgClass.'"> <button type="button" class="close" data-dismiss="alert" aria-label="close" aria-hidden="true" >&times;</button>'.$statusMsg.'</div>';
 	    } 
-	    if(($_SESSION['crmRanking']==1) || ($_SESSION['crmRanking']==2)){
+	    // if(($_SESSION['crmRanking']==1) || ($_SESSION['crmRanking']==2)){
 	    	echo "<a href='asistencia-enc-crear.php'>
 			<button type='button' class='btn btn-info'>
 				Nueva
 			</button>
 		</a>";
-	    }
+	    // }
 	    ?>
 		
 		<div class="panel panel-default" style="margin-top: 10px">

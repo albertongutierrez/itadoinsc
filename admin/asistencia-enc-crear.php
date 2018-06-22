@@ -1,8 +1,5 @@
 <?php include'php/cabeza.php';
 
-if ($_SESSION['crmRanking']>2){
-	echo"<script language='javascript'>window.location='categoria-mant.php'</script>;";
-}
 		$fecha=date("Y-m-d").'T'.date("h:i");
 		$creada=false;
 		$ids='';
@@ -14,7 +11,7 @@ if ($_SESSION['crmRanking']>2){
 		<p class="site-title">Mantenimiento Asistencia</p>
 		<div class="panel panel-default" style="margin-top: 10px">
 			<div class="panel-heading">
-				<h3 class="panel-title">Secciones <a href="javascript:void(0);" onclick="$('#importFrm').slideToggle();" style="float: right;">Filtros</a> </h3>
+				<h3 class="panel-title">Sección: <span class="seccion"></span> <a href="javascript:void(0);" onclick="$('#importFrm').slideToggle();" style="float: right;">Filtros</a> </h3>
 
 				<?php 
 					if (isset($_GET['seccion'])): 
@@ -41,7 +38,7 @@ if ($_SESSION['crmRanking']>2){
 					    	<br>
 					    	<div class="form-group">
     							<label class="sr-only" for="actividad">Actividad</label>
-    							<select id="codactividad" name="seccion" class="form-control" required=""> 
+    							<select id="seccion" name="seccion" class="form-control" required=""> 
 			            			<option value="">Seleccione</option>         
 						             <?php 
 									$query=extraerSeccionesENC();						
@@ -64,15 +61,18 @@ if ($_SESSION['crmRanking']>2){
 			<div class="p-body">
 			        	<form id="frm-example2" method="post" action="php/asistencia-enc-registros.php?accion=INS">
 
-						<div class="form-group">
-							<div class="col-sm-4">
-								<label>Fecha / Hora</label><span style="font-weight: bold; color: red; font-size: 16px">*</span>
-			        			<!-- <input type="datetime-local" name="horas" class="form-control" required="" value="<?php echo $fecha ?>"> -->
+						<div class="col-sm-4">
+							<div class="form-group">
 			        			<div class="input-append date form_datetime">
-			                      <input size="24" type="text" value="<?php echo $fecha ?>" id= "horas" name="horas" placeholder="Fecha" required="" readonly>
-			                      <span class="add-on"><i class="icon-remove"></i></span>
-			                      <span class="add-on"><i class="icon-th"></i></span>
-			                    </div>      
+								
+								<label class="control-label">Fecha / Hora</label><span style="font-weight: bold; color: red; font-size: 16px">*</span>
+		                        <div class="input-group">
+			                    	<input size="24" type="text" class="form-control" value="<?php echo $fecha ?>" id= "horas" name="horas" placeholder="Fecha" required="" readonly>
+			                    	<span class="add-on input-group-addon"><i class="icon-remove"></i></span>
+			                    	<span class="add-on input-group-addon"><i class="icon-th"></i></span>
+			                    </div> 
+			                    </div> 
+
 			        		</div>
 			        	</div>
 
@@ -170,6 +170,7 @@ if ($_SESSION['crmRanking']>2){
 	        todayBtn: true,
 	        pickerPosition: "bottom-left"
 	    });
+	    $('.seccion').text($('#seccion option:selected').text());
 	</script>         
 
 <?php include'php/pie.php';?>

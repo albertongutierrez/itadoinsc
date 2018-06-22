@@ -30,8 +30,10 @@
 									$query=extraerTipous();
 									if($query->num_rows > 0)
 									{
-										while ($row = $query->fetch_assoc()) {														
-											echo "<option value='".$row['codtipo']."'>".strtoupper($row['descripcion'])."</option>	";
+										while ($row = $query->fetch_assoc()) {	
+											if ($row['codtipo']!=3) {
+												echo "<option value='".$row['codtipo']."'>".strtoupper($row['descripcion'])."</option>	";
+											}													
 										}
 									}
 								?>						

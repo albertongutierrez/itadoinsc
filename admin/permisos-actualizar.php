@@ -1,8 +1,8 @@
 <?php include'php/cabeza.php';
 
-if ($_SESSION['crmRanking']>2){
-	echo"<script language='javascript'>window.location='categoria-mant.php'</script>;";
-}
+// if ($_SESSION['crmRanking']>2){
+// 	echo"<script language='javascript'>window.location='categoria-mant.php'</script>;";
+// }
 		date_default_timezone_set('America/La_Paz');
 		$fecha=date("Y-m-d").'T'.date("h:i");
 		

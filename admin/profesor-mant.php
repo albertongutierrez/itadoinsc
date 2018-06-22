@@ -6,6 +6,15 @@ if ($_SESSION['crmRanking']>2){
 <?php 
 	if(!empty($_GET['status'])){
 		    switch($_GET['status']){
+		    	case 'username':
+		            $statusMsgClass = 'alert-danger';
+		            $statusMsg = 'Usuario registrado, pruebe con otro.';
+		            break;
+				case 'pass':
+		            $statusMsgClass = 'alert-danger';
+		            $statusMsg = 'Las contraseñas no coinciden.';
+		            break;
+
 		        case 'succ':
 		            $statusMsgClass = 'alert-success';
 		            $statusMsg = 'Registro almacenado correctamente.';
@@ -14,6 +23,12 @@ if ($_SESSION['crmRanking']>2){
 		            $statusMsgClass = 'alert-danger';
 		            $statusMsg = 'Ha ocurrido un error insertando el registro.';
 		            break;
+
+		        case 'errus':
+		            $statusMsgClass = 'alert-danger';
+		            $statusMsg = 'Ha ocurrido un error insertando el usuario.';
+		            break;
+
 		        case 'succudt':
 		            $statusMsgClass = 'alert-success';
 		            $statusMsg = 'Registro actualizado correctamente.';
@@ -76,6 +91,7 @@ if ($_SESSION['crmRanking']>2){
 							$query=extraerProfesor();
 							if($query->num_rows > 0){
 								while ( $row= $query->fetch_assoc()) { 
+									if ($row['codprofesor']!=0) {
 									
 									echo "
 									<tr>
@@ -103,6 +119,7 @@ if ($_SESSION['crmRanking']>2){
 												});"/>
 											<?php echo"
 										 </td>";}
+									}
 								}
 								/*<td> <a href='empresa-registros.php?accion=UDT&id=".$row['codempresa']."&nombre=".$row['nombre']."&rsmnombre=".$row['rsm_nombre']."&telefono1=".$row['telefono1']."&telefono2=".$row['telefono2']."&correo=".$row['email']."&web=".$row['pweb']."&estado=".$row['estado']."&rnc=".$row['RNC']."'><img src='img/lapiz.png' width=15/></a> </td>*/
 							}
