@@ -6,6 +6,11 @@
 	echo"<script language='javascript'>window.location='categoria-mant.php'</script>;";		
 }
 ?>
+	<?php 					
+		$query=extraerActividadesUDT($_GET['empresa'], $_GET['id']);
+		$row=$query->fetch_assoc();
+	?>
+	
 	
 	<div class="content-wrapper" style="overflow:hidden;" >
 		<p class="site-title">Mantenimiento Actividades</p>
@@ -13,12 +18,12 @@
 			<div class="panel-heading">
 				<h3 class="panel-title">Editar</h3>
 			</div>
+			<ol class="breadcrumb">
+			  <li><a href="main.php">Inicio</a></li>
+			  <li><a href="actividades-mant.php">Actividades</a></li>
+			  <li class="active">Editar Registro</li>			  
+			</ol>
 			<div class="p-body">
-				<?php 					
-					$query=extraerActividadesUDT($_GET['empresa'], $_GET['id']);
-					$row=$query->fetch_assoc();
-				?>
-				
 				<form class="form-horizontal" method="POST" action="php/actividades-registros.php?accion=UDT" autocomplete="off" enctype="multipart/form-data">				
 					<div class="form-group">
 						<label for="codcategoria" class="col-sm-2 control-label">Código Actividad</label>

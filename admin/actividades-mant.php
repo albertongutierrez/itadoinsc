@@ -48,7 +48,7 @@ if ($_SESSION['crmRanking']>2){
 	    if(($_SESSION['crmRanking']==1) || ($_SESSION['crmRanking']==2)){
 	    	echo "<a href='actividades-crear.php'>
 			<button type='button' class='btn btn-info'>
-				Nueva
+				Nuevo
 			</button>
 		</a>";
 	    }
@@ -58,6 +58,10 @@ if ($_SESSION['crmRanking']>2){
 			<div class="panel-heading">
 				<h3 class="panel-title">Actividades</h3>
 			</div>
+			<ol class="breadcrumb">
+			  <li><a href="main.php">Inicio</a></li>
+			  <li class="active">Actividades</li>			  
+			</ol>
 			<div class="p-body">
 				<!-- <div class="row table-responsive"> -->
 					<table class="display table table-striped" id="table_id">
