@@ -9,6 +9,11 @@
 ?>
 	<div class="content-wrapper" style="overflow:hidden;" >
 		<p class="site-title">Mantenimiento Asistencia</p>
+			<ol class="breadcrumb">
+			  <li><a href="main.php">Inicio</a></li>
+			  <li><a href="asistencia-enc-mant.php">Asistencia</a></li>
+			  <li class="active">Nuevo Registro</li>			  
+			</ol>
 		<div class="panel panel-default" style="margin-top: 10px">
 			<div class="panel-heading">
 				<h3 class="panel-title">Sección: <span class="seccion"></span> <a href="javascript:void(0);" onclick="$('#importFrm').slideToggle();" style="float: right;">Filtros</a> </h3>
@@ -58,6 +63,7 @@
 				</div>
 			</div>
 			<?php //if (isset($GET['seccion'])): ?>
+		
 			<div class="p-body">
 			        	<form id="frm-example2" method="post" action="php/asistencia-enc-registros.php?accion=INS">
 

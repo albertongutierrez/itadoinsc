@@ -40,7 +40,10 @@ if ($_SESSION['crmRanking']>2){
 
 	<div class="content-wrapper" style="overflow:hidden;">
 		<h2 style="text-align: center;" class="site-title">Mantenimiento Provincias</h2>
-
+			<ol class="breadcrumb">
+			  <li><a href="main.php">Inicio</a></li>
+			  <li class="active">Provincias</li>			  
+			</ol>
 		<?php if(!empty($statusMsg)){
 	        //echo '<div class="alert '.$statusMsgClass.'">'.$statusMsg.'</div>';
 	        echo '<div class="alert alert-dismissable '.$statusMsgClass.'"> <button type="button" class="close" data-dismiss="alert" aria-label="close" aria-hidden="true" >&times;</button>'.$statusMsg.'</div>';
@@ -48,7 +51,7 @@ if ($_SESSION['crmRanking']>2){
 	    if(($_SESSION['crmRanking']==1) || ($_SESSION['crmRanking']==2)){
 	    	echo "<a href='provincias-crear.php'>
 			<button type='button' class='btn btn-info'>
-				Nueva 
+				Nuevo 
 			</button>
 		</a>";
 	    }

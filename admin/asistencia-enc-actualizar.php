@@ -1,5 +1,22 @@
 <?php include'php/cabeza.php';
 
+$Vid =    (int)$_GET['id'];
+    if ($Vid == 0){
+        // $id = filter_var($Vid, FILTER_SANITIZE_NUMBER_INT);
+        // if( !$id ) { 
+            // die('Intento de contaminar consulta'); 
+            $statusMsgClass = 'alert-danger';
+            $statusMsg = 'Se ha producido un error al intentar contaminar la consulta.';
+
+        }
+        // código para procesar Id numérico
+    // }
+    
+    if ($_SESSION['crmEmpresa'] != $_GET['empresa']){
+        // die('Intento de contaminar consulta'); 
+            $statusMsgClass = 'alert-danger';
+            $statusMsg = 'Se ha producido un error al intentar contaminar la consulta.';      
+    } 
 
 $id=$_GET['id'];
 $empresa=$_GET['empresa'];
@@ -9,15 +26,32 @@ $query4=extraerAsistenciaENCUDT($id);
 $ru=$query4->fetch_assoc();
 $fecha=date("Y-m-d",strtotime($ru['fecha'])).'T'.date("h:i",strtotime($ru['fecha']));
 
+	if ( empty($ru['codasistencia_enc']) && ($Vid != 0)
+		){
+        $statusMsgClass = 'alert-danger';
+        $statusMsg = 'La consulta no devolvió ningún resultado.';
+    }
+
+
+
 ?>
 	<div class="content-wrapper" style="overflow:hidden;" >
 		<p class="site-title">Mantenimiento Asistencia</p>
+			<ol class="breadcrumb">
+			  <li><a href="main.php">Inicio</a></li>
+			  <li><a href="asistencia-enc-mant.php">Asistencia</a></li>
+			  <li class="active">Editar Registro</li>			  
+			</ol>
+
+			 <?php if(!empty($statusMsg)){
+                    echo '<div class="alert '.$statusMsgClass.'">'.$statusMsg.'</div>';
+                    die("<a href='javascript:history.go(-1);' class='btn btn-warning btn-fill'>Datos no encontrados, volver atrás</a>");
+                } ?>
 		<div class="panel panel-default" style="margin-top: 10px">
 			<div class="panel-heading">
 				<h3 class="panel-title">Secciones  </h3>
 
 			</div>
-		
 			<div class="p-body">
 			        	<form id="frm-example2" method="post" action="php/asistencia-enc-registros.php?accion=UDT">
 

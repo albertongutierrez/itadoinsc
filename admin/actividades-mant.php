@@ -41,6 +41,10 @@ if ($_SESSION['crmRanking']>2){
 	<div class="content-wrapper" style="overflow:hidden;">
 		<h2 style="text-align: center;" class="site-title">Mantenimiento Actividades</h2>
 
+			<ol class="breadcrumb">
+			  <li><a href="main.php">Inicio</a></li>
+			  <li class="active">Actividades</li>			  
+			</ol>
 		<?php if(!empty($statusMsg)){
 	        //echo '<div class="alert '.$statusMsgClass.'">'.$statusMsg.'</div>';
 	        echo '<div class="alert alert-dismissable '.$statusMsgClass.'"> <button type="button" class="close" data-dismiss="alert" aria-label="close" aria-hidden="true" >&times;</button>'.$statusMsg.'</div>';
@@ -58,10 +62,6 @@ if ($_SESSION['crmRanking']>2){
 			<div class="panel-heading">
 				<h3 class="panel-title">Actividades</h3>
 			</div>
-			<ol class="breadcrumb">
-			  <li><a href="main.php">Inicio</a></li>
-			  <li class="active">Actividades</li>			  
-			</ol>
 			<div class="p-body">
 				<!-- <div class="row table-responsive"> -->
 					<table class="display table table-striped" id="table_id">

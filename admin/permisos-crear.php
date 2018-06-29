@@ -8,6 +8,11 @@
 ?>
 	<div class="content-wrapper" style="overflow:hidden;" >
 		<p class="site-title">Mantenimiento Permisos</p>
+		<ol class="breadcrumb">
+		  <li><a href="main.php">Inicio</a></li>
+		  <li><a href="permisos-mant.php">Permisos</a></li>
+		  <li class="active">Nuevo Registro</li>			  
+		</ol>
 		<div class="panel panel-default" style="margin-top: 10px">
 			<div class="panel-heading">
 				<h3 class="panel-title">Permisos <a href="javascript:void(0);" onclick="$('#importFrm').slideToggle();" style="float: right;">Filtros</a> </h3>

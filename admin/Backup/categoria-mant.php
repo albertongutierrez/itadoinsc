@@ -39,16 +39,16 @@ if ($_SESSION['crmRanking']>2){
 		?>
 
 	<div class="content-wrapper" style="overflow:hidden;">
-		<h2 style="text-align: center;" class="site-title">Mantenimiento Grupo Pais</h2>
+		<h2 style="text-align: center;" class="site-title">Mantenimiento Categorías</h2>
 
 		<?php if(!empty($statusMsg)){
 	        //echo '<div class="alert '.$statusMsgClass.'">'.$statusMsg.'</div>';
 	        echo '<div class="alert alert-dismissable '.$statusMsgClass.'"> <button type="button" class="close" data-dismiss="alert" aria-label="close" aria-hidden="true" >&times;</button>'.$statusMsg.'</div>';
 	    } 
 	    if(($_SESSION['crmRanking']==1) || ($_SESSION['crmRanking']==2)){
-	    	echo "<a href='grupo-pais-crear.php'>
+	    	echo "<a href='categoria-crear.php'>
 			<button type='button' class='btn btn-info'>
-				Nueva
+				Nuevo
 			</button>
 		</a>";
 	    }
@@ -56,17 +56,21 @@ if ($_SESSION['crmRanking']>2){
 		
 		<div class="panel panel-default" style="margin-top: 10px">
 			<div class="panel-heading">
-				<h3 class="panel-title">Grupo Pais</h3>
+				<h3 class="panel-title">Categoría</h3>
 			</div>
+			<ol class="breadcrumb">
+			  <li><a href="main.php">Inicio</a></li>
+			  <li class="active">Categoría</li>			  
+			</ol>
 			<div class="p-body">
 				<!-- <div class="row table-responsive"> -->
 					<table class="display table table-striped" id="table_id">
 						<thead>
 							<tr>
 								<th>Código</th>
-								<?php if($_SESSION['crmRanking']==1){echo "<th>Empresa</th>";}?>
 								<th>Descripción</th>
-								<!-- <th>Rango Final</th> -->
+								<th>Rango Inicial</th>
+								<th>Rango Final</th>
 								<th>Estado</th>
 								<!-- <th>Por defecto</th> -->								
 								<?php if($_SESSION['crmRanking']==1 or $_SESSION['crmRanking']==2){echo "<th></th>";}?>
@@ -75,20 +79,20 @@ if ($_SESSION['crmRanking']>2){
 						</thead>						
 						<tbody>
 						<?php 
-							$query=extraerGrupopais();
+							$query=extraerCategorias($_SESSION['crmRanking'],$_SESSION['crmEmpresa']);
 							if($query->num_rows > 0){
 								while ( $row= $query->fetch_assoc()) { 
 									
 									echo "
 									<tr>
-									<td> ".$row['codgrupo']." </td>";
-									if($_SESSION['crmRanking']==1) {echo "<td>".$row['codempresa']."</td>";}
-									echo "
-									<td> ".$row['descripcion']."</td>
+									<td> ".$row['codcategoria']." </td>
+									<td>".$row['descripcion']."</td>
+									<td> ".$row['rango1']."</td>
+									<td> ".$row['rango2']."</td>
 									<td> ".$row['estado']."</td>
 									";//<td> ".$row['por_defecto']."</td>
-									 if($_SESSION['crmRanking']==1 or $_SESSION['crmRanking']==2){echo "<td><a data-toggle='tooltip' title='Editar' href='grupo-pais-actualizar.php?accion=UDT&empresa=".$row['codempresa']."&id=".$row['codgrupo']."'><img src='img/lapiz.png' width=15/></a> </td>";}
-									 if($_SESSION['crmRanking']==1 or $_SESSION['crmRanking']==2){echo "<td>"?> 
+									 if($_SESSION['crmRanking']==1 or $_SESSION['crmRanking']==2){echo "<td><a data-toggle='tooltip' title='Editar' href='categoria-actualizar.php?accion=UDT&empresa=".$row['codempresa']."&id=".$row['codcategoria']."'><img src='img/lapiz.png' width=15/></a> </td>";}
+									 if($_SESSION['crmRanking']==1 or $_SESSION['crmRanking']==2){												echo "<td>"?> 
 													<img 
 													data-toggle='tooltip'
 													src='img/basura.png' width='15' title='Anular' onclick="
@@ -97,7 +101,7 @@ if ($_SESSION['crmRanking']>2){
 												    content: 'Con esta acción el registro seleccionado sera eliminado',
 												    buttons: {
 												        confirmar: function () {
-												 window.location='php/grupo-pais-registros.php/?accion=DLT&id=<?php echo $row['codgrupo']."&empresa=".$row['codempresa'];?>';
+												 window.location='php/categoria-registros.php/?accion=DLT&id=<?php echo $row['codcategoria']."&empresa=".$row['codempresa'];?>';
 												        },
 												        cancelar: function () {
 												            // $.alert('Cancelado!');
@@ -105,7 +109,7 @@ if ($_SESSION['crmRanking']>2){
 												    }
 												});"/>
 											<?php echo"
-										 </td>";}	
+										 </td>";}
 																		
 									echo"</tr>";
 								}
@@ -119,11 +123,9 @@ if ($_SESSION['crmRanking']>2){
 			</div>
 		</div>
 	</div>
-
 <script>
 $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();   
 });
 </script>
-
 <?php include'php/pie.php';?>

@@ -1,16 +1,57 @@
 <?php include'php/cabeza.php';
 
 if ($_SESSION['crmRanking']>2){
-	echo"<script language='javascript'>window.location='categoria-mant.php'</script>;";
+	echo"<script language='javascript'>window.location='main.php'</script>;";
 }
+
+ 	$Vid 	=    (int)$_GET['id'];
+ 	$Vuser 	=    (int)$_GET['user'];
+
+    if (($Vid == 0) or ($Vuser == 0)){
+        // $id = filter_var($Vid, FILTER_SANITIZE_NUMBER_INT);
+        // if( !$id ) { 
+            // die('Intento de contaminar consulta'); 
+            $statusMsgClass = 'alert-danger';
+            $statusMsg = 'Se ha producido un error al intentar contaminar la consulta.';
+
+        }
+        // código para procesar Id numérico
+    // }
+    
+    if ($_SESSION['crmEmpresa'] != $_GET['empresa']){
+        // die('Intento de contaminar consulta'); 
+            $statusMsgClass = 'alert-danger';
+            $statusMsg = 'Se ha producido un error al intentar contaminar la consulta.';      
+    }
+
 $query=extraerSeccionesDETUDT($_GET['id']);						
 $row= $query->fetch_assoc();
 $query2=extaerInscritosUDT2($_GET['user'],$_GET['empresa']);
 $ro=$query2->fetch_assoc();
+
+	if (empty($row['codseccion_det'])){
+        $statusMsgClass = 'alert-danger';
+        $statusMsg = 'La consulta no devolvió ningún resultado.';
+    }
+
+    
+    if (empty($ro['codinscripcion'])){
+        $statusMsgClass = 'alert-danger';
+        $statusMsg = 'La consulta no devolvió ningún resultado.';
+    }
 ?>
 	
 	<div class="content-wrapper" style="overflow:hidden;" >
-		<p class="site-title">Mantenimiento Clase </p>
+		<p class="site-title">Asignar Secciones</p>
+			<ol class="breadcrumb">
+			  <li><a href="main.php">Inicio</a></li>
+			  <li><a href="secciones-det-mant.php">Asignar Secciones</a></li>
+			  <li class="active">Editar Registro</li>			  
+			</ol>
+					 <?php if(!empty($statusMsg)){
+                    echo '<div class="alert '.$statusMsgClass.'">'.$statusMsg.'</div>';
+                    die("<a href='javascript:history.go(-1);' class='btn btn-warning btn-fill'>Datos no encontrados, volver atrás</a>");
+                } ?>
 		<div class="panel panel-default" style="margin-top: 10px">
 			<div class="panel-heading">
 				<h3 class="panel-title">Editar</h3>

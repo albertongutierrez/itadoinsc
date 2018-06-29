@@ -1,25 +1,45 @@
 <?php include'php/cabeza.php';
 	if (!isset($_GET['id']) or !isset($_GET['us'])){
-		echo"<script language='javascript'>window.location='usuario-mant.php'</script>;";
+		echo"<script language='javascript'>window.location='main.php'</script>;";
 	}
 	if($_SESSION['crmRanking']!=1 and $_SESSION['crmEmpresa']!=$_GET['id']) {
-	echo"<script language='javascript'>window.location='usuario-mant.php'</script>;";		
+	echo"<script language='javascript'>window.location='main.php'</script>;";
 }
+
+    if ($_SESSION['crmEmpresa'] != $_GET['id']){
+        // die('Intento de contaminar consulta'); 
+            $statusMsgClass = 'alert-danger';
+            $statusMsg = 'Se ha producido un error al intentar contaminar la consulta.';      
+    } 
+
 ?>
 
+			<?php 
+					$query=extraerUsuarioUDT($_GET['id'],$_GET['us']);
+					// echo $query;
+					$r=$query->fetch_assoc();
+					if (empty($r['username'])){
+			        	$statusMsgClass = 'alert-danger';
+			        	$statusMsg = 'La consulta no devolvió ningún resultado.';
+			    	}
+				?>
 	
 	<div class="content-wrapper" style="overflow:hidden;" >
 		<p class="site-title">Mantenimiento Usuario</p>
+		<ol class="breadcrumb">
+			  <li><a href="main.php">Inicio</a></li>
+			  <li><a href="usuario-mant.php">Usuarios</a></li>
+			  <li class="active">Editar Registro</li>			  
+			</ol>
+			<?php if(!empty($statusMsg)){
+                    echo '<div class="alert '.$statusMsgClass.'">'.$statusMsg.'</div>';
+                    die("<a href='javascript:history.go(-1);' class='btn btn-warning btn-fill'>Datos no encontrados, volver atrás</a>");
+                } ?>
 		<div class="panel panel-default" style="margin-top: 10px">
 			<div class="panel-heading">
 				<h3 class="panel-title">Editar </h3>
 			</div>
 			<div class="p-body">
-			<?php 
-					$query=extraerUsuarioUDT($_GET['id'],$_GET['us']);
-					// echo $query;
-					$r=$query->fetch_assoc();
-				?>
 				<form class="form-horizontal" method="POST" action="php/usuario-registros.php?accion=UDT" autocomplete="off" enctype="multipart/form-data">				
 					<div class="form-group">
 						<label for="username" class="col-sm-2 control-label">Usuario</label>

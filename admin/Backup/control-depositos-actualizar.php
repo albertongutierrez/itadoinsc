@@ -7,17 +7,22 @@
 }
 ?>
 	
+	<?php 					
+		$query=extraerDepositosLibUDT($_GET['empresa'], $_GET['id']);
+		$row=$query->fetch_assoc();
+	?>
 	<div class="content-wrapper" style="overflow:hidden;" >
 		<p class="site-title">Mantenimiento Depósitos</p>
 		<div class="panel panel-default" style="margin-top: 10px">
 			<div class="panel-heading">
 				<h3 class="panel-title">Editar </h3>
 			</div>
+			<ol class="breadcrumb">
+			  <li><a href="main.php">Inicio</a></li>
+			  <li><a href="control-depositos-mant.php">Actividades</a></li>
+			  <li class="active">Editar Registro</li>			  
+			</ol>
 			<div class="p-body">
-				<?php 					
-					$query=extraerDepositosLibUDT($_GET['empresa'], $_GET['id']);
-					$row=$query->fetch_assoc();
-				?>
 				
 				<form class="form-horizontal" method="POST" action="php/control-depositos-lib-registros.php?accion=UDT" autocomplete="off" enctype="multipart/form-data">				
 					<div class="form-group">

@@ -10,8 +10,13 @@ if ($_SESSION['crmRanking']>2){
 		<p class="site-title">Mantenimiento Categorías</p>
 		<div class="panel panel-default" style="margin-top: 10px">
 			<div class="panel-heading">
-				<h3 class="panel-title">Nueva</h3>
+				<h3 class="panel-title">Nuevo</h3>
 			</div>
+			<ol class="breadcrumb">
+			  <li><a href="main.php">Inicio</a></li>
+			  <li><a href="categoria-mant.php">Categoría</a></li>
+			  <li class="active">Nuevo Registro</li>			  
+			</ol>
 			<div class="p-body">
 				<form class="form-horizontal" method="POST" action="php/categoria-registros.php?accion=INS" autocomplete="off" enctype="multipart/form-data">				
 					<!--NO APLICA YA QUE ES AUTOINCREMENTABLE-->

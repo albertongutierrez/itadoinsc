@@ -5,8 +5,35 @@
 	if($_SESSION['crmRanking']>2 and $_SESSION['crmEmpresa']) {
 	echo"<script language='javascript'>window.location='provincias-pais-mant.php'</script>;";		
 }
+
+$Vid =    (int)$_GET['id'];
+    if ($Vid == 0){
+        // $id = filter_var($Vid, FILTER_SANITIZE_NUMBER_INT);
+        // if( !$id ) { 
+            // die('Intento de contaminar consulta'); 
+            $statusMsgClass = 'alert-danger';
+            $statusMsg = 'Se ha producido un error al intentar contaminar la consulta.';
+
+        }
+        // código para procesar Id numérico
+    // }
+    
+    if ($_SESSION['crmEmpresa'] != $_GET['empresa']){
+        // die('Intento de contaminar consulta'); 
+            $statusMsgClass = 'alert-danger';
+            $statusMsg = 'Se ha producido un error al intentar contaminar la consulta.';      
+    } 
 ?>
 	
+				<?php 					
+					$query=extraerProvinciasPaisUDT($_GET['empresa'], $_GET['id']);
+					$row=$query->fetch_assoc();
+					if (empty($row['codprovincia']) && ($Vid != 0)){
+			        $statusMsgClass = 'alert-danger';
+			        $statusMsg = 'La consulta no devolvió ningún resultado.';
+			         }
+				?>
+				
 	<div class="content-wrapper" style="overflow:hidden;" >
 		<p class="site-title">Mantenimiento Provincias Pais</p>
 		<div class="panel panel-default" style="margin-top: 10px">
@@ -14,11 +41,6 @@
 				<h3 class="panel-title">Editar </h3>
 			</div>
 			<div class="p-body">
-				<?php 					
-					$query=extraerProvinciasPaisUDT($_GET['empresa'], $_GET['id']);
-					$row=$query->fetch_assoc();
-				?>
-				
 				<form class="form-horizontal" method="POST" action="php/provincias-pais-registros.php?accion=UDT" autocomplete="off" enctype="multipart/form-data">				
 					<div class="form-group">
 						<label for="codprovincia" class="col-sm-2 control-label">Código Provincia</label>

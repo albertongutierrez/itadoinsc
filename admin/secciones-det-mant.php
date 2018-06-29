@@ -47,8 +47,12 @@ if ($_SESSION['crmRanking']>2){
 		?>
 
 	<div class="content-wrapper" style="overflow:hidden;">
-		<h2 style="text-align: center;" class="site-title">Mantenimiento Clases</h2>
+		<h2 style="text-align: center;" class="site-title">Asignar Secciones</h2>
 
+			<ol class="breadcrumb">
+			  <li><a href="main.php">Inicio</a></li>
+			  <li class="active">Asignar Secciones</li>			  
+			</ol>
 		<?php if(!empty($statusMsg)){
 	        //echo '<div class="alert '.$statusMsgClass.'">'.$statusMsg.'</div>';
 	        echo '<div class="alert alert-dismissable '.$statusMsgClass.'"> <button type="button" class="close" data-dismiss="alert" aria-label="close" aria-hidden="true" >&times;</button>'.$statusMsg.'</div>';
@@ -56,15 +60,15 @@ if ($_SESSION['crmRanking']>2){
 	    if(($_SESSION['crmRanking']==1) || ($_SESSION['crmRanking']==2)){
 	    	echo "<a href='secciones-det-crear.php'>
 			<button type='button' class='btn btn-info'>
-				Nueva
+				Nuevo
 			</button>
 		</a>";
 	    }
 	    ?>
-		
+			
 		<div class="panel panel-default" style="margin-top: 10px">
 			<div class="panel-heading">
-				<h3 class="panel-title">Secciones <a href="javascript:void(0);" onclick="$('#importFrm').slideToggle();" style="float: right;">Filtros</a> </h3>
+				<h3 class="panel-title">Asignar Secciones <a href="javascript:void(0);" onclick="$('#importFrm').slideToggle();" style="float: right;">Filtros</a> </h3>
 
 				<?php if (isset($_GET['seccion'])): ?>
 		        	<div id="importFrm"> 

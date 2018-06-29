@@ -55,6 +55,10 @@ if ($_SESSION['crmRanking']>2){
 
 	<div class="content-wrapper" style="overflow:hidden;">
 		<h2 style="text-align: center;" class="site-title">Mantenimiento Profesor</h2>
+			<ol class="breadcrumb">
+			  <li><a href="main.php">Inicio</a></li>
+			  <li class="active">Profesores</li>			  
+			</ol>
 
 		<?php if(!empty($statusMsg)){
 	        //echo '<div class="alert '.$statusMsgClass.'">'.$statusMsg.'</div>';

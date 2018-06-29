@@ -41,18 +41,22 @@ if ($_SESSION['crmRanking']>3){
 		?>
 <div class="content-wrapper" style="overflow:hidden;">
 		<h2 style="text-align: center;" class="site-title">Reporte Asistencia</h2>
+		<ol class="breadcrumb">
+			  <li><a href="main.php">Inicio</a></li>
+			  <li class="active">Reporte Asistencia</li>			  
+		</ol>
 
 		<?php if(!empty($statusMsg)){
 	        //echo '<div class="alert '.$statusMsgClass.'">'.$statusMsg.'</div>';
 	        echo '<div class="alert alert-dismissable '.$statusMsgClass.'"> <button type="button" class="close" data-dismiss="alert" aria-label="close" aria-hidden="true" >&times;</button>'.$statusMsg.'</div>';
 	    } 
-	    if(($_SESSION['crmRanking']==1) || ($_SESSION['crmRanking']==2)){
-	    	echo "<a href='main.php'>
-			<button type='button' class='btn btn-info'>
-				Volver Atrás 
-			</button>
-		</a>";
-	    }
+	 //    if(($_SESSION['crmRanking']==1) || ($_SESSION['crmRanking']==2)){
+	 //    	echo "<a href='main.php'>
+		// 	<button type='button' class='btn btn-info'>
+		// 		Volver Atrás 
+		// 	</button>
+		// </a>";
+	 //    }
 	    $fecha=date('Y-m-d');
 	    // echo $fecha;
 	    if (isset($_GET['curso'])) {
@@ -78,9 +82,7 @@ if ($_SESSION['crmRanking']>3){
 		
 		 <div class="panel panel-default">
 			<div class="panel-heading">
-		        Consultar 
-		        <a href="javascript:void(0);" onclick="$('#importFrm').slideToggle();" style="float: right;">Filtros</a>
-		        <br>
+		        <h3 class="panel-title">Consultar <a href="javascript:void(0);" onclick="$('#importFrm').slideToggle();" style="float: right;">Filtros</a> </h3>
 
 		        <?php if (isset($_GET['rev'])): ?>
 		        	<div id="importFrm"> 
@@ -97,7 +99,7 @@ if ($_SESSION['crmRanking']>3){
 					    	<br>
 								<div class="col-sm-3">
 									<!-- <br> -->
-	    							<label class="control-label" for="curso">Curso</label>
+	    							<label class="control-label" for="curso">Curso</label><span style="font-weight: bold; color: red; font-size: 16px">*</span>
 	    							<select id="curso" name="curso" class="form-control" onchange="validar()" required=""> 
 				            <option value="">Seleccione</option>           
 				            <?php 

@@ -8,8 +8,8 @@
 
 //PC DE HAROLD
 $host="localhost";
-$user="root";
-$pw="";
+$user="mangusoft";
+$pw="123";
 $bd="crm_inscripciones_itado";
 $llavec="QY%qffw4";
 

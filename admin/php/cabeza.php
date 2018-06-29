@@ -431,8 +431,8 @@
 					
 					<ul>
 						<li><a href="usuario-mant.php">Gestión de Usuarios</a></li>
-						<li><a href="#0">Importar Datos</a></li>
-						<li><a href="#0">Exportar Datos</a></li>
+						<!-- <li><a href="#0">Importar Datos</a></li> -->
+						<!-- <li><a href="#0">Exportar Datos</a></li> -->
 					</ul>
 				</li>
 

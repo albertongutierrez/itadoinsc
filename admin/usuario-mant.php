@@ -48,7 +48,10 @@
 
 	<div class="content-wrapper" style="overflow:hidden;">
 		<h2 style="text-align: center;" class="site-title">Mantenimiento Usuarios</h2>
-
+		<ol class="breadcrumb">
+		  <li><a href="main.php">Inicio</a></li>
+		  <li class="active">Usuarios</li>			  
+		</ol>
 		<?php if(!empty($statusMsg)){
 	        //echo '<div class="alert '.$statusMsgClass.'">'.$statusMsg.'</div>';
 	        echo '<div class="alert alert-dismissable '.$statusMsgClass.'"> <button type="button" class="close" data-dismiss="alert" aria-label="close" aria-hidden="true" >&times;</button>'.$statusMsg.'</div>';

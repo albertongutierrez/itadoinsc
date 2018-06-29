@@ -1,13 +1,19 @@
 <?php include'php/cabeza.php';
 
 if ($_SESSION['crmRanking']>2){
-	echo"<script language='javascript'>window.location='nacionalidad-mant.php'</script>;";
+	// echo"<script language='javascript'>window.location='nacionalidad-mant.php'</script>;";
+	echo"<script language='javascript'>window.location='main.php'</script>;";
 }
 ?>
 
 	
 	<div class="content-wrapper" style="overflow:hidden;" >
 		<p class="site-title">Mantenimiento Curso</p>
+			<ol class="breadcrumb">
+			  <li><a href="main.php">Inicio</a></li>
+			  <li><a href="curso-mant.php">Cursos</a></li>
+			  <li class="active">Nuevo Registro</li>			  
+			</ol>
 		<div class="panel panel-default" style="margin-top: 10px">
 			<div class="panel-heading">
 				<h3 class="panel-title">Nuevo</h3>

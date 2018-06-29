@@ -38,6 +38,10 @@
 
 	<div class="content-wrapper" style="overflow:hidden;">
 		<h2 style="text-align: center;" class="site-title">Mantenimiento Asistencia</h2>
+			<ol class="breadcrumb">
+			  <li><a href="main.php">Inicio</a></li>
+			  <li class="active">Asistencia</li>			  
+			</ol>
 
 		<?php if(!empty($statusMsg)){
 	        //echo '<div class="alert '.$statusMsgClass.'">'.$statusMsg.'</div>';
@@ -46,7 +50,7 @@
 	    // if(($_SESSION['crmRanking']==1) || ($_SESSION['crmRanking']==2)){
 	    	echo "<a href='asistencia-enc-crear.php'>
 			<button type='button' class='btn btn-info'>
-				Nueva
+				Nuevo
 			</button>
 		</a>";
 	    // }
@@ -56,6 +60,8 @@
 			<div class="panel-heading">
 				<h3 class="panel-title">Asistencia</h3>
 			</div>
+			
+
 			<div class="p-body">
 				<!-- <div class="row table-responsive"> -->
 					<table class="display table table-striped" id="table_id">

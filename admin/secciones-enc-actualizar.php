@@ -1,10 +1,34 @@
 <?php include'php/cabeza.php';
 
 if ($_SESSION['crmRanking']>2){
-	echo"<script language='javascript'>window.location='categoria-mant.php'</script>;";
+	echo"<script language='javascript'>window.location='main.php'</script>;";
 }
+
+$Vid =    (int)$_GET['id'];
+    if ($Vid == 0){
+        // $id = filter_var($Vid, FILTER_SANITIZE_NUMBER_INT);
+        // if( !$id ) { 
+            // die('Intento de contaminar consulta'); 
+            $statusMsgClass = 'alert-danger';
+            $statusMsg = 'Se ha producido un error al intentar contaminar la consulta.';
+
+        }
+        // código para procesar Id numérico
+    // }
+    
+    if ($_SESSION['crmEmpresa'] != $_GET['empresa']){
+        // die('Intento de contaminar consulta'); 
+            $statusMsgClass = 'alert-danger';
+            $statusMsg = 'Se ha producido un error al intentar contaminar la consulta.';      
+    } 
+
 $query=extraerSeccionesENCUDT($_GET['id'],$_GET['empresa']);
 $ro=$query->fetch_assoc();
+
+if (empty($ro['codseccion_enc']) && ($Vid != 0)){
+        $statusMsgClass = 'alert-danger';
+        $statusMsg = 'La consulta no devolvió ningún resultado.';
+    }
 ?>
 <script type="text/javascript">
 	var acomulativa=false;
@@ -35,9 +59,19 @@ $ro=$query->fetch_assoc();
 	
 	<div class="content-wrapper" style="overflow:hidden;" >
 		<p class="site-title">Mantenimiento Secciones </p>
+			<ol class="breadcrumb">
+			  <li><a href="main.php">Inicio</a></li>
+			  <li><a href="secciones-enc-mant.php">Secciones</a></li>
+			  <li class="active">Editar Registro</li>			  
+			</ol>
+
+			<?php if(!empty($statusMsg)){
+                    echo '<div class="alert '.$statusMsgClass.'">'.$statusMsg.'</div>';
+                    die("<a href='javascript:history.go(-1);' class='btn btn-warning btn-fill'>Datos no encontrados, volver atrás</a>");
+                } ?>
 		<div class="panel panel-default" style="margin-top: 10px">
 			<div class="panel-heading">
-				<h3 class="panel-title">Actualizar</h3>
+				<h3 class="panel-title">Editar</h3>
 			</div>
 			<div class="p-body">
 				<form class="form-horizontal" method="POST" action="php/secciones-enc-registros.php?accion=UDT" autocomplete="off" enctype="multipart/form-data">	

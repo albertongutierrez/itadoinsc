@@ -40,7 +40,10 @@
 
 	<div class="content-wrapper" style="overflow:hidden;">
 		<h2 style="text-align: center;" class="site-title">Impresion de Ticket</h2>
-
+		<ol class="breadcrumb">
+			  <li><a href="main.php">Inicio</a></li>
+			  <li class="active">Impresión de Ticket</li>			  
+		</ol>
 		<?php if(!empty($statusMsg)){
 	        echo '<div class="alert '.$statusMsgClass.'">'.$statusMsg.'</div>';
 	    } 
