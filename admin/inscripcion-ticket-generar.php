@@ -36,15 +36,15 @@
 			</head>
 			<body style="margin:0mm ;padding:0mm; width:100%; ">
 			<div style="border:3px black solid;margin-top:4px; ">
-				<div style=" font-size:37.1px; width:98%; margin:0 auto;">
+				<div style=" font-size:20px; width:98%; margin:0 auto;">
 					<img src="'.$img.'" width="250px" style="float:right; margin-top:48px"/>
 					<p>Estudiante: <br>
-					<span style="font-weight:bold;">'.$row['nombre']." ".$row['apellido'].'</span></p>
+					<span style="font-weight:bold; font-size:30px">'.$row['nombre']." ".$row['apellido'].'</span></p>
 					<p>Cedula:<br>
-					<span style="font-weight:bold;">'.$row['cedula'].'</span></p>
+					<span style="font-weight:bold; font-size:30px">'.$row['cedula'].'</span></p>
 
 					<p>Curso:<br>
-					<span style="font-weight:bold; font-size:180%">'.$row['curso'].'</span></p>
+					<span style="font-weight:bold; font-size:20">'.$row['curso'].'</span></p><br>
 				</div>	
 			<div>
 			</body>

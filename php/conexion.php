@@ -1,15 +1,15 @@
 <?php
 /*local*/
 // $host="localhost";
-// $user="root";
-// $pw="";
+$user="root";
+$pw="";
 // $bd="crm_inscripciones_itado";
 // $llavec="QY%qffw4";
 
 //PC DE HAROLD
 $host="localhost";
-$user="mangusoft";
-$pw="123";
+// $user="mangusoft";
+// $pw="123";
 $bd="crm_inscripciones_itado";
 $llavec="QY%qffw4";
 

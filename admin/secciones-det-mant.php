@@ -124,6 +124,7 @@ if ($_SESSION['crmRanking']>2){
 								while ( $row= $query->fetch_assoc()) { 
 									$query2=extaerInscritosUDT2($row['codinscripcion'],$row['codempresa']);
 									$ro=$query2->fetch_assoc();
+
 									echo "
 									<tr>
 									<td> ".$row['codseccion_det']." </td>";
@@ -143,7 +144,7 @@ if ($_SESSION['crmRanking']>2){
 												    content: 'Con esta acción el registro seleccionado sera eliminado',
 												    buttons: {
 												        confirmar: function () {
-												 window.location='php/secciones-det-registros.php/?accion=DLT&id=<?php echo $row['codseccion_det']."&empresa=".$row['codempresa']."&user==".$row['codinscripcion'];?>';
+												 window.location='php/secciones-det-registros.php/?accion=DLT&id=<?php echo $row['codseccion_det']."&empresa=".$row['codempresa']."&user=".$row['codinscripcion'];?>';
 												        },
 												        cancelar: function () {
 												            // $.alert('Cancelado!');
@@ -157,6 +158,7 @@ if ($_SESSION['crmRanking']>2){
 											echo "<td></td>";
 										}
 									echo "</tr>";
+								
 								}
 								/*<td> <a href='empresa-registros.php?accion=UDT&id=".$row['codempresa']."&nombre=".$row['nombre']."&rsmnombre=".$row['rsm_nombre']."&telefono1=".$row['telefono1']."&telefono2=".$row['telefono2']."&correo=".$row['email']."&web=".$row['pweb']."&estado=".$row['estado']."&rnc=".$row['RNC']."'><img src='img/lapiz.png' width=15/></a> </td>*/
 							}

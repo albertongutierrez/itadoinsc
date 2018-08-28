@@ -41,7 +41,7 @@ if ($_SESSION['crmRanking']>2){
 				<h3 class="panel-title">Nuevo</h3>
 			</div>
 			<div class="p-body">
-				<form class="form-horizontal" method="POST" action="php/secciones-det-registros.php?accion=INS" autocomplete="off" enctype="multipart/form-data">	
+				<form class="form-horizontal" method="POST" action="php/secciones-det-registros.php?accion=INS" autocomplete="off" enctype="multipart/form-data" id="target">	
 
 					<div class="form-group">
 			          <div class="col-sm-4 ">
@@ -64,7 +64,7 @@ if ($_SESSION['crmRanking']>2){
 			        <table class="display table table-striped" id="example"  cellspacing="0" width="100%">
 						<thead>
 							<tr>
-								<th><input name="select_all" value="1" id="example-select-all" type="checkbox"/> Todo</th>
+								<th><input name="select_all" value="1" id="checkall" type="checkbox"/> Todo</th>
 								<th>Código</th>
 								<th>Nombre</th>							
 								<th>Apellido</th>							

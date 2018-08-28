@@ -131,7 +131,7 @@ if(isset($_GET['accion'])){
 					`secciones_det` 
 				SET 
 				`estado`='I',
-				`usuario`='".$_SESSION['crmUsername']."' 
+				`usuario`='".$_SESSION['crmUsername']."'
 				WHERE
 				`codseccion_det` = '$id' 
 				 ";

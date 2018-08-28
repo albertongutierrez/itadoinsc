@@ -129,9 +129,9 @@
 	// 	echo mysqli_error($mysqli);
 	// 	header("Location: ../reporte-efectivo-percibir.php".$rev);
 	// }
+// }
 	else{
 		header("Location: ../main.php");	
 	}
 		
-
- ?>	}
+ ?>	
