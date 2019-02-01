@@ -96,6 +96,49 @@ if(isset($_GET['accion'])){
 
 			if($mysqli->query($sql)){
 				$qstring = '?status=succdlt';
+				$sql=" 
+				UPDATE 
+					`secciones_det` 
+				SET 
+				`estado`='I',
+				`usuario`='".$_SESSION['crmUsername']."' 
+				WHERE
+				`codseccion_enc` = '$id' 
+				 ";
+				 if ($_SESSION['crmRanking']==2){
+			 	$sql=$sql." and codempresa = '$empresa'";
+				}
+				if($mysqli->query($sql)){
+					$qstring = '?status=succdlt';
+					$sql=" 
+						UPDATE 
+							`inscripcion` 
+						SET 
+						`curso`='N',
+						`usuario`='".$_SESSION['crmUsername']."' 
+						WHERE
+						`codinscripcion` = '$us' 
+						 ";
+						 if ($_SESSION['crmRanking']==2){
+					 	$sql=$sql." and codempresa = '$empresa'";
+					}
+
+					if($mysqli->query($sql)){
+						$qstring = '?status=succdlt';
+						// header("Location: ../../secciones-det-mant.php".$qstring);
+
+					}
+					else{
+						$qstring = '?status=errdlt';
+						// header("Location: ../../secciones-det-mant.php".$qstring);
+						 echo("Error description: " . mysqli_error($mysqli));
+					}
+				}
+				else{
+					$qstring = '?status=errdlt';
+					// header("Location: ../../secciones-enc-mant.php".$qstring);
+					echo("Error description: " . mysqli_error($mysqli));
+				}
 				header("Location: ../../secciones-enc-mant.php".$qstring);
 
 			}

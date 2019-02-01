@@ -1,7 +1,7 @@
-<?php include'php/cabeza2.php';
+<?php include'php/cabeza.php';
 
 if ($_SESSION['crmRanking']>2){
-	echo"<script language='javascript'>window.location='categoria-mant.php'</script>;";
+	echo"<script language='javascript'>window.location='main.php'</script>;";
 }
 ?>
 <script type="text/javascript">
@@ -30,13 +30,18 @@ if ($_SESSION['crmRanking']>2){
 </script>
 	
 	<div class="content-wrapper" style="overflow:hidden;" >
-		<p class="site-title">Mantenimiento Clase </p>
+		<p class="site-title">Asignar Secciones</p>
+			<ol class="breadcrumb">
+				  <li><a href="main.php">Inicio</a></li>
+				  <li><a href="secciones-det-mant.php">Asignar Secciones</a></li>
+				  <li class="active">Nuevo Registro</li>			  
+			</ol>
 		<div class="panel panel-default" style="margin-top: 10px">
 			<div class="panel-heading">
-				<h3 class="panel-title">Nueva</h3>
+				<h3 class="panel-title">Nuevo</h3>
 			</div>
 			<div class="p-body">
-				<form class="form-horizontal" method="POST" action="php/secciones-det-registros.php?accion=INS" autocomplete="off" enctype="multipart/form-data">	
+				<form class="form-horizontal" method="POST" action="php/secciones-det-registros.php?accion=INS" autocomplete="off" enctype="multipart/form-data" id="target">	
 
 					<div class="form-group">
 			          <div class="col-sm-4 ">
@@ -59,7 +64,7 @@ if ($_SESSION['crmRanking']>2){
 			        <table class="display table table-striped" id="example"  cellspacing="0" width="100%">
 						<thead>
 							<tr>
-								<th><input name="select_all" value="1" id="example-select-all" type="checkbox"/> All</th>
+								<th><input name="select_all" value="1" id="checkall" type="checkbox"/> Todo</th>
 								<th>Código</th>
 								<th>Nombre</th>							
 								<th>Apellido</th>							

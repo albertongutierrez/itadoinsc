@@ -47,23 +47,28 @@ if ($_SESSION['crmRanking']>2){
 		?>
 
 	<div class="content-wrapper" style="overflow:hidden;">
-		<h2 style="text-align: center;" class="site-title">Mantenimiento Clases</h2>
+		<h2 style="text-align: center;" class="site-title">Asignar Secciones</h2>
 
+			<ol class="breadcrumb">
+			  <li><a href="main.php">Inicio</a></li>
+			  <li class="active">Asignar Secciones</li>			  
+			</ol>
 		<?php if(!empty($statusMsg)){
-	        echo '<div class="alert '.$statusMsgClass.'">'.$statusMsg.'</div>';
+	        //echo '<div class="alert '.$statusMsgClass.'">'.$statusMsg.'</div>';
+	        echo '<div class="alert alert-dismissable '.$statusMsgClass.'"> <button type="button" class="close" data-dismiss="alert" aria-label="close" aria-hidden="true" >&times;</button>'.$statusMsg.'</div>';
 	    } 
 	    if(($_SESSION['crmRanking']==1) || ($_SESSION['crmRanking']==2)){
 	    	echo "<a href='secciones-det-crear.php'>
 			<button type='button' class='btn btn-info'>
-				Nueva
+				Nuevo
 			</button>
 		</a>";
 	    }
 	    ?>
-		
+			
 		<div class="panel panel-default" style="margin-top: 10px">
 			<div class="panel-heading">
-				<h3 class="panel-title">Secciones <a href="javascript:void(0);" onclick="$('#importFrm').slideToggle();" style="float: right;">Filtros</a> </h3>
+				<h3 class="panel-title">Asignar Secciones <a href="javascript:void(0);" onclick="$('#importFrm').slideToggle();" style="float: right;">Filtros</a> </h3>
 
 				<?php if (isset($_GET['seccion'])): ?>
 		        	<div id="importFrm"> 
@@ -119,6 +124,7 @@ if ($_SESSION['crmRanking']>2){
 								while ( $row= $query->fetch_assoc()) { 
 									$query2=extaerInscritosUDT2($row['codinscripcion'],$row['codempresa']);
 									$ro=$query2->fetch_assoc();
+
 									echo "
 									<tr>
 									<td> ".$row['codseccion_det']." </td>";
@@ -127,14 +133,32 @@ if ($_SESSION['crmRanking']>2){
 									
 									<td> ".$row['estado']."</td>
 									";//<td> ".$row['por_defecto']."</td>
-									  echo"<td><a href='secciones-det-actualizar.php?accion=UDT&empresa=".$row['codempresa']."&id=".$row['codseccion_det']."&user=".$row['codinscripcion']."'><img src='img/lapiz.png' width=15/></a> </td>"; 
+									  echo"<td><a data-toggle='tooltip' title='Editar' href='secciones-det-actualizar.php?accion=UDT&empresa=".$row['codempresa']."&id=".$row['codseccion_det']."&user=".$row['codinscripcion']."'><img src='img/lapiz.png' width=15/></a> </td>"; 
 									  if (($ro['codinscripcion']==$row['codinscripcion']) and ($row['estado']=='A')){
-									  echo "<td> <a href='php/secciones-det-registros.php/?accion=DLT&id=".$row['codseccion_det']."&empresa=".$row['codempresa']."&user=".$row['codinscripcion']."'><img src='img/basura.png' width=15/></a> </td>";
+									  	echo "<td>"?> 
+													<img 
+													data-toggle='tooltip'
+													src='img/basura.png' width='15' title='Anular' onclick="
+													$.confirm({
+												    title: '¿Estás seguro? ',
+												    content: 'Con esta acción el registro seleccionado sera eliminado',
+												    buttons: {
+												        confirmar: function () {
+												 window.location='php/secciones-det-registros.php/?accion=DLT&id=<?php echo $row['codseccion_det']."&empresa=".$row['codempresa']."&user=".$row['codinscripcion'];?>';
+												        },
+												        cancelar: function () {
+												            // $.alert('Cancelado!');
+												        }
+												    }
+												});"/>
+											<?php echo"
+										 </td>";
 										}
 										else{
 											echo "<td></td>";
 										}
 									echo "</tr>";
+								
 								}
 								/*<td> <a href='empresa-registros.php?accion=UDT&id=".$row['codempresa']."&nombre=".$row['nombre']."&rsmnombre=".$row['rsm_nombre']."&telefono1=".$row['telefono1']."&telefono2=".$row['telefono2']."&correo=".$row['email']."&web=".$row['pweb']."&estado=".$row['estado']."&rnc=".$row['RNC']."'><img src='img/lapiz.png' width=15/></a> </td>*/
 							}
@@ -147,5 +171,9 @@ if ($_SESSION['crmRanking']>2){
 			<?php endif ?>
 		</div>
 	</div>
-
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
 <?php include'php/pie.php';?>

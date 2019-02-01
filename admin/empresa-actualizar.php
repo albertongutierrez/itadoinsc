@@ -1,21 +1,43 @@
 <?php include'php/cabeza.php';?>
 <?php if($_SESSION['crmRanking']!=1 and $_SESSION['crmEmpresa']!=$_GET['id']) {
-	echo"<script language='javascript'>window.location='empresa-mant.php'</script>;";		
+	//echo"<script language='javascript'>window.location='empresa-mant.php'</script>;";		
+	echo"<script language='javascript'>window.location='main.php'</script>;";
 }
+
+ if ($_SESSION['crmEmpresa'] != $_GET['id']){
+        // die('Intento de contaminar consulta'); 
+            $statusMsgClass = 'alert-danger';
+            $statusMsg = 'Se ha producido un error al intentar contaminar la consulta.';      
+    } 
 
 ?>
 	
+	<?php 
+		$query=extraerEmpresaUDT($_GET['id']);
+		$row=$query->fetch_assoc();
+
+		if (empty($row['codempresa'])){
+        	$statusMsgClass = 'alert-danger';
+        	$statusMsg = 'La consulta no devolvió ningún resultado.';
+    	}
+	?>
+	
 	<div class="content-wrapper" style="overflow:hidden;" >
 		<p class="site-title">Mantenimiento Empresa</p>
+			<ol class="breadcrumb">
+			  <li><a href="main.php">Inicio</a></li>
+			  <li><a href="empresa-mant.php">Empresa</a></li>
+			  <li class="active">Editar Registro</li>			  
+			</ol>
+						<?php if(!empty($statusMsg)){
+                    echo '<div class="alert '.$statusMsgClass.'">'.$statusMsg.'</div>';
+                    die("<a href='javascript:history.go(-1);' class='btn btn-warning btn-fill'>Datos no encontrados, volver atrás</a>");
+                } ?>
 		<div class="panel panel-default" style="margin-top: 10px">
 			<div class="panel-heading">
-				<h3 class="panel-title">Editar Empresa</h3>
+				<h3 class="panel-title">Editar</h3>
 			</div>
 			<div class="p-body">
-				<?php 
-					$query=extraerEmpresaUDT($_GET['id']);
-					$row=$query->fetch_assoc();
-				?>
 				
 				<form class="form-horizontal" method="POST" action="php/empresa-registros.php?accion=UDT" autocomplete="off" enctype="multipart/form-data">				
 					<div class="form-group" >

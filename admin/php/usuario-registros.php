@@ -92,6 +92,66 @@ if(isset($_GET['accion'])){
 		header("Location: ../usuario-mant.php".$qstring);
 
 	}
+	if ($i=='UDT1'){
+
+		if (!empty($_POST['pwn']) and !empty($_POST['pwnv']) and !empty($_POST['pwv'])){	
+			$s="SELECT * FROM usuario WHERE pass=AES_ENCRYPT('".$_POST['pwv']."','$llave') and username='".$_SESSION['crmUsername']."'";
+
+			if ($mysqli->query($s)->num_rows>0){
+
+				if( $_POST['pwn']== $_POST['pwnv']){		
+					$sql="UPDATE `usuario` SET pass=AES_ENCRYPT('".$_POST['pwn']."','$llave') WHERE username='".$_SESSION['crmUsername']."' and codprofesor='".$_SESSION['crmProfesor']."'";
+					if($mysqli->query($sql)){
+						$qstring = '?status=succudt';
+						if($_SESSION['crmRanking']==3){
+
+							$sql="UPDATE `profesor` SET
+									nombre='".strtoupper($_POST['nombre'])."' ,
+									apellido='".strtoupper($_POST['apellido'])."' ,
+									email='".$_POST['email']."' 
+								WHERE 
+									codprofesor='".$_SESSION['crmProfesor']."'
+							 ";
+							 if($mysqli->query($sql)){
+								$qstring = '?status=succudt';
+							}
+							else{
+								$qstring = '?status=errudt2';
+							}
+						}
+					}
+					else{
+						$qstring = '?status=errudt';
+					}
+				}
+				else{
+					$qstring = '?status=pass';
+				}
+			}
+			else{
+				$qstring = '?status=passv';
+			}
+		}
+		else{
+			$sql="UPDATE `profesor` SET
+				nombre='".strtoupper($_POST['nombre'])."' ,
+				apellido='".strtoupper($_POST['apellido'])."' ,
+				email='".$_POST['email']."' 
+			WHERE 
+				codprofesor='".$_SESSION['crmProfesor']."'
+			 ";
+			 if($mysqli->query($sql)){
+					$qstring = '?status=succudt';
+			}
+			else{
+				$qstring = '?status=errudt';
+			}
+		}
+		
+
+		header("Location: ../usuario-editar.php".$qstring);
+
+	}
 	if ($i=='DLT'){
 		if ($_SESSION['crmRanking']<=2){
 			$sql="

@@ -1,18 +1,35 @@
-<?php include'php/cabeza3.php';
+<?php include'php/cabeza.php';
 
-if ($_SESSION['crmRanking']>2){
-	echo"<script language='javascript'>window.location='categoria-mant.php'</script>;";
-}
 		$fecha=date("Y-m-d").'T'.date("h:i");
+		$creada=false;
+		$ids='';
+		$empresa='';
+		$seccion=''
 
 ?>
 	<div class="content-wrapper" style="overflow:hidden;" >
 		<p class="site-title">Mantenimiento Asistencia</p>
+			<ol class="breadcrumb">
+			  <li><a href="main.php">Inicio</a></li>
+			  <li><a href="asistencia-enc-mant.php">Asistencia</a></li>
+			  <li class="active">Nuevo Registro</li>			  
+			</ol>
 		<div class="panel panel-default" style="margin-top: 10px">
 			<div class="panel-heading">
-				<h3 class="panel-title">Secciones <a href="javascript:void(0);" onclick="$('#importFrm').slideToggle();" style="float: right;">Filtros</a> </h3>
+				<h3 class="panel-title">Sección: <span class="seccion"></span> <a href="javascript:void(0);" onclick="$('#importFrm').slideToggle();" style="float: right;">Filtros</a> </h3>
 
-				<?php if (isset($_GET['seccion'])): ?>
+				<?php 
+					if (isset($_GET['seccion'])): 
+						$consulta=extraerAsistenciaCreada($_GET['seccion']);
+						// echo $consulta;
+						if($consulta->num_rows>0){
+							$creada=true;
+
+							$var=$consulta->fetch_assoc();
+							$ids=$var['codasistencia_enc'];
+							$empresa=$var['codempresa'];
+						}
+					?>
 		        	<div id="importFrm"> 
 		        <?php endif ?>
 			    <?php if (!isset($_GET['seccion'])): ?>
@@ -26,7 +43,7 @@ if ($_SESSION['crmRanking']>2){
 					    	<br>
 					    	<div class="form-group">
     							<label class="sr-only" for="actividad">Actividad</label>
-    							<select id="codactividad" name="seccion" class="form-control" required=""> 
+    							<select id="seccion" name="seccion" class="form-control" required=""> 
 			            			<option value="">Seleccione</option>         
 						             <?php 
 									$query=extraerSeccionesENC();						
@@ -46,19 +63,28 @@ if ($_SESSION['crmRanking']>2){
 				</div>
 			</div>
 			<?php //if (isset($GET['seccion'])): ?>
+		
 			<div class="p-body">
-			        	<form id="frm-example" method="post" action="php/asistencia-enc-registros.php?accion=INS">
+			        	<form id="frm-example2" method="post" action="php/asistencia-enc-registros.php?accion=INS">
 
-						<div class="form-group">
-							<div class="col-sm-4">
-								<label>Fecha / Hora</label><span style="font-weight: bold; color: red; font-size: 25px">*</span>
-			        			<input type="datetime-local" name="horas" class="form-control" required="" value="<?php echo $fecha ?>">
+						<div class="col-sm-4">
+							<div class="form-group">
+			        			<div class="input-append date form_datetime">
+								
+								<label class="control-label">Fecha / Hora</label><span style="font-weight: bold; color: red; font-size: 16px">*</span>
+		                        <div class="input-group">
+			                    	<input size="24" type="text" class="form-control" value="<?php echo $fecha ?>" id= "horas" name="horas" placeholder="Fecha" required="" readonly>
+			                    	<span class="add-on input-group-addon"><i class="icon-remove"></i></span>
+			                    	<span class="add-on input-group-addon"><i class="icon-th"></i></span>
+			                    </div> 
+			                    </div> 
+
 			        		</div>
 			        	</div>
-			   
+
 			        	<div class="form-group">
 			        	<div class="col-sm-12 ">
-			        	<table id="example" class="display">
+			        	<table id="example2" class="display">
 			        		<thead>
 								<tr>
 									<th>C&oacute;digo</th>
@@ -68,7 +94,8 @@ if ($_SESSION['crmRanking']>2){
 								</tr>
 							</thead>						
 							<tbody >
-								<?php 
+							<?php 
+							if ($creada!=true){
 								if (isset($_GET['seccion'])) {
 									$seccion=$_GET['seccion'];
 								}
@@ -90,9 +117,9 @@ if ($_SESSION['crmRanking']>2){
 												".$ro['nombre'].' '.$ro['apellido']."
 											</td>
 											<td> 
-											<select  name='presente[]' class='form-control' required=''> 
-						            			<option value='P,".$ro['codinscripcion']."'>Presente</option>         
+											<select  name='presente[]' class='form-control' required='' id='selector'> 
 									            <option value='A,".$ro['codinscripcion']."'>Ausente</option>
+						            			<option value='P,".$ro['codinscripcion']."'>Presente</option>         
 									                      
 									        </select>
 									        </td>
@@ -100,7 +127,25 @@ if ($_SESSION['crmRanking']>2){
 										</tr>";
 									}
 								}
-								?>
+							}
+							else{
+								echo "
+								<script>
+									$.confirm({
+									    title: 'Ya se ha pasado asistencia!',
+									    content: 'Desea Editarla?',
+									    buttons: {
+									        Si: function () {
+												window.location='asistencia-enc-actualizar.php?id=".$ids."&empresa=".$empresa."';
+									 		},
+									        cancelar: function () {
+									            // $.alert('Cancelado!');
+									        }
+									    }
+									});
+								</script>";
+							}
+							?>
 							</tbody>
 						</table>
 						</div>
@@ -122,4 +167,16 @@ if ($_SESSION['crmRanking']>2){
 	    	<?php ////endif ?>			
 		</div>
 	</div>		
+	
+	<script type="text/javascript">
+	    $(".form_datetime").datetimepicker({
+	        // format: "dd MM yyyy - HH:ii P",
+	        showMeridian: true,
+	        autoclose: true,
+	        todayBtn: true,
+	        pickerPosition: "bottom-left"
+	    });
+	    $('.seccion').text($('#seccion option:selected').text());
+	</script>         
+
 <?php include'php/pie.php';?>

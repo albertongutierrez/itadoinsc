@@ -122,7 +122,7 @@ if(isset($_GET['accion'])){
 			}
 			else{
 				$qstring = '?status=errdlt';
-				// header("Location: ../../empresa-mant.php".$qstring);
+				header("Location: ../../empresa-mant.php".$qstring);
 				 // echo("Error description: " . mysqli_error($mysqli));
 			}
 		}

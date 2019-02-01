@@ -1,7 +1,7 @@
 <?php include'php/cabeza.php'; 
-if ($_SESSION['crmRanking']>2){
-	echo"<script language='javascript'>window.location='main.php'</script>;";
-}
+// if ($_SESSION['crmRanking']>2){
+// 	echo"<script language='javascript'>window.location='main.php'</script>;";
+// }
 ?>
 <?php 
 	if(!empty($_GET['status'])){
@@ -40,7 +40,10 @@ if ($_SESSION['crmRanking']>2){
 
 	<div class="content-wrapper" style="overflow:hidden;">
 		<h2 style="text-align: center;" class="site-title">Impresion de Ticket</h2>
-
+		<ol class="breadcrumb">
+			  <li><a href="main.php">Inicio</a></li>
+			  <li class="active">Impresión de Ticket</li>			  
+		</ol>
 		<?php if(!empty($statusMsg)){
 	        echo '<div class="alert '.$statusMsgClass.'">'.$statusMsg.'</div>';
 	    } 
@@ -81,8 +84,7 @@ if ($_SESSION['crmRanking']>2){
 									<td>".$row['nombre']."</td>
 									<td>".$row['apellido']."</td>
 									<td> ".$row['estado_inscripcion']."</td>
-									";//<td> ".$row['por_defecto']."</td>
-									 if($_SESSION['crmRanking']==1 or $_SESSION['crmRanking']==2){echo "<td><a href='inscripcion-ticket-generar.php?accion=UDT&empresa=".$row['codempresa']."&id=".$row['codinscripcion']."'><img src='img/printer.png' width=15/></a> </td>";}
+									<td><a data-toggle='tooltip' title='Imprimir' target='_blank' href='inscripcion-ticket-generar.php?accion=UDT&empresa=".$row['codempresa']."&id=".$row['codinscripcion']."'><img src='img/printer.png' width=15/></a> </td>";
 									echo"</tr>";
 								}
 								/*<td> <a href='empresa-registros.php?accion=UDT&id=".$row['codempresa']."&nombre=".$row['nombre']."&rsmnombre=".$row['rsm_nombre']."&telefono1=".$row['telefono1']."&telefono2=".$row['telefono2']."&correo=".$row['email']."&web=".$row['pweb']."&estado=".$row['estado']."&rnc=".$row['RNC']."'><img src='img/lapiz.png' width=15/></a> </td>*/
@@ -95,5 +97,10 @@ if ($_SESSION['crmRanking']>2){
 			</div>
 		</div>
 	</div>
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
 
 <?php include'php/pie.php';?>

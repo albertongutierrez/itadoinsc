@@ -40,14 +40,18 @@ if ($_SESSION['crmRanking']>2){
 
 	<div class="content-wrapper" style="overflow:hidden;">
 		<h2 style="text-align: center;" class="site-title">Mantenimiento Nacionalidades</h2>
-
+			<ol class="breadcrumb">
+			  <li><a href="main.php">Inicio</a></li>
+			  <li class="active">Nacionalidades</li>			  
+			</ol>
 		<?php if(!empty($statusMsg)){
-	        echo '<div class="alert '.$statusMsgClass.'">'.$statusMsg.'</div>';
+	        //echo '<div class="alert '.$statusMsgClass.'">'.$statusMsg.'</div>';
+	        echo '<div class="alert alert-dismissable '.$statusMsgClass.'"> <button type="button" class="close" data-dismiss="alert" aria-label="close" aria-hidden="true" >&times;</button>'.$statusMsg.'</div>';
 	    } 
 	    if(($_SESSION['crmRanking']==1) || ($_SESSION['crmRanking']==2)){
 	    	echo "<a href='nacionalidad-crear.php'>
 			<button type='button' class='btn btn-info'>
-				Nueva
+				Nuevo
 			</button>
 		</a>";
 	    }
@@ -85,10 +89,25 @@ if ($_SESSION['crmRanking']>2){
 									<td>".$row['descripcion']."</td>
 									<td> ".$row['estado']."</td>
 									";//<td> ".$row['por_defecto']."</td>
-									 if($_SESSION['crmRanking']==1 or $_SESSION['crmRanking']==2){echo "<td><a href='nacionalidad-actualizar.php?accion=UDT&empresa=".$row['codempresa']."&id=".$row['codnacionalidad']."'><img src='img/lapiz.png' width=15/></a> </td>";}
-									 if($_SESSION['crmRanking']==1 or $_SESSION['crmRanking']==2){echo "<td> <a href='php/nacionalidades-registros.php/?accion=DLT&id=".$row['codnacionalidad']."&empresa=".$row['codempresa']."'><img src='img/basura.png' width=15/></a> </td>";}
-																		
-									echo"</tr>";
+									 if($_SESSION['crmRanking']==1 or $_SESSION['crmRanking']==2){echo "<td><a data-toggle='tooltip' title='Editar' href='nacionalidad-actualizar.php?accion=UDT&empresa=".$row['codempresa']."&id=".$row['codnacionalidad']."'><img src='img/lapiz.png' width=15/></a> </td>";}
+									 if($_SESSION['crmRanking']==1 or $_SESSION['crmRanking']==2){echo "<td>"?> 
+													<img 
+													data-toggle='tooltip'
+													src='img/basura.png' width='15' title='Anular' onclick="
+													$.confirm({
+												    title: '¿Estás seguro? ',
+												    content: 'Con esta acción el registro seleccionado sera eliminado',
+												    buttons: {
+												        confirmar: function () {
+												 window.location='php/nacionalidades-registros.php/?accion=DLT&id=<?php echo $row['codnacionalidad']."&empresa=".$row['codempresa'];?>';
+												        },
+												        cancelar: function () {
+												            // $.alert('Cancelado!');
+												        }
+												    }
+												});"/>
+											<?php echo"
+										 </td>";}	
 								}
 								/*<td> <a href='empresa-registros.php?accion=UDT&id=".$row['codempresa']."&nombre=".$row['nombre']."&rsmnombre=".$row['rsm_nombre']."&telefono1=".$row['telefono1']."&telefono2=".$row['telefono2']."&correo=".$row['email']."&web=".$row['pweb']."&estado=".$row['estado']."&rnc=".$row['RNC']."'><img src='img/lapiz.png' width=15/></a> </td>*/
 							}
@@ -100,5 +119,9 @@ if ($_SESSION['crmRanking']>2){
 			</div>
 		</div>
 	</div>
-
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
 <?php include'php/pie.php';?>

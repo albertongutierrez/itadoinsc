@@ -8,7 +8,6 @@
 	date_default_timezone_set('America/La_Paz');
  	
  ?>
- 
 <!doctype html>
 <html lang="en" class="no-js">
 <head>
@@ -29,44 +28,90 @@
 	
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.3.1/css/buttons.dataTables.min.css">
+
+	<!-- datatimepiker -->
+  	<link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+  	<!-- <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet"> -->
+  	<link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+  	<script type="text/javascript" src="js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+  	<!-- <script type="text/javascript" src="js/bootstrap-datetimepicker.es.js" charset="UTF-8"></script> -->
 		
   	
     <title>MS | CONFIGURACION </title>
     <link rel="icon" type="image/png" href="img/logo.png" />
 
     <script>
- 	$(document).ready(function(){
-	    
-	    var table = $('#example').DataTable({   
-       "iDisplayLength": 12,
-       "order": [[ 1, "desc" ]],
-       dom: 'Bfrtip',
-        buttons: ['copy', 'csv', 'excel', 'pdf', 'print']
+ 	table=$('#example').DataTable({
+	    	 "iDisplayLength": 15,
+	    	 "order": [[ 0, "desc" ]],
+	    	 dom: 'Bfrtip',
+	        buttons: ['copy', 'csv', 'excel', 'pdf', 'print'],
+         "language":{
+			    "sProcessing":     "Procesando...",
+			    "sLengthMenu":     "Mostrar _MENU_ registros",
+			    "sZeroRecords":    "No se encontraron resultados",
+			    "sEmptyTable":     "Ningún dato disponible en esta tabla",
+			    "sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+			    "sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
+			    "sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
+			    "sInfoPostFix":    "",
+			    "sSearch":         "Buscar:",
+			    "sUrl":            "",
+			    "sInfoThousands":  ",",
+			    "sLoadingRecords": "Cargando...",
+			    "oPaginate": {
+			        "sFirst":    "Primero",
+			        "sLast":     "Último",
+			        "sNext":     "Siguiente",
+			        "sPrevious": "Anterior"
+			    },
+			    "oAria": {
+			        "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
+			        "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+			    }
+			}
+      });
       
-    
-   });
+      $('#checkall').on('click', function(){
+        // Check/uncheck all checkboxes in the table
+        var rows = table.rows({ 'search': 'applied' }).nodes();
+        $('input[type="checkbox"]', rows).prop('checked', this.checked);
+     });
 
-   // Handle click on "Select all" control
-   // presente
-   $('#example-select-all1').on('click', function(){
-      // Check/uncheck all checkboxes in the table
+      $('#example tbody').on('change', 'input[type="checkbox"]', function(){
+        // If checkbox is not checked
+        if(!this.checked){
+           var el = $('#checkall').get(0);
+           // If "Select all" control is checked and has 'indeterminate' property
+           if(el && el.checked && ('indeterminate' in el)){
+              // Set visual state of "Select all" control 
+              // as 'indeterminate'
+              el.indeterminate = true;
+           }
+        }
+     });
 
-      var rows = table.rows({ 'search': 'applied' }).nodes();
-      $('#presente', rows).prop('checked', this.checked);
-   });
-   // 
-   $('#example-select-all2').on('click', function(){
-      // Check/uncheck all checkboxes in the table
+      $('#target').on('submit', function(e){
+        var form = this;
 
-      var rows = table.rows({ 'search': 'applied' }).nodes();
-      $('#ausente', rows).prop('checked', this.checked);
-   });
+        // Iterate over all checkboxes in the table
+        table.$('input[type="checkbox"]').each(function(){
+           // If checkbox doesn't exist in DOM
+           if(!$.contains(document, this)){
+              // If checkbox is checked
+              if(this.checked){
+                 // Create a hidden element 
+                 $(form).append(
+                    $('<input>')
+                       .attr('type', 'hidden')
+                       .attr('name', this.name)
+                       .val(this.value)
+                 );
+              }
+           } 
+        });
 
-   // Handle click on checkbox to set state of "Select all" control
-   // presente
-   
-
-    });
+     });
        		
 
     </script>

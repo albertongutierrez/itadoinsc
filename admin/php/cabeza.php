@@ -8,7 +8,6 @@
 	date_default_timezone_set('America/La_Paz');
  	
  ?>
- 
 <!doctype html>
 <html lang="en" class="no-js">
 <head>
@@ -22,7 +21,12 @@
 	<link rel="stylesheet" href="css/jquery.dataTables.min.css">
 	<link rel="stylesheet" href="css/bootstrap-theme.css">
     <link rel="stylesheet"  href="css/bootstrap.min.css">
+    <link rel="stylesheet"  href="css/jquery-confirm.min.css">
 	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery-confirm.min.js"></script>
+
+	<script src="js/bootstrap.js"></script>	
+
 	<script src="js/bootstrap.js"></script>	
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
 	<script src="js/jquery.dataTables.min.js"></script>
@@ -30,6 +34,13 @@
 	
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.3.1/css/buttons.dataTables.min.css">
+
+	<!-- datatimepiker -->
+  	<link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+  	<!-- <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet"> -->
+  	<link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+  	<script type="text/javascript" src="js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+  	<!-- <script type="text/javascript" src="js/bootstrap-datetimepicker.es.js" charset="UTF-8"></script> -->
 		
   	
     <title>MS | CONFIGURACION </title>
@@ -37,6 +48,7 @@
 
     <script>
  	$(document).ready(function(){
+
 	    $('#table_id').DataTable({ // tabla con botones de impresion
 	    	 "iDisplayLength": 15,
 	    	 "order": [[ 0, "desc" ]],
@@ -67,6 +79,38 @@
 			    }
 			}
 	    });
+
+	    $('#table_id3').DataTable({ // tabla con botones de impresion
+	    	 "iDisplayLength": 15,
+	    	 "order": [[ 8, "desc" ]],
+	    	 dom: 'Bfrtip',
+	        buttons: ['copy', 'csv', 'excel', 'pdf', 'print'],
+	      "language":{
+			    "sProcessing":     "Procesando...",
+			    "sLengthMenu":     "Mostrar _MENU_ registros",
+			    "sZeroRecords":    "No se encontraron resultados",
+			    "sEmptyTable":     "Ningún dato disponible en esta tabla",
+			    "sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+			    "sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
+			    "sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
+			    "sInfoPostFix":    "",
+			    "sSearch":         "Buscar:",
+			    "sUrl":            "",
+			    "sInfoThousands":  ",",
+			    "sLoadingRecords": "Cargando...",
+			    "oPaginate": {
+			        "sFirst":    "Primero",
+			        "sLast":     "Último",
+			        "sNext":     "Siguiente",
+			        "sPrevious": "Anterior"
+			    },
+			    "oAria": {
+			        "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
+			        "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+			    }
+			}
+	    });
+
 	    $('#table_id2').DataTable({ // tablas grandes se pone la barra y con botones
 	    	  "scrollX": true,
 	    	 "iDisplayLength": 15,
@@ -101,7 +145,145 @@
 
 	    
 
+
+	    //////////////////////////////////////////////////////////
+	    var table2 = $('#example2').DataTable({   
+     	// "scrollX": true,
+       "iDisplayLength": 12,
+       "order": [[ 1, "desc" ]],
+       dom: 'Bfrtip',
+        buttons: ['copy', 'csv', 'excel', 'pdf', 'print'],
+        "language":{
+			    "sProcessing":     "Procesando...",
+			    "sLengthMenu":     "Mostrar _MENU_ registros",
+			    "sZeroRecords":    "No se encontraron resultados",
+			    "sEmptyTable":     "Ningún dato disponible en esta tabla",
+			    "sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+			    "sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
+			    "sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
+			    "sInfoPostFix":    "",
+			    "sSearch":         "Buscar:",
+			    "sUrl":            "",
+			    "sInfoThousands":  ",",
+			    "sLoadingRecords": "Cargando...",
+			    "oPaginate": {
+			        "sFirst":    "Primero",
+			        "sLast":     "Último",
+			        "sNext":     "Siguiente",
+			        "sPrevious": "Anterior"
+			    },
+			    "oAria": {
+			        "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
+			        "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+			    }
+			}
+    
+	   });
+
+	   
+	    
+	   $('#frm-example2').on('submit', function(e){
+	      var form1 = this;
+
+	      // var rows = table.rows({ 'search': 'applied' }).nodes();
+  		 	// $('select', rows).prop("selected", true);
+
+	      // Iterate over all checkboxes in the table
+	      table2.$('#selector option:selected').each(function(){
+	         // If checkbox doesn't exist in DOM
+	         if(!$.contains(document, this)){
+	            // If checkbox is checked
+	            // if(this.checked){
+	               // Create a hidden element 
+	             // alert(this.name);
+	               $(form1).append(
+	                  $('<input>')
+	                     .attr('type', 'hidden')
+	                     .attr('name','presente[]')
+	                     .val(this.value)
+	               );
+	            // }
+	         } 
+	      }); 
+
+	   });
+	   /////////////////////////////////////////////////
+	   table=$('#example').DataTable({
+	    	 "iDisplayLength": 15,
+	    	 "order": [[ 0, "desc" ]],
+	    	 dom: 'Bfrtip',
+	        buttons: ['copy', 'csv', 'excel', 'pdf', 'print'],
+         "language":{
+			    "sProcessing":     "Procesando...",
+			    "sLengthMenu":     "Mostrar _MENU_ registros",
+			    "sZeroRecords":    "No se encontraron resultados",
+			    "sEmptyTable":     "Ningún dato disponible en esta tabla",
+			    "sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+			    "sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
+			    "sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
+			    "sInfoPostFix":    "",
+			    "sSearch":         "Buscar:",
+			    "sUrl":            "",
+			    "sInfoThousands":  ",",
+			    "sLoadingRecords": "Cargando...",
+			    "oPaginate": {
+			        "sFirst":    "Primero",
+			        "sLast":     "Último",
+			        "sNext":     "Siguiente",
+			        "sPrevious": "Anterior"
+			    },
+			    "oAria": {
+			        "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
+			        "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+			    }
+			}
+      });
+      
+      $('#checkall').on('click', function(){
+        // Check/uncheck all checkboxes in the table
+        var rows = table.rows({ 'search': 'applied' }).nodes();
+        $('input[type="checkbox"]', rows).prop('checked', this.checked);
+     });
+
+      $('#example tbody').on('change', 'input[type="checkbox"]', function(){
+        // If checkbox is not checked
+        if(!this.checked){
+           var el = $('#checkall').get(0);
+           // If "Select all" control is checked and has 'indeterminate' property
+           if(el && el.checked && ('indeterminate' in el)){
+              // Set visual state of "Select all" control 
+              // as 'indeterminate'
+              el.indeterminate = true;
+           }
+        }
+     });
+
+      $('#target').on('submit', function(e){
+        var form = this;
+
+        // Iterate over all checkboxes in the table
+        table.$('input[type="checkbox"]').each(function(){
+           // If checkbox doesn't exist in DOM
+           if(!$.contains(document, this)){
+              // If checkbox is checked
+              if(this.checked){
+                 // Create a hidden element 
+                 $(form).append(
+                    $('<input>')
+                       .attr('type', 'hidden')
+                       .attr('name', this.name)
+                       .val(this.value)
+                 );
+              }
+           } 
+        });
+
+     });
     });
+
+    
+
+    
     </script>
 </head>
 <body  >
@@ -127,14 +309,14 @@
 				
 				<li class="has-children account">
 					<a href="#0" class="cuenta">
-						<img src="img/cd-avatar.png" alt="avatar">
+						<img src="https://ui-avatars.com/api/?name=<?php echo $_SESSION['crmUsername']; ?>&size=128&color=ffffff&background=1784c7" alt="avatar" style='border: 2px solid white;width:24px;height:24px;'>
 						<?php echo $_SESSION['crmUsername']; ?>
 					</a>
 
 					<ul>
 
 						<!-- <li><a href="#0">My Account</a></li> -->
-						<li><a href="usuario-mant.php">Cuenta</a></li>
+						<li><a href="usuario-editar.php">Cuenta</a></li>
 						<li><a href="php/logout.php">Cerrar Sesión</a></li>
 					</ul>
 				</li>
@@ -179,6 +361,7 @@
 						
 					</ul>
 				</li>
+			<?php endif ?>
 
 				<li class="has-children gcurso">
 					<a href="#0">Gestión de Asistencia</a>
@@ -191,7 +374,6 @@
 						
 					</ul>
 				</li>
-			<?php endif ?>
 				<li class="has-children reporte">
 					<a href="#0">Reportes</a>
 					
@@ -249,8 +431,8 @@
 					
 					<ul>
 						<li><a href="usuario-mant.php">Gestión de Usuarios</a></li>
-						<li><a href="#0">Importar Datos</a></li>
-						<li><a href="#0">Exportar Datos</a></li>
+						<!-- <li><a href="#0">Importar Datos</a></li> -->
+						<!-- <li><a href="#0">Exportar Datos</a></li> -->
 					</ul>
 				</li>
 

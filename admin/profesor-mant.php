@@ -6,6 +6,15 @@ if ($_SESSION['crmRanking']>2){
 <?php 
 	if(!empty($_GET['status'])){
 		    switch($_GET['status']){
+		    	case 'username':
+		            $statusMsgClass = 'alert-danger';
+		            $statusMsg = 'Usuario registrado, pruebe con otro.';
+		            break;
+				case 'pass':
+		            $statusMsgClass = 'alert-danger';
+		            $statusMsg = 'Las contraseñas no coinciden.';
+		            break;
+
 		        case 'succ':
 		            $statusMsgClass = 'alert-success';
 		            $statusMsg = 'Registro almacenado correctamente.';
@@ -14,6 +23,12 @@ if ($_SESSION['crmRanking']>2){
 		            $statusMsgClass = 'alert-danger';
 		            $statusMsg = 'Ha ocurrido un error insertando el registro.';
 		            break;
+
+		        case 'errus':
+		            $statusMsgClass = 'alert-danger';
+		            $statusMsg = 'Ha ocurrido un error insertando el usuario.';
+		            break;
+
 		        case 'succudt':
 		            $statusMsgClass = 'alert-success';
 		            $statusMsg = 'Registro actualizado correctamente.';
@@ -40,9 +55,14 @@ if ($_SESSION['crmRanking']>2){
 
 	<div class="content-wrapper" style="overflow:hidden;">
 		<h2 style="text-align: center;" class="site-title">Mantenimiento Profesor</h2>
+			<ol class="breadcrumb">
+			  <li><a href="main.php">Inicio</a></li>
+			  <li class="active">Profesores</li>			  
+			</ol>
 
 		<?php if(!empty($statusMsg)){
-	        echo '<div class="alert '.$statusMsgClass.'">'.$statusMsg.'</div>';
+	        //echo '<div class="alert '.$statusMsgClass.'">'.$statusMsg.'</div>';
+	        echo '<div class="alert alert-dismissable '.$statusMsgClass.'"> <button type="button" class="close" data-dismiss="alert" aria-label="close" aria-hidden="true" >&times;</button>'.$statusMsg.'</div>';
 	    } 
 	    if(($_SESSION['crmRanking']==1) || ($_SESSION['crmRanking']==2)){
 	    	echo "<a href='profesor-crear.php'>
@@ -75,6 +95,7 @@ if ($_SESSION['crmRanking']>2){
 							$query=extraerProfesor();
 							if($query->num_rows > 0){
 								while ( $row= $query->fetch_assoc()) { 
+									if ($row['codprofesor']!=0) {
 									
 									echo "
 									<tr>
@@ -83,12 +104,26 @@ if ($_SESSION['crmRanking']>2){
 									<td> ".$row['apellido']."</td>
 									<td> ".$row['estado']."</td>
 									";//<td> ".$row['por_defecto']."</td>
-									 if($_SESSION['crmRanking']==1 or $_SESSION['crmRanking']==2){echo "<td><a href='profesor-actualizar.php?accion=UDT&id=".$row['codprofesor']."&empresa=".$row['codempresa']."'><img src='img/lapiz.png' width=15/></a> </td>";}
-									 if($_SESSION['crmRanking']==1 or $_SESSION['crmRanking']==2){echo "<td> <a href='php/profesor-registros.php/?accion=DLT&id=".$row['codprofesor']."&empresa=".$row['codempresa']."'><img src='img/basura.png' width=15/></a> </td>";}
-
-									
-									
-									echo"</tr>";
+									 if($_SESSION['crmRanking']==1 or $_SESSION['crmRanking']==2){echo "<td><a data-toggle='tooltip' title='Editar' href='profesor-actualizar.php?accion=UDT&id=".$row['codprofesor']."&empresa=".$row['codempresa']."'><img src='img/lapiz.png' width=15/></a> </td>";}
+									 if($_SESSION['crmRanking']==1 or $_SESSION['crmRanking']==2){	echo "<td>"?> 
+													<img 
+													data-toggle='tooltip'
+													src='img/basura.png' width='15' title='Anular' onclick="
+													$.confirm({
+												    title: '¿Estás seguro? ',
+												    content: 'Con esta acción el registro seleccionado sera eliminado',
+												    buttons: {
+												        confirmar: function () {
+												 window.location='php/profesor-registros.php/?accion=DLT&id=<?php echo $row['codprofesor']."&empresa=".$row['codempresa'];?>';
+												        },
+												        cancelar: function () {
+												            // $.alert('Cancelado!');
+												        }
+												    }
+												});"/>
+											<?php echo"
+										 </td>";}
+									}
 								}
 								/*<td> <a href='empresa-registros.php?accion=UDT&id=".$row['codempresa']."&nombre=".$row['nombre']."&rsmnombre=".$row['rsm_nombre']."&telefono1=".$row['telefono1']."&telefono2=".$row['telefono2']."&correo=".$row['email']."&web=".$row['pweb']."&estado=".$row['estado']."&rnc=".$row['RNC']."'><img src='img/lapiz.png' width=15/></a> </td>*/
 							}
@@ -100,5 +135,11 @@ if ($_SESSION['crmRanking']>2){
 			</div>
 		</div>
 	</div>
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
 
 <?php include'php/pie.php';?>

@@ -1,12 +1,17 @@
 <?php include'php/cabeza.php';
 	if ($_SESSION['crmRanking']>2){
-		echo"<script language='javascript'>window.location='usuario-mant.php'</script>;";
+		echo"<script language='javascript'>window.location='main.php'</script>;";
 	}
 ?>
 
 	
 	<div class="content-wrapper" style="overflow:hidden;" >
 		<p class="site-title">Mantenimiento Usuario</p>
+		<ol class="breadcrumb">
+			  <li><a href="main.php">Inicio</a></li>
+			  <li><a href="usuario-mant.php">Usuarios</a></li>
+			  <li class="active">Nuevo Registro</li>			  
+			</ol>
 		<div class="panel panel-default" style="margin-top: 10px">
 			<div class="panel-heading">
 				<h3 class="panel-title">Nuevo</h3>
@@ -30,8 +35,10 @@
 									$query=extraerTipous();
 									if($query->num_rows > 0)
 									{
-										while ($row = $query->fetch_assoc()) {														
-											echo "<option value='".$row['codtipo']."'>".strtoupper($row['descripcion'])."</option>	";
+										while ($row = $query->fetch_assoc()) {	
+											if ($row['codtipo']!=3) {
+												echo "<option value='".$row['codtipo']."'>".strtoupper($row['descripcion'])."</option>	";
+											}													
 										}
 									}
 								?>						

@@ -1,18 +1,24 @@
 <?php
 //PC DE HAROLD
-// $host="localhost";
+$host="localhost";
 // $user="mangusoft";
 // $pw="123";
-// $bd="crm_inscripciones";
-// $llavec="%7jdq##a";
+$bd="crm_inscripciones_itado";
+$llavec="QY%qffw4";
 
 
 // pc de alberto 
-$host="localhost";
+// $host="localhost";
 $user="root";
+<<<<<<< HEAD
 $pw="123";
 $bd="crm_inscripciones_itado";
 $llavec="%7jdq##a";
+=======
+$pw="";
+// $bd="crm_inscripciones_itado";
+// $llavec="QY%qffw4";
+>>>>>>> 5a669aa75e60ef41fd06395c847c0c410a35a8fe
 
 /*SERVIDOR WEB*/
 

@@ -1,13 +1,18 @@
-<?php include'php/cabeza3.php';
+<?php include'php/cabeza.php';
 
-if ($_SESSION['crmRanking']>2){
-	echo"<script language='javascript'>window.location='categoria-mant.php'</script>;";
-}
+// if ($_SESSION['crmRanking']>2){
+// 	echo"<script language='javascript'>window.location='categoria-mant.php'</script>;";
+// }
 		$fecha=date("Y-m-d").'T'.date("h:i");
 
 ?>
 	<div class="content-wrapper" style="overflow:hidden;" >
 		<p class="site-title">Mantenimiento Permisos</p>
+		<ol class="breadcrumb">
+		  <li><a href="main.php">Inicio</a></li>
+		  <li><a href="permisos-mant.php">Permisos</a></li>
+		  <li class="active">Nuevo Registro</li>			  
+		</ol>
 		<div class="panel panel-default" style="margin-top: 10px">
 			<div class="panel-heading">
 				<h3 class="panel-title">Permisos <a href="javascript:void(0);" onclick="$('#importFrm').slideToggle();" style="float: right;">Filtros</a> </h3>
@@ -49,10 +54,16 @@ if ($_SESSION['crmRanking']>2){
 			<div class="p-body">
 			        	<form id="frm-example" method="post" action="php/permisos-registros.php?accion=INS" class="form-horizontal">
 
-						<div class="form-group">
-							<div class="col-sm-4">
-								<label>Fecha / Hora</label><span style="font-weight: bold; color: red; font-size: 25px">*</span>
-			        			<input type="datetime-local" name="horas" class="form-control" required="" value="<?php echo $fecha ?>">
+						<div class="col-sm-4">
+							<div class="form-group">
+								<label class="control-label">Fecha / Hora</label><span style="font-weight: bold; color: red; font-size: 25px">*</span>
+			        			<div class="input-append date form_datetime">
+			        				<div class="input-group">
+				                      <input size="24" type="text" class="form-control" value="<?php echo $fecha ?>" id= "horas" name="horas" placeholder="Fecha" required="" readonly>
+				                      <span class="add-on input-group-addon"><i class="icon-remove"></i></span>
+				                      <span class="add-on input-group-addon"><i class="icon-th"></i></span>
+				                    </div>   
+				                </div>
 			        		</div>
 			        	</div>
 			   
@@ -77,25 +88,39 @@ if ($_SESSION['crmRanking']>2){
 								}
 
 								$query=extraerEstudiantesPermiso($seccion);
-								// echo "";
-								while ($row=$query->fetch_assoc()) {
-									// $query2=extaerInscritosUDT2($row['codinscripcion'],$row['codempresa']);
-									// $ro=$query2->fetch_assoc();
-									// if ($row['estado']=='A'){
-										echo "
-										<tr>
-											<td>
-												".$row['id']."
-											</td>
-											<td>
-												".$row['nombre']."
-											</td>
-											<td> 
-											<input type='radio' name='permiso' value='".$row['id']."'>            
-									        </td>
-											
-										</tr>";
-									// }
+								if($query->num_rows==0 and $seccion!=''){
+
+									echo "<script>
+											$.confirm({
+												    title: 'Debe de Pasar Asistencia ',
+												    content: 'Desea Pasar asistencia?',
+												    buttons: {
+												        confirmar: function () {
+														 window.location='asistencia-enc-crear.php?seccion=".$seccion."';
+												        },
+												        cancelar: function () {
+												            // $.alert('Cancelado!');
+												        }
+												    }
+												});
+									</script>"	;
+								}
+								else{
+									while ($row=$query->fetch_assoc()) {
+											echo "
+											<tr>
+												<td>
+													".$row['id']."
+												</td>
+												<td>
+													".$row['nombre']."
+												</td>
+												<td> 
+												<input type='radio' name='permiso' value='".$row['id']."'>            
+										        </td>
+												
+											</tr>";
+									}
 								}
 								?>
 							</tbody>
@@ -119,4 +144,14 @@ if ($_SESSION['crmRanking']>2){
 	    	<?php ////endif ?>			
 		</div>
 	</div>		
+
+		<script type="text/javascript">
+	    $(".form_datetime").datetimepicker({
+	        // format: "dd MM yyyy - HH:ii P",
+	        showMeridian: true,
+	        autoclose: true,
+	        todayBtn: true,
+	        pickerPosition: "bottom-left"
+	    });
+	</script>  
 <?php include'php/pie.php';?>

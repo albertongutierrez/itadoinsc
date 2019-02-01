@@ -1,7 +1,5 @@
 <?php include'php/cabeza.php'; 
-if ($_SESSION['crmRanking']>2){
-	echo"<script language='javascript'>window.location='main.php'</script>;";
-}
+
 ?>
 <?php 
 	if(!empty($_GET['status'])){
@@ -40,23 +38,30 @@ if ($_SESSION['crmRanking']>2){
 
 	<div class="content-wrapper" style="overflow:hidden;">
 		<h2 style="text-align: center;" class="site-title">Mantenimiento Asistencia</h2>
+			<ol class="breadcrumb">
+			  <li><a href="main.php">Inicio</a></li>
+			  <li class="active">Asistencia</li>			  
+			</ol>
 
 		<?php if(!empty($statusMsg)){
-	        echo '<div class="alert '.$statusMsgClass.'">'.$statusMsg.'</div>';
+	        //echo '<div class="alert '.$statusMsgClass.'">'.$statusMsg.'</div>';
+	        echo '<div class="alert alert-dismissable '.$statusMsgClass.'"> <button type="button" class="close" data-dismiss="alert" aria-label="close" aria-hidden="true" >&times;</button>'.$statusMsg.'</div>';
 	    } 
-	    if(($_SESSION['crmRanking']==1) || ($_SESSION['crmRanking']==2)){
+	    // if(($_SESSION['crmRanking']==1) || ($_SESSION['crmRanking']==2)){
 	    	echo "<a href='asistencia-enc-crear.php'>
 			<button type='button' class='btn btn-info'>
-				Nueva
+				Nuevo
 			</button>
 		</a>";
-	    }
+	    // }
 	    ?>
 		
 		<div class="panel panel-default" style="margin-top: 10px">
 			<div class="panel-heading">
 				<h3 class="panel-title">Asistencia</h3>
 			</div>
+			
+
 			<div class="p-body">
 				<!-- <div class="row table-responsive"> -->
 					<table class="display table table-striped" id="table_id">
@@ -101,9 +106,26 @@ if ($_SESSION['crmRanking']>2){
 									<td>".$row['fecha']."</td>
 									<td> ".$row['estado']."</td>
 									";
-									echo "<td><a href='asistencia-enc-actualizar.php?accion=UDT&empresa=".$row['codempresa']."&id=".$row['codasistencia_enc']."'><img src='img/lapiz.png' width=15/></a> </td>";
-									echo "<td> <a href='php/asistencia-enc-registros.php/?accion=DLT&id=".$row['codasistencia_enc']."&empresa=".$row['codempresa']."'><img src='img/basura.png' width=15/></a> </td>";
-																		
+									echo "<td><a data-toggle='tooltip' title='Editar' href='asistencia-enc-actualizar.php?empresa=".$row['codempresa']."&id=".$row['codasistencia_enc']."'><img src='img/lapiz.png' width=15/></a> </td>";
+									// echo "<td> <a data-toggle='tooltip' title='Anular' href='php/asistencia-enc-registros.php/?accion=DLT&id=".$row['codasistencia_enc']."&empresa=".$row['codempresa']."'><img src='img/basura.png' width=15/></a> </td>";
+												echo "<td>"?> 
+													<img 
+													data-toggle='tooltip'
+													src='img/basura.png' width='15' title='Anular' onclick="
+													$.confirm({
+												    title: '¿Estás seguro? ',
+												    content: 'Con esta acción el registro seleccionado sera eliminado',
+												    buttons: {
+												        confirmar: function () {
+												 window.location='php/asistencia-enc-registros.php/?accion=DLT&id=<?php echo $row['codasistencia_enc']."&empresa=".$row['codempresa'];?>';
+												        },
+												        cancelar: function () {
+												            // $.alert('Cancelado!');
+												        }
+												    }
+												});"/>
+											<?php echo"
+										 </td>";					
 									echo"</tr>";
 								}
 								/*<td> <a href='empresa-registros.php?accion=UDT&id=".$row['codempresa']."&nombre=".$row['nombre']."&rsmnombre=".$row['rsm_nombre']."&telefono1=".$row['telefono1']."&telefono2=".$row['telefono2']."&correo=".$row['email']."&web=".$row['pweb']."&estado=".$row['estado']."&rnc=".$row['RNC']."'><img src='img/lapiz.png' width=15/></a> </td>*/
@@ -116,5 +138,11 @@ if ($_SESSION['crmRanking']>2){
 			</div>
 		</div>
 	</div>
+
+	<script>
+		$(document).ready(function(){
+		    $('[data-toggle="tooltip"]').tooltip();   
+		});
+	</script>
 
 <?php include'php/pie.php';?>

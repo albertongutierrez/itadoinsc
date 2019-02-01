@@ -48,9 +48,13 @@
 
 	<div class="content-wrapper" style="overflow:hidden;">
 		<h2 style="text-align: center;" class="site-title">Mantenimiento Usuarios</h2>
-
+		<ol class="breadcrumb">
+		  <li><a href="main.php">Inicio</a></li>
+		  <li class="active">Usuarios</li>			  
+		</ol>
 		<?php if(!empty($statusMsg)){
-	        echo '<div class="alert '.$statusMsgClass.'">'.$statusMsg.'</div>';
+	        //echo '<div class="alert '.$statusMsgClass.'">'.$statusMsg.'</div>';
+	        echo '<div class="alert alert-dismissable '.$statusMsgClass.'"> <button type="button" class="close" data-dismiss="alert" aria-label="close" aria-hidden="true" >&times;</button>'.$statusMsg.'</div>';
 	    } 
 	    if($_SESSION['crmRanking']<=2  ){
 	    	echo "<a href='usuario-crear.php'>
@@ -84,6 +88,7 @@
 
 							if($query->num_rows > 0){
 								while ( $row= $query->fetch_assoc()) { 
+									if ($row['codtipo']!=3){
 									
 									echo "
 									<tr>
@@ -91,10 +96,28 @@
 									<td>".$row['username']."</td>
 									<td> ".$row['estado']."</td>
 									";//<td> ".$row['por_defecto']."</td>
-									echo "<td> <a href='usuario-actualizar.php?accion=UDT&id=".$row['codempresa']."&us=".$row['username']."'><img src='img/lapiz.png' width=15/></a> </td>";
-									 if($_SESSION['crmRanking']==1 or $_SESSION['crmRanking']==2 ){echo "<td> <a href='php/usuario-registros.php?accion=DLT&id=".$row['codempresa']."&username=".$row['username']."'><img src='img/basura.png' width=15/></a> </td>";}									
+									echo "<td> <a data-toggle='tooltip' title='Editar' href='usuario-actualizar.php?accion=UDT&id=".$row['codempresa']."&us=".$row['username']."'><img src='img/lapiz.png' width=15/></a> </td>";
+									 if($_SESSION['crmRanking']==1 or $_SESSION['crmRanking']==2 ){echo "<td>"?> 
+													<img 
+													data-toggle='tooltip'
+													src='img/basura.png' width='15' title='Anular' onclick="
+													$.confirm({
+												    title: '¿Estás seguro? ',
+												    content: 'Con esta acción el registro seleccionado sera eliminado',
+												    buttons: {
+												        confirmar: function () {
+												 window.location='php/usuario-registros.php/?accion=DLT&id=<?php echo $row['codempresa']."&username=".$row['username'];?>';
+												        },
+												        cancelar: function () {
+												            // $.alert('Cancelado!');
+												        }
+												    }
+												});"/>
+											<?php echo"
+										 </td>";}									
 									
 									echo"</tr>";
+									}
 								}
 								/*<td> <a href='empresa-registros.php?accion=UDT&id=".$row['codempresa']."&nombre=".$row['nombre']."&rsmnombre=".$row['rsm_nombre']."&telefono1=".$row['telefono1']."&telefono2=".$row['telefono2']."&correo=".$row['email']."&web=".$row['pweb']."&estado=".$row['estado']."&rnc=".$row['RNC']."'><img src='img/lapiz.png' width=15/></a> </td>*/
 							}
@@ -106,5 +129,9 @@
 			</div>
 		</div>
 	</div>
-
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
 <?php include'php/pie.php';?>
