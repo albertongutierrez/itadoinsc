@@ -2,7 +2,7 @@
 /*local*/
 $host="localhost";
 $user="root";
-$pw="";
+$pw="123";
 $bd="crm_inscripciones_itado";
 $llavec="QY%qffw4";
 

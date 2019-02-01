@@ -10,7 +10,7 @@
 // pc de alberto 
 $host="localhost";
 $user="root";
-$pw="";
+$pw="123";
 $bd="crm_inscripciones_itado";
 $llavec="%7jdq##a";
 
